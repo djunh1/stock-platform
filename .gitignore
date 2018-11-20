@@ -17,3 +17,5 @@
 /yarn-error.log
 
 .byebug_history
+# Custom gitignore
+/config/secrets.yml
