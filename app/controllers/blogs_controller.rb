@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
   def show
   end
 
-  # GET /blogs/new
+ # GET /blogs/new
   def new
     @blog = Blog.new
   end
