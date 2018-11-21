@@ -1,0 +1,22 @@
+<p id="notice"><%%= notice %></p>
+
+<h2><%= plural_table_name.titleize %></h2>
+<hr>
+
+  <div>
+    <%% @<%= plural_table_name %>.each do |<%= singular_table_name %>| %>
+      <div>
+<% attributes.reject(&:password_digest?).each do |attribute| -%>
+        <p><%%= <%= singular_table_name %>.<%= attribute.column_name %> %></p>
+<% end -%>
+        <p><%%= link_to 'Show', <%= model_resource_name %> %></p>
+        <p><%%= link_to 'Edit', edit_<%= singular_route_name %>_path(<%= singular_table_name %>) %></p>
+        <p><%%= link_to 'Delete', <%= model_resource_name %>, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+      </div>
+    <%% end %>
+  </div>
+
+
+<br>
+
+<%%= link_to 'New <%= singular_table_name.titleize %>', new_<%= singular_route_name %>_path %>
