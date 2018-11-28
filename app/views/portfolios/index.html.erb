@@ -4,6 +4,6 @@
   <p><%= port.title %></p>
   <p><%= port.subtitle %></p>
   <p><%= port.body %></p>
-  <p><%= image_tag port.thumb_image %></p>
+  <p><%= image_tag port.thumb_image unless port.thumb_image.nil? %></p>
 
 <% end %>
