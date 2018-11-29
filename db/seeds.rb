@@ -50,3 +50,9 @@ end
     thumb_image: "https://via.placeholder.com/350x200"
   )
 end
+
+3.times do |tech|
+  Portfolio.last.technologies.create!(
+    name: "Tech #{tech}"
+  )
+end

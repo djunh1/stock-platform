@@ -2,6 +2,8 @@ class Portfolio < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  #pluralize the model referenced.
+  has_many :technologies
   #keep logic in model.  Use lamba fucntion.
   scope :ruby_on_rails, -> {
     where(subtitle: 'Holy Moly Mike Santolli')
