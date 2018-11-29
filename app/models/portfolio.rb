@@ -7,7 +7,7 @@ class Portfolio < ApplicationRecord
 
   #collection of items associated with a parent model
   accepts_nested_attributes_for :technologies,
-                                 reject_if: lamba { |attr| attr['name'].blank?}
+                                 reject_if: lambda { |attr| attr['name'].blank?}
   #keep logic in model.  Use lamba fucntion.
   scope :ruby_on_rails, -> {
     where(subtitle: 'Holy Moly Mike Santolli')
