@@ -1,13 +1,8 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
+  #Use module helpers instead of putting logic in App ctl
   include DeviseWhitelist
-
-  before_action :set_source
-
-  def set_source
-    #set only if params w/ q
-    session[:source] =params[:q] if params[:q]
-  end
+  include SetSource
 
 end
