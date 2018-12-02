@@ -4,5 +4,6 @@ class ApplicationController < ActionController::Base
   #Use module helpers instead of putting logic in App ctl
   include DeviseWhitelist
   include SetSource
+  include CurrentUserConcern
 
 end
