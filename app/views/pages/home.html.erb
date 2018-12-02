@@ -1,4 +1,7 @@
-<h1>Douglas Jacobson</h1>
+<h1><%= current_user.first_name if current_user%></h1>
 
+<p>Blogs</p>
+
+<%= @posts.inspect %>
 <p>My Skills</p>
 <%= @skills.inspect %>
