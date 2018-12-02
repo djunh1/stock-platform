@@ -19,5 +19,13 @@
     <% end %>
 
     <%= yield %>
+     <p>
+       <% if session[:source] %>
+       Visiting From <%= session[:source] %>
+       <% else %>
+       Nothing
+       <% end %>
+     </p>
+
   </body>
 </html>
