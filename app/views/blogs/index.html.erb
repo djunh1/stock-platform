@@ -2,20 +2,10 @@
 
 <h1>Blogs</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="4"></th>
-    </tr>
-  </thead>
+<div>
+  <%= render partial: @blogs, spacer_template: 'blog_ruler'  %>
+</div>
 
-  <tbody>
-    <%= render @blogs %>
-
-  </tbody>
-</table>
 
 <br>
 
