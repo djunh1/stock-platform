@@ -3,46 +3,25 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link active" href="#">Home</a>
-          <a class="nav-link" href="#">New features</a>
-          <a class="nav-link" href="#">Press</a>
-          <a class="nav-link" href="#">New hires</a>
-          <a class="nav-link" href="#">About</a>
-        </nav>
-      </div>
-    </div>
-
+    <%= render 'shared/blog_nav' %>
     <div class="blog-header">
       <div class="container">
         <h1 class="blog-title">The Blog Father</h1>
         <p class="lead blog-description">An offer you can't refuse.</p>
+        <%= link_to "Create New", new_blog_path if logged_in?(:site_admin) %>
       </div>
     </div>
 
     <div class="container">
-
       <div class="row">
-
-
-
-
-        <%= login_helper %>
-
         <%= yield %>
 
         <!-- start of sidebar -->
@@ -78,18 +57,17 @@
           </div>
         </div>
 
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
 
 
-        <%= render "shared/nav", location: 'bottom' %>
 
-        <%= source_helper("blog") %>
+      <%= source_helper("blog") %>
       </div>
+      <footer class="blog-footer">
+        <p>Blog template built for <a href="https://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+        <p>
+          <a href="#">Back to top</a>
+        </p>
+      </footer>
     </div>
   </body>
 </html>
