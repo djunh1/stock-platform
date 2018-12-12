@@ -13,6 +13,10 @@ class Portfolio < ApplicationRecord
     where(subtitle: 'Holy Moly Mike Santolli')
   }
 
+  def self.by_position
+    order("position ASC")
+  end
+
   #Init after new , NOT create
   after_initialize :set_defaults
 
