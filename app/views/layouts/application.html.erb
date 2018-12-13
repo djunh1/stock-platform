@@ -16,7 +16,14 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
+          <!--div id="background"></div-->
+          <%= video_tag(
+            'code.mov',
+             id: 'background',
+             autoplay: true,
+             loop: true,
+             muted: true,
+             poster: 'landingrink.jpg') %>
           <%= render "shared/application_nav" %>
 
               <%= yield %>
