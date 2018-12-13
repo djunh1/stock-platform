@@ -19,3 +19,4 @@
 .byebug_history
 # Custom gitignore
 /config/secrets.yml
+.env
