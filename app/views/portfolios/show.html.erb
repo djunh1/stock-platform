@@ -1,7 +1,7 @@
 <div class="container port-container">
   <div class="row">
     <div class="col-lg-7">
-      <%= image_tag portfolio_img(@portfolio_item.thumb_image, 'main'), width: '75%' %>
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '75%' %>
     </div>
 
     <div class="col-lg-5">
@@ -20,7 +20,12 @@
       <% @portfolio_item.technologies.each do |t| %>
       <p><%= t.name %></p>
       <% end %>
+      <% if logged_in?(:site_admin) %>
+      <div class="">
+          <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+      </div>
 
+      <% end %>
 
     </div>
   </div>
