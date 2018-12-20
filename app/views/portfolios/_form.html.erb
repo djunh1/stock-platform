@@ -2,7 +2,7 @@
 <%= form_for(portfolio_item) do |form| %>
 <% if portfolio_item.errors.any? %>
   <% portfolio_item.errors.full_messages.each do |e| %>
-      <%= js add_gritter(e, title: "Errors Submitting Portfolio") %>
+      <%= alert_generator e %>
   <% end %>
 <% end %>
 <div class="row">
