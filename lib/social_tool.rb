@@ -7,7 +7,7 @@ module SocialTool
       config.access_token_secret = ENV.fetch("TWITTER_ACCESS_SECRET")
     end
 
-    client.search("#tesla", result_type: 'recent').take(6).collect do |tweet|
+    client.search("$tslaq", result_type: 'recent').take(6).collect do |tweet|
       "#{tweet.user.screen_name}: #{tweet.text}"
     end
   end
