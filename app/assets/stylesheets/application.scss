@@ -156,7 +156,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 
@@ -209,4 +209,17 @@ body {
 
 .devise-form{
   padding:3rem;
+}
+
+.tech-news {
+  color: black;
+  margin: 1rem;
+}
+
+.tech-news > .card {
+  padding: 1.5rem;
+}
+
+.tech-news a {
+  color: green;
 }

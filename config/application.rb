@@ -21,7 +21,7 @@ module DouglasPortfolio
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
-
+    config.eager_load_paths << "#{Rails.root}/lib"
     config.generators do |g|
       g.orm :active_record
       g.template_engine :erb
