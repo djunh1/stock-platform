@@ -158,6 +158,7 @@ h6, .h6 {
  */
 
 .blog-footer {
+  margin-top: 2rem;
   padding: 2.5rem 0;
   color: #999;
   text-align: center;
@@ -170,4 +171,21 @@ h6, .h6 {
 
 .social-links li {
   font-size: 2.5em;
+}
+
+.card-block{
+  padding: 1rem;
+}
+
+.comment-card > .card {
+  margin-top: 1.2rem;
+}
+
+.comment-attribution {
+  font-size: .6em;
+  font-style: italic;
+}
+
+.comment-name {
+  font-weight: 700;
 }
