@@ -6,6 +6,23 @@
         <div class="col-md-6">
 
           <%= image_tag "djpup.jpg", width: 400, alt: "Doug Jacobson", class: 'profile-img' %>
+
+          <div class="skills">
+            <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div class="progress-bar progress-bar-striped bg-danger"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent %>%">
+
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
         </div>
         <div class="col-md-6">
 
@@ -36,10 +53,10 @@
             <p>
               <div class="collapse" id="jobHistory">
                 <div class="card card-block">
-                    Loftware
+                    <p>Loftware</p>
                 </div>
                 <div class="card card-block">
-                    Portsmouth Shipyard
+                    <p>Loftware</p>
                 </div>
               </div>
             </p>
@@ -47,10 +64,10 @@
             <p>
               <div class="collapse" id="education">
                 <div class="card card-block">
-                    UNH
+                    <p>Loftware</p>
                 </div>
                 <div class="card card-block">
-                    UNh
+                    <p>Loftware</p>
                 </div>
               </div>
             </p>
