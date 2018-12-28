@@ -20,6 +20,7 @@ Bundler.require(*Rails.groups)
 module DouglasPortfolio
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     config.load_defaults 5.1
     config.eager_load_paths << "#{Rails.root}/lib"
     config.generators do |g|
