@@ -7,6 +7,7 @@
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>"/>
 
+    <%= favicon_link_tag 'favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -31,7 +32,7 @@
           <%= render "shared/application_footer" %>
 
           <%= alerts %>
-  
+
         </div>
       </div>
     </div>
