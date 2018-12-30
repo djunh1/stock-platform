@@ -1,34 +1,34 @@
-<div class="app-card-container">
-  <div class="card">
-    <div class="inner cover">
-      <h1 class="cover-heading">About</h1>
-      <div class="row">
-        <div class="col-md-6">
+<div class="containerApplication">
+  <h1 class="containerApplication__header">About Me</h1>
+    <div class="containerApplication__left">
+      <%= image_tag "djpup.jpg", width: 400, alt: "Doug Jacobson", class: 'profile-img' %>
 
-          <%= image_tag "djpup.jpg", width: 400, alt: "Doug Jacobson", class: 'profile-img' %>
+         <div class="skills">
+           <% @skills.each do |skill| %>
+           <div class="skill">
+             <h4><%= skill.title %></h4>
+             <div class="progress">
+               <div class="progress-bar bg-skill"
+                 role="progressbar"
+                 aria-valuenow="<%= skill.percent %>"
+                 aria-valuemax="100"
+                 style="width: <%= skill.percent %>%">
 
-          <div class="skills">
-            <% @skills.each do |skill| %>
-            <div class="skill">
-              <h4><%= skill.title %></h4>
-              <div class="progress">
-                <div class="progress-bar progress-bar-striped bg-danger"
-                  role="progressbar"
-                  aria-valuenow="<%= skill.percent %>"
-                  aria-valuemax="100"
-                  style="width: <%= skill.percent %>%">
+               </div>
+             </div>
+           </div>
+           <% end %>
+         </div>
 
-                </div>
-              </div>
-            </div>
-            <% end %>
-          </div>
-        </div>
-        <div class="col-md-6">
 
-          <p class="lead">Crude oil futures erase the gains they made on Friday following OPEC's decision to cut production: January WTI settled -3.1%
-            to $51/bbl after rising 3.3% last week, and Brent -2.8% ended a
-            t $59.97/bbl following last week's 3.7% jump..</p>
+
+
+    </div>
+    <div class="containerApplication__right">
+      <p class="containerApplication__item ">I am a Java Developer with expertise
+        in multiple areas including: research and development, product testing,
+        nuclear systems engineering, data analysis, full stack web development, and software testing.
+           I love to play hockey, Invest in the stock market, and travel the world.</p>
 
             <span>
               <button
@@ -53,10 +53,16 @@
             <p>
               <div class="collapse" id="jobHistory">
                 <div class="card card-block">
-                    <p>Loftware</p>
+                  <h4>Loftware</h4>
+                    <ul>
+                      <li>Debug and fix bugs with Loftware Print Drivers.</li>
+                    </ul>
                 </div>
                 <div class="card card-block">
-                    <p>Loftware</p>
+                  <h4>Portsmouth Naval Shipyard</h4>
+                    <ul>
+                      <li>Author nuclear test documentation.</li>
+                    </ul>
                 </div>
               </div>
             </p>
@@ -64,15 +70,16 @@
             <p>
               <div class="collapse" id="education">
                 <div class="card card-block">
-                    <p>Loftware</p>
+                  <h4>University of New Hampshire - M.S.M.E</h4>
+                    <ul>
+                      <li>Utilizing spectral Feed force to determine cutting tool runout.</li>
+                    </ul>
                 </div>
                 <div class="card card-block">
-                    <p>Loftware</p>
+                  <h4>University of New Hampshire - B.S.M.E</h4>
+                    <p>1999-2003</p>
                 </div>
               </div>
             </p>
-        </div>
-      </div>
     </div>
-  </div>
 </div>

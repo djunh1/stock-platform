@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "gritter";
+@import "variables.scss";
 /*
  * Globals
  */
@@ -50,6 +51,12 @@ h6, .h6,
 
 }
 
+h1.header{
+  font-family: 'Special Elite', cursive;
+  font-size: 3rem;
+
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
@@ -89,7 +96,7 @@ h6, .h6,
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-weight: bold;
-  color: rgba(255,255,255,.5);
+  color: rgba(246, 246, 246, 0.9);
   background-color: transparent;
   border-bottom: .25rem solid transparent;
 }
@@ -123,11 +130,17 @@ h6, .h6,
  */
 
 .cover {
-  padding: 0 1.5rem;
+  padding: 2rem;
+  background-color: rgba(134, 134, 134, 0.67);
 }
 .cover .btn-lg {
   padding: .75rem 1.25rem;
   font-weight: bold;
+
+.cover-contact{
+  padding: 1rem;
+  background-color: #fff;
+}
 }
 
 
@@ -137,6 +150,7 @@ h6, .h6,
 
 .mastfoot {
   color: rgba(255,255,255,.5);
+  margin-top: 1rem;
 }
 
 
@@ -147,11 +161,11 @@ h6, .h6,
 @media (min-width: 40em) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
+    //position: fixed;
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    //position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -242,6 +256,8 @@ h6, .h6,
   color:rgb(0, 0, 0);
   text-align: left;
   background-color: rgba(255, 255, 255, 0.69);
+  margin-top: 7rem;
+
 }
 
 .app-card-container > .card {
@@ -266,4 +282,71 @@ h6, .h6,
 .skill {
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
+}
+
+.link-primary{
+  color: rgb(7, 235, 200);
+  font-size: 1.3rem;
+  text-decoration: underline;
+  font-weight: bold;
+
+}
+
+.bg-skill{
+  background-image: linear-gradient(to bottom, #E91E63 0%, #E91E63 100%);
+}
+
+
+//Modern class
+.containerApplication{
+  display: grid;
+  grid-template-columns: [full-start] 10% [left-start] .5fr [center-start] .5fr [right-end] 10% [full-end];
+  color: #000;
+  font-size:1.4rem;
+  background-color: rgba(255, 255, 255, 0.97);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  border-radius: .5rem;
+
+  &__header{
+    grid-row: 2/3;
+    grid-column: left-start/center-start;
+    justify-self: center;
+    font-size: 2.5rem;
+    justify-self: start;
+  }
+
+  &__left{
+    grid-row: 3/4;
+    grid-column: left-start/center-start;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1rem;
+
+  }
+
+  &__right{
+    grid-row: 3/4;
+    grid-column: center-start/right-end;
+    justify-content: center;
+  }
+
+  &__item{
+    align-content: space-between;
+    text-align: left;
+    font-size: 1.2rem;
+    text-decoration: none;
+    text-shadow: none;
+
+  }
+
+  &__title{
+    font-size: 1.3rem;
+  }
+
+  &__text{
+    font-size: 1rem;
+    color: #000;
+  }
 }

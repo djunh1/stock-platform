@@ -6,7 +6,8 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>"/>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
     <%= favicon_link_tag 'favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -19,20 +20,16 @@
         <div class="cover-container">
           <!--div id="background"></div-->
           <%= video_tag(
-            'waves.mov',
+            'beach.mp4',
              id: 'background',
              autoplay: true,
              loop: true,
              muted: true,
              poster: 'landingrink.jpg') %>
           <%= render "shared/application_nav" %>
-
               <%= yield %>
-
           <%= render "shared/application_footer" %>
-
           <%= alerts %>
-
         </div>
       </div>
     </div>
