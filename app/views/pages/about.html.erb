@@ -1,35 +1,37 @@
 <div class="containerApplication">
-  <h1 class="containerApplication__header">About Me</h1>
+  <h1 class="containerApplication__header">About</h1><hr>
     <div class="containerApplication__left">
-      <%= image_tag "djpup.jpg", width: 400, alt: "Doug Jacobson", class: 'profile-img' %>
-
-         <div class="skills">
-           <% @skills.each do |skill| %>
-           <div class="skill">
-             <h4><%= skill.title %></h4>
-             <div class="progress">
-               <div class="progress-bar bg-skill"
-                 role="progressbar"
-                 aria-valuenow="<%= skill.percent %>"
-                 aria-valuemax="100"
-                 style="width: <%= skill.percent %>%">
-
-               </div>
-             </div>
-           </div>
-           <% end %>
-         </div>
-
-
+      <%= image_tag "greatwall.png", alt: "Doug Jacobson", class: 'profile-img' %>
 
 
     </div>
-    <div class="containerApplication__right">
-      <p class="containerApplication__item ">I am a Java Developer with expertise
-        in multiple areas including: research and development, product testing,
-        nuclear systems engineering, data analysis, full stack web development, and software testing.
-           I love to play hockey, Invest in the stock market, and travel the world.</p>
+    <div class="skills containerApplication__skills">
+      <% @skills.each do |skill| %>
+      <div class="skill">
 
+        <h4><%= skill.title %></h4>
+
+        <div class="progress">
+          <div class="progress-bar bg-skill"
+            role="progressbar"
+            aria-valuenow="<%= skill.percent %>"
+            aria-valuemax="100"
+            style="width: <%= skill.percent %>%">
+
+          </div>
+        </div>
+
+      </div>
+      <% end %>
+    </div>
+    <div class="containerApplication__right">
+      <p class="containerApplication__item ">I am currently employed and working as a Java Developer at Loftware
+        .  I build web applications using Ruby on Rails.  In my spare time, you'll find me playing Ice Hockey,
+      scouring the stock market for interesting opportunities, or traveling the world.  </p>
+
+      </div>
+
+    <div class="containerApplication__background">
             <span>
               <button
                 class="btn btn-primary"
@@ -50,36 +52,215 @@
                 aria-controler="jobHistory">Education</button>
             </span>
 
-            <p>
-              <div class="collapse" id="jobHistory">
-                <div class="card card-block">
-                  <h4>Loftware</h4>
-                    <ul>
-                      <li>Debug and fix bugs with Loftware Print Drivers.</li>
-                    </ul>
-                </div>
-                <div class="card card-block">
-                  <h4>Portsmouth Naval Shipyard</h4>
-                    <ul>
-                      <li>Author nuclear test documentation.</li>
-                    </ul>
-                </div>
-              </div>
-            </p>
+            <span>
+              <%= link_to "Download Resume", download_resume_path, class: 'btn btn-success' %>
 
-            <p>
+            </span>
+
+              <div class="collapse" id="jobHistory">
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Java Developer</h3>
+                    <h4 class="collapse__title--company">
+                      Loftware <strong>- Portsmouth, NH</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Oct 2018 to Present</span>
+                    <ul class="collapse__title--list">
+                      <li>Performed enhancement of Loftware print drivers.</li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">QA Engineer</h3>
+                    <h4 class="collapse__title--company">
+                      Loftware <strong>- Portsmouth, NH</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Feb 2017 to Oct 2018</span>
+                    <ul class="collapse__title--list">
+                      <li>Participated in all phases of product development including planning, design, implementation
+                        and execution of automated and manual testing of Loftware’s products.
+                        </li>
+
+                        <li>
+                          Designed and developed in-house automation frameworks (Java) and test suites.
+                        </li>
+                        <li>
+                          Developed and maintained virtual environments using VMware.
+                          Configured test environments based on customer infrastructure using
+                          Windows and Linux operating systems (clustering, high availability, disaster recovery).
+                        </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Founder - Developer</h3>
+                    <h4 class="collapse__title--company">
+                      The Hopewell Hockey Company LLC <strong>- Portsmouth, NH</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Aug 2016 to Aug 2018</span>
+                    <ul class="collapse__title--list">
+                      <li>
+                        Developed and bought to market a hockey stick that is as light (410g) as leading brands,
+                        but at half the price.
+                      </li>
+                      <li>
+                        Created a fully functional eCommerce platform using Django MVC, and deployed to
+                        Amazon Cloud Services (AWS) using EC2 and RDS.  Featured secure connections and a
+                        fully PCI compliant payment system using Stripe.
+                      </li>
+
+                      <li>
+                        Developed a prototype hockey rink ice time sharing application using Ruby on Rails,
+                        and deployed a Beta version to AWS’s Elastic Beanstalk service. Featured third party
+                        authentication, socket based chat feature, PCI compliant payment system using Stripe,
+                        and text notifications using Twilio.
+                      </li>
+                      <li>
+                        Maintained live production servers and payment systems.  Resolved problems in real time.
+                      </li>
+                      <li>
+                        Performed all accounting and bookwork including inventory management, booking sales, and managing expense accounts.
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Nuclear Systems Engineer</h3>
+                    <h4 class="collapse__title--company">
+                      Portsmouth Naval Shipyard <strong>- Kittery, ME</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">July 2011 to Jan 2017</span>
+                    <ul class="collapse__title--list">
+                      <li>Fulfilled duties of nuclear systems engineer within an operations environment on overhauls of
+                        Los Angeles class (S6G) and Virginia class (S8G) fast attack submarines.</li>
+
+                        <li>
+                          Authored S6G and S9G Reactor Plant System test documentation for preparation, installation and removal of nuclear support equipment.  Wrote plant operating procedures for S6G and S9G Reactors systems to support testing evolutions.
+                        </li>
+
+                        <li>
+                          Served as team leader (auditor) in executing performance evaluation of nuclear work on 688 class submarines.  Organized team meetings, evaluated performance of team members, conducted management presentations of major issues and concerns within the organization.
+                        </li>
+
+                        <li>
+                          Interfaced with key stakeholders including the Department of the Navy, and regulatory oversight. Held briefs, enforced technical requirements of nuclear work, and directed evolutions of reactor plant testing (under qualified supervision).
+                        </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Contract (Systems) Engineer</h3>
+                    <h4 class="collapse__title--company">
+                      GT Advanced Technologies <strong>- Merrimack, NH</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">March 2011 to June 2017</span>
+                    <ul class="collapse__title--list">
+                      <li>
+
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Principal Owner/ Co-Founder</h3>
+                    <h4 class="collapse__title--company">
+                     JAS Energy <strong>- Blacksburg, VA</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Aug 2009 to Aug 2010</span>
+                    <ul class="collapse__title--list">
+                      <li>
+                        Launched green energy company focused on using algae to sequester pollutants from munitions wastewater facilities.  Secured 120,000$ in seed funding.
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Project Engineer</h3>
+                    <h4 class="collapse__title--company">
+                      GOSS International <strong>- Durham, NH</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Sept 2008 to May 2009</span>
+                    <ul class="collapse__title--list">
+                      <li>
+                        Performed design and detailing for commercial scale printing press systems and components using Computer Aided Design (CAD).
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+
+                <div class="card card-block">
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">Reliability Engineer</h3>
+                    <h4 class="collapse__title--company">
+                      Waters Corporation <strong>- Milford, MA</strong>
+                    </h4>
+
+                    <span class="collapse__title--dates">Sept 2006 to Sept 2008</span>
+                    <ul class="collapse__title--list">
+                      <li>
+                        Performed duties of support engineer for all product design changes
+                        and extensions on liquid chromatography detectors.
+                      </li>
+                    </ul>
+                  </div>
+                </div><!-- end job -->
+
+              </div>
+
+
+
               <div class="collapse" id="education">
                 <div class="card card-block">
-                  <h4>University of New Hampshire - M.S.M.E</h4>
-                    <ul>
-                      <li>Utilizing spectral Feed force to determine cutting tool runout.</li>
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">M.S Mechanical Engineering</h3>
+                    <h4 class="collapse__title--company">
+                      University of New Hampshire
+                    </h4>
+
+
+                    <ul class="collapse__title--list">
+                      <li>
+                          Tool Runout Estimation Using Feed Force Spectral Components.  For the publication, click
+                        <a
+                          href="http://proceedings.asmedigitalcollection.asme.org/proceeding.aspx?articleid=1602024"
+                          target=_blank
+                          class="collapse__title--link">
+                          here.
+                        </a>
+                      </li>
                     </ul>
-                </div>
+                  </div>
+                </div><!-- end job -->
                 <div class="card card-block">
-                  <h4>University of New Hampshire - B.S.M.E</h4>
-                    <p>1999-2003</p>
-                </div>
+                  <div class="collapse__title">
+                    <h3 class="collapse__title--role">B.S Mechanical Engineering</h3>
+                    <h4 class="collapse__title--company">
+                      University of New Hampshire
+                    </h4>
+
+
+
+                  </div>
+                </div><!-- end job -->
               </div>
-            </p>
+
     </div>
-</div>
+    </div>

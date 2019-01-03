@@ -5,6 +5,7 @@ Rails.application.routes.draw do
               path_names: {sign_in: 'login', sign_out: 'logout' , sign_up: 'register'}
   root to: 'pages#home'
 
+
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
   end
@@ -19,6 +20,7 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
+  get 'download_resume', to: "pages#download_file"
   get 'about', to: 'pages#about'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'

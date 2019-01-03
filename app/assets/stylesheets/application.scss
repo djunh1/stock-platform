@@ -269,8 +269,8 @@ h1.header{
 }
 
 .profile-img {
-  border: 1px solid rgb(162, 163, 166);
   border-radius: .3rem;
+  width:90%;
 }
 
 .card-block{
@@ -280,8 +280,10 @@ h1.header{
 }
 
 .skill {
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+
 }
 
 .link-primary{
@@ -308,6 +310,16 @@ h1.header{
   padding-top: 1rem;
   border-radius: .5rem;
 
+  @media only screen and (max-width: $bp-large) {
+     grid-template-columns: [full-start] 10% [left-start] .5fr [center-start] .5fr [right-end] 10% [full-end];
+}
+
+@media only screen and (max-width: $bp-small) {
+   grid-template-columns: [full-start] 5% [left-start] 1fr [right-end] 5% [full-end];
+}
+
+
+
   &__header{
     grid-row: 2/3;
     grid-column: left-start/center-start;
@@ -324,12 +336,36 @@ h1.header{
     flex-direction: column;
     padding-top: 1rem;
 
+    @media only screen and (max-width: $bp-small) {
+
+       grid-column: left-start/right-end;
+    }
   }
 
   &__right{
     grid-row: 3/4;
     grid-column: center-start/right-end;
     justify-content: center;
+
+  @media only screen and (max-width: $bp-small) {
+     grid-row: 4/5;
+     grid-column: left-start/right-end;
+  }
+
+  }
+
+  &__rightPicture{
+    grid-row: 2/4;
+    grid-column: center-start/right-end;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+
+  @media only screen and (max-width: $bp-medium) {
+     display: none;
+  }
+
   }
 
   &__item{
@@ -338,6 +374,7 @@ h1.header{
     font-size: 1.2rem;
     text-decoration: none;
     text-shadow: none;
+    padding: 1rem;
 
   }
 
@@ -349,4 +386,84 @@ h1.header{
     font-size: 1rem;
     color: #000;
   }
+
+  &__skills {
+    padding:1rem;
+    grid-row: 4/5;
+    grid-column: left-start/right-end;
+    @media only screen and (max-width: $bp-small) {
+       grid-row: 5/6;
+       grid-column: left-start/right-end;
+    }
+  }
+
+  &__background{
+    grid-row: 5/6;
+    grid-column: left-start/right-end;
+    @media only screen and (max-width: $bp-large) {
+       grid-row: 6/7;
+       grid-column: left-start/right-end;
+  }
+  }
+}
+
+
+.collapse{
+
+  &__text{
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  &__title{
+    display:grid;
+    grid-template-columns: [full-start] 2% [left-start] .6fr [center-start] .4fr [right-end] 2% [full-end];
+
+    &--role{
+      grid-row: 1/2;
+      grid-column: left-start/center-start;
+      font-size: 1.4rem;
+      font-weight:lighter;
+    }
+
+    &--company{
+      grid-row: 3/4;
+      grid-column: left-start/center-start;
+      font-size: 1.2rem;
+    }
+
+
+    &--dates{
+      grid-row: 3/4;
+      grid-column: center-start/right-end;
+      justify-self:end;
+      font-size: 1rem;
+    }
+
+    &--list{
+      grid-column: left-start/right-end;
+      font-size: 1rem;
+      grid-row: 4/6;
+    }
+
+    &--link{
+      color: rgb(0, 21, 159);
+      text-decoration: none;
+    }
+
+
+  }
+
+  &__date{
+    font-size: 1rem;
+    font-style: italic;
+  }
+}
+
+
+.right-picture{
+  @media only screen and (max-width: $bp-large) {
+     display: none;
+  }
+
 }

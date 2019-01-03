@@ -14,4 +14,9 @@ class PagesController < ApplicationController
   def tech_news
     @tweets = SocialTool.twitter_search
   end
+
+  def download_file
+    send_file "#{Rails.root}/app/assets/downloads/resume.pdf", type: "application/pdf", x_sendfile: true
+  end
+
 end
