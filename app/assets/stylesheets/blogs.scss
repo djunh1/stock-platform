@@ -114,6 +114,13 @@ h6, .h6 {
 .sidebar-module {
   padding: 1rem;
   /*margin: 0 -1rem 1rem;*/
+
+  &__item{
+    font-size: 1rem;
+    font-style: italic;
+    color: rgb(118, 152, 210);
+
+  }
 }
 .sidebar-module-inset {
   padding: 1rem;

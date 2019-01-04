@@ -9,9 +9,9 @@
     <%= source_helper("alart alert-info blog-sidebar-source") %>
 
   <div class="sidebar-module">
-    <h4>Topics</h4>
+    <h4>Filter by topic</h4>
     <% @sidebar_topics.each do |topic| %>
-      <p>
+      <p class="sidebar-module__item">
         <%= link_to topic.title, topic_path(topic) %>
       </p>
     <% end %>
@@ -19,10 +19,7 @@
   <div class="sidebar-module">
     <h4>Social</h4>
     <ol class="list-unstyled social-links">
-      <li><a href="#"><%= fa_icon "github" %></a></li>
-      <li><a href="#"><%= fa_icon "instagram" %></a></li>
-      <li><a href="#"><%= fa_icon "facebook" %></a></li>
-      <li><a href="#"><%= fa_icon "twitter" %></a></li>
+      <li><a href="https://github.com/djunh1" target="_blank"><%= fa_icon "github" %></a></li>
     </ol>
   </div>
 </div>
