@@ -8,6 +8,7 @@
     <meta name="keywords" content="<%= @seo_keywords %>"/>
     <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <%= favicon_link_tag 'favicon.ico' %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -20,12 +21,12 @@
         <div class="cover-container">
           <!--div id="background"></div-->
           <%= video_tag(
-            'beach.mp4',
+            'increase_stock.mov',
              id: 'background',
              autoplay: true,
              loop: true,
              muted: true,
-             poster: 'landingrink.jpg') %>
+             poster: 'stockbg.jpg') %>
           <%= render "shared/application_nav" %>
               <%= yield %>
           <%= render "shared/application_footer" %>

@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'rails', '~> 5.1.6'
+gem 'rails', '~> 6.0', '>= 6.0.3.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
@@ -34,7 +34,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #Custom Gems
 gem 'friendly_id', '~> 5.2.4'
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
@@ -52,4 +52,4 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
-ruby "2.4.0"
+ruby "2.6.3"

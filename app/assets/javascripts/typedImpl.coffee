@@ -1,9 +1,9 @@
 ready = ->
   Typed.new '.element',
     strings: [
-      "Web Applications Done Right."
+      "Stocks, Stocks, Stocks"
     ]
-    typeSpeed: 10
+    typeSpeed: 35
     showCursor: false
   return
 
