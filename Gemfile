@@ -52,4 +52,9 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
+  gem 'trestle', '~> 0.8.12'
+  gem 'trestle-auth', '~> 0.2.5'
+  gem 'trestle-search', '~> 0.3.0'
+  gem 'trestle-tinymce', '~> 0.1.3'
+
 ruby "2.6.3"
