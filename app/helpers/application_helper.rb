@@ -26,21 +26,20 @@ end
       },
       {
         url: about_path,
-        title: 'About Me'
+        title: 'About'
       },
       {
         url: contact_path,
-        title: 'Contact'
+        title: 'Market Status'
+      },
+      {
+        url: portfolios_path,
+        title: 'Stocks'
       },
       {
         url: blogs_path,
         title: 'Blog'
       },
-      {
-        url: portfolios_path,
-        title: 'Portfolio'
-      },
-      
     ]
   end
 

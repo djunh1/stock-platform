@@ -37,7 +37,7 @@ body {
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  //text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 h1, .h1,
@@ -61,7 +61,7 @@ h1.header{
 .site-wrapper {
   display: table;
   width: 100%;
-  height: 100%; /* For at least Firefox */
+  height: 100vh; /* For at least Firefox */
   min-height: 100%;
   -webkit-box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
           box-shadow: inset 0 0 5rem rgba(0,0,0,.5);
@@ -467,3 +467,38 @@ h1.header{
   }
 
 }
+
+// navbar 
+nav .nav-link.active {
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+a.middle{
+  position: relative;
+}
+  
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+a.middle:hover {
+  color:#000;
+}
+
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+ 
+

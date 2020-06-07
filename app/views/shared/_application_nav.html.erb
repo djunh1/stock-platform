@@ -1,9 +1,15 @@
-<div class="masthead clearfix">
-  <div class="inner">
-    <h3 class="masthead-brand">Douglas Jacobson</h3>
-    <nav class="nav nav-masthead app-nav">
-      <%= nav_helper 'nav-link', 'span' %>
-      <%= login_helper 'nav-link' %>
-    </nav>
+<nav class="navbar navbar-expand-md navbar-light blog-nav" style="background-color: #fff;">
+  <div class="container">
+   
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+     <ul class="navbar-nav ml-auto">
+       <%= nav_helper 'nav-link middle', 'span' %>
+       <%= login_helper 'nav-link middle' %>
+     </ul>
+    </div>
   </div>
-</div>
+</nav>
