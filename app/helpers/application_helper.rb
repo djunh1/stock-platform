@@ -25,11 +25,11 @@ end
         title: 'Home'
       },
       {
-        url: about_path,
-        title: 'About'
+        url: trading_rules_path,
+        title: 'Rules'
       },
       {
-        url: contact_path,
+        url: market_status_path,
         title: 'Market Status'
       },
       {

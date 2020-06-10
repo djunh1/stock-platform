@@ -1,22 +1,56 @@
-<div class="mastfoot">
-  <div class="row">
-    <div class="col">
-      <div class="d-flex justify-content-end">
-       <div class="pr-2"><%= link_to "Privacy Policy", privacy_path %></div>
-       <div><span class="application-footer pr-2">|</span></div>
-       <div><%= link_to "Terms and Conditions", terms_path %></div>
-     </div>
-     <p class="application-footer">&copy; 2020 | Douglas Jacobson</p>
-     
-    </div>
-    <div class="col">
-    <h5 class="application-footer">Disclaimer:</h5>
-    <p class="application-footer">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-    Commodi ullam ex debitis id doloribus. Facilis illum ullam error necessitatibus dignissimos at
-     minima, inventore itaque, consectetur porro harum aliquid! Quos, cum.</p>
-    </div>
-     
-  </div>
-</div>
+<footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>About</h6>
+            <p class="text-justify font-light">This information is issued solely for informational purposes and does not constitute an offer to 
+            sell or a solicitation of an offer to buy securities. Information contained herein is based on sources which we believe
+             to be reliable but is not guaranteed by us as being accurate and does not purport to be a complete statement 
+             or summary of available data. Past performance is not a guarantee, nor is it necessarily indicative, of future results. 
+             Opinions expressed herein are statements of our judgment as of the publication date and are subject to change 
+             without notice. Douglas Jacobson may have a position, long or short, in the securities referred to herein, and/or other 
+             related securities, and may increase or decrease such position or take a contra position. Additional information 
+             is available upon written request.</p>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Navigation</h6>
+            <ul class="footer-links">
+              <li><%= link_to "Rules", trading_rules_path %></li> 
+              <li><%= link_to "Market Status", market_status_path %></li> 
+              <li><%= link_to "Stocks", portfolios_path %></li> 
+              <li><%= link_to "Blog", blogs_path %></li> 
+    
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Quick Links</h6>
+            <ul class="footer-links">
+             <li><%= link_to "Privacy Policy", privacy_path %></li> 
+              <li><%= link_to "Terms and Conditions", terms_path %></li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text font-light">Copyright &copy; 2020 All Rights Reserved.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
 
 

@@ -1,14 +1,30 @@
-<div class="inner cover">
-  <h1 class="element header"></h1>
-  <span class="lead">I buy fast moving stocks as they break out from sound consolidation.  No options,
-  and most importantly, no bull shit.  Stop losses and risk management are everything, period.  
-  Finally, ignore the paid shills in the media especially CNBC. 
 
-  <div><br><br>
-    <p class="lead">
-      <%= link_to "Basic Rules", about_path, class: "btn btn-lg btn-secondary" %>
-    </p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <!--div id="background"></div-->
+          <%= video_tag(
+            'increase_stock.mov',
+             id: 'background',
+             autoplay: true,
+             loop: true,
+             muted: true,
+             poster: 'stockbg.jpg') %>
+
+      <div class="inner cover">
+        <h1 class="element header"></h1>
+        <span class="lead font-light">Buy the breakouts.  Sell the losers.  Manage Risk.  No bullshit.
+
+        <div><br><br>
+          <p class="lead">
+            <%= link_to "Lets Go", trading_rules_path, class: "btn btn-lg btn-secondary" %>
+          </p>
+        </div>
+      </div>
+
+    <%= alerts %>
+    </div>
   </div>
-
 </div>
 
+<%= render "pages/home/desc" %>

@@ -1,0 +1,13 @@
+@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+
+%stock-pick{
+    margin:1rem;
+    padding: 1rem;
+}
+
+.picture-1 {
+    @extend %stock-pick;
+    width:80%;
+  }

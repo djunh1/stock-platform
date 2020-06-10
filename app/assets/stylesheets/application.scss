@@ -1,6 +1,18 @@
 @import "bootstrap";
 @import "gritter";
-@import "variables.scss";
+
+//@import "abstracts/mixins.scss";
+@import "abstracts/variables.scss";
+
+// @import "base/base.scss";
+@import "base/animations.scss";
+@import "base/typography.scss";
+
+@import "pages/mainpage.scss";
+@import "pages/rules.scss";
+@import 'components/footer.scss';
+
+
 /*
  * Globals
  */
@@ -45,9 +57,15 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6,
+h6, .h6
 {
   font-family: 'Montserrat', sans-serif;
+
+}
+
+.header{
+  font-size: 3rem;
+  font-weight: 100;
 
 }
 
@@ -56,6 +74,25 @@ h1.header{
   font-size: 3rem;
 
 }
+
+.section-header {
+  font-size:3rem;
+  font-weight: 100;
+  position: relative;
+  display: inline-block;
+  padding:1rem;
+
+  &:before{
+    content: '';
+  border-bottom: 3px solid lightcoral;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  bottom: 0;
+  }
+}
+
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -499,6 +536,4 @@ a.middle:hover:before {
   visibility: visible;
   transform: scaleX(1);
 }
-
- 
 

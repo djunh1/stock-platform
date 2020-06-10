@@ -21,8 +21,8 @@ Rails.application.routes.draw do
   mount ActionCable.server => '/cable'
 
   get 'download_resume', to: "pages#download_file"
-  get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact'
+  get 'trading-rules', to: 'pages#trading_rules'
+  get 'market-status', to: 'pages#market_status'
   get 'tech-news', to: 'pages#tech_news'
   get 'privacy' => 'pages#privacyPolicy'
   get 'terms' => 'pages#termsAndConditions'

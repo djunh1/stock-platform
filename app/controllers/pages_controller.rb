@@ -4,11 +4,11 @@ class PagesController < ApplicationController
     @posts = Blog.all
   end
 
-  def about
+  def trading_rules
     @skills = Skill.all
   end
 
-  def contact
+  def market_status
   end
 
   def tech_news

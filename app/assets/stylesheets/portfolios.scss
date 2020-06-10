@@ -1,6 +1,16 @@
 @import "bootstrap";
 @import "jquery-ui";
 @import "gritter";
+
+@import "abstracts/variables.scss";
+
+@import "base/animations.scss";
+@import "base/typography.scss";
+
+@import "pages/mainpage.scss";
+@import "pages/rules.scss";
+@import 'components/footer.scss';
+
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
   font-family: 'Raleway', sans-serif;
@@ -11,8 +21,7 @@ h2, .h2,
 h3, .h3,
 h4, .h4,
 h5, .h5,
-h6, .h6,
-{
+h6, .h6 {
   font-family: 'Montserrat', sans-serif;
 
 }
@@ -78,4 +87,37 @@ footer p {
 
 .port-container{
   padding-top: 7rem;
+}
+
+
+// navbar , not dry :(
+nav .nav-link.active {
+  font-weight: 100;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+a.middle{
+  position: relative;
+}
+  
+a.middle:before {
+  content: "";
+  position: absolute;
+  width: 97%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.5s ease-in-out;
+}
+
+a.middle:hover {
+  color:#000;
+}
+
+a.middle:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
 }

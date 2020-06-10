@@ -1,0 +1,79 @@
+// Primary Colors
+$color-primary: #17334a;
+$color-primary-light: #526573;
+$color-primary-dark: #0d2e49;
+
+$color-secondary: #415669;
+$color-secondary-light: #415669;
+$color-secondary-dark: #415669;
+
+$color-tertiary: #415669;
+$color-tertiary-light: #415669;
+$color-tertiary-dark: #415669;
+
+$color-backup: #d6b155;
+
+// Site color-secondary
+
+$color-black: #000;
+$color-white: #fff;
+
+$color-grey-light-1: #edefed;
+$color-grey-light-2: #dce0e0;
+$color-grey-light-3: #8a8787;
+
+$color-grey-dark: #aca3a3;
+$color-grey-dark-2: #8c7f7f;
+$color-grey-dark-3: #5b5a63;
+
+$color-update: #f22f46;
+$color-verify:rgb(255, 245, 0);
+$color-select: rgba(4, 59, 184, 1);
+$color-delete: rgba(255, 0, 0, 0.82);
+
+$color-stripe:#4568b2;
+
+//Borders
+
+$line: 1px solid $color-grey-light-2;
+
+//Shadows
+
+$shadow-dark: 0 2rem 6rem rgba(0, 0, 0, 0.3);
+$shadow-light: 0 2rem 5rem rgba(0, 0, 0, 0.09);
+
+// Fonts
+
+// FONT VARIABLES
+$font-primary: 'Raleway', sans-serif !important;
+$font-display: 'JMontserrat', sans-serif !important;
+$font-cursive: 'Special Elite', cursive !important;
+
+$default-font-size: 1.4rem;
+
+//navbar-fixed-index
+
+$color-navbar:#fff;
+
+// Buttons
+
+$width-button: 20rem;
+$color-light: rgb(255, 255, 255);
+
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+//Margins
+
+$margin-bottom-small:2rem;
+
+//Media queries (for flexbox stuff)
+
+$bp-largest:75em; //1200px
+$bp-large:68.75em; //1100px
+$bp-medium:56.25em; //900px
+$bp-small:37.5em; //600px
+$bp-smallest:31.25em;//500px

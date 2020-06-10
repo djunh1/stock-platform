@@ -16,32 +16,7 @@
 
   <body>
     <%= render "shared/application_nav" %>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <!--div id="background"></div-->
-          <%= video_tag(
-            'increase_stock.mov',
-             id: 'background',
-             autoplay: true,
-             loop: true,
-             muted: true,
-             poster: 'stockbg.jpg') %>
-          
-              <%= yield %>
-          
-          <%= alerts %>
-        </div>
-      </div>
-    </div>
-
-    <div class="container-fluid bg-light text-dark pt-5 pb-5">
-      <div class="row">
-        <div class="col">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quas vel asperiores quam pariatur aperiam molestias laborum delectus ipsa, inventore magnam? Temporibus nobis mollitia facere officia alias consequuntur dolor quas.</p>
-        </div>
-      </div>
-    </div>
+    <%= yield %>
     <%= render "shared/application_footer" %>
   </body>
 </html>
