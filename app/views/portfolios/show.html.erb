@@ -1,31 +1,39 @@
-<div class="container port-container">
-  <div class="row">
-    <div class="col-lg-7">
-      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '75%' %>
+<div class="container-fluid pb-5">
+  <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%', class: '#' %>
+</div>
+
+<div class="container-fluid port-container">
+  <div class="row mb-5">
+    
+
+    <div class="col-lg-8 offset-lg-2">
+      <div class="table-responsive mb-3">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Ticker</th>
+          <th scope="col">Earnings</th>
+        </tr>
+        </thead>
+        <tbody> 
+          <tr>
+            <td><%= @portfolio_item.ticker %></td>
+            <td><%= @portfolio_item.earnings_date.strftime('%d %b %Y') if @portfolio_item.earnings_date %></td>     
+           </tr>   
+        </tbody>
+      </table>
+    <blockquote>
+      <%= @portfolio_item.body %>
+    </blockquote>
+
+    <div class="d-flex justify-content-around p-4 mb-3">
+        <%= link_to "Back" , edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+        <% if logged_in?(:site_admin) %>
+          <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-success' %>
+       <% end %>
+         
     </div>
-
-    <div class="col-lg-5">
-      <h1><%= @portfolio_item.title %></h1>
-
-      <hr>
-
-      <em><%= @portfolio_item.subtitle %></em>
-
-      <p><%= @portfolio_item.body %></p>
-
-      <hr>
-
-      <h3>Technologies Used:</h3>
-
-      <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
-      <% end %>
-      <% if logged_in?(:site_admin) %>
-      <div class="">
-          <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
-      </div>
-
-      <% end %>
+      
 
     </div>
   </div>

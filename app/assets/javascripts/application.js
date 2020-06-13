@@ -23,3 +23,7 @@
 //= require_tree .
 //= require popper
 //= require bootstrap
+//= require bootstrap-sprockets
+//= require moment
+//= require tempusdominus-bootstrap-4.js
+

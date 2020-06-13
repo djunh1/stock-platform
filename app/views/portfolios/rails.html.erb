@@ -1,13 +1,61 @@
-<h1>Rails Items</h1>
+<header class="header-admin-section ">
+  <div class="header-admin-section __logo-box">
+    
+  </div>
+  <div class="header-admin-section__text-box">
+    <h1 class="heading-primary">
+      <span class="heading-primary--main">Administer my Stocks</span>
+    </h1>
+  </div>
+</header>
 
-<%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin)%>
+<section>
+  <div class="container m-5 p-5">
+    <div class="row">
+      <div class="col-lg-10 offset-lg-2">
+      <h1>My Listed Stocks </h1>
 
-<% @rails_portfolio_items.each do |port| %>
-  <p><%= link_to port.title, portfolio_show_path(port) %></p>
-  <p><%= port.subtitle %></p>
-  <p><%= port.body %></p>
-  <p><%= image_tag port.thumb_image unless port.thumb_image.nil? %></p>
-  <%= link_to 'Edit', edit_portfolio_path(port) if logged_in?(:site_admin)%>
-  <%= link_to 'Delete', portfolio_path(port), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %>
+      <%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin)%>
 
-<% end %>
+     
+
+      <div class="table-responsive">
+      <table class="table">
+        <thead>
+        <tr>
+          <th scope="col">Ticker</th>
+          <th scope="col">Earnings</th>
+          <th scope="col">Chart</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+          <% @rails_portfolio_items.each do |port| %>
+          <tr>
+            <td><%= port.ticker %></td>
+            <td><%= port.earnings_date %></td>
+            
+            <% unless port.main_image.nil?%>
+              <td><%= image_tag port.main_image.url, class: 'thumbnail' %></td>
+            <% end %>
+            
+            <td><%= link_to 'Edit', edit_portfolio_path(port) if logged_in?(:site_admin)%></td>
+            <td><%= link_to 'Delete', portfolio_path(port), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+        
+        
+        
+        
+            
+      </div>
+    </div>
+  </div>
+
+</section>
+
+

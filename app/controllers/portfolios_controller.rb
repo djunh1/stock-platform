@@ -16,7 +16,8 @@ class PortfoliosController < ApplicationController
   end
 
   def rails
-    @rails_portfolio_items = Portfolio.ruby_on_rails
+    @rails_portfolio_items = Portfolio.all
+    
   end
 
   def new
@@ -64,8 +65,8 @@ class PortfoliosController < ApplicationController
  private
 
  def portfolio_params
-   params.require(:portfolio).permit(:title,
-                                      :subtitle,
+   params.require(:portfolio).permit(:ticker,
+                                      :earnings_date,
                                       :body,
                                       :main_image,
                                       :thumb_image,

@@ -1,11 +1,30 @@
-<div class="col-md-4">
+<div class="col-md-6">
   <div class="card" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>
+    <%= image_tag portfolio_img(portfolio_item.main_image, 'main'), width: '100%'  %>
     <p class="card-text">
-      <span>
-        <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %>
-      </span>
-      <%= portfolio_item.subtitle %>
+      <div class="d-flex justify-content-center">
+        <p class="mr-3"> <u>
+          Ticker: </u></p>
+        <p class="font-size-1"><%= link_to portfolio_item.ticker, portfolio_show_path(portfolio_item) %></p>
+      </div>
+      <% if portfolio_item.earnings_date %>
+      <div class="d-flex justify-content-center">
+        <p class="mr-3"> <u>
+          Earnings: </u></p>
+        <p><%= portfolio_item.earnings_date.strftime('%d %b %Y') if portfolio_item.earnings_date %></p>
+      </div>
+      <% end %>
+      <hr>
+      <div class="d-flex justify-content-center p-4 mb-3">
+        <p class="font-size-2"><%= portfolio_item.body %></p>
+      </div>
+
+      <div class="d-flex justify-content-center">
+          <%= link_to "View Stock", portfolio_show_path(portfolio_item), class: 'btnCust btnCust--green' %>
+
+      </div>
+      
+      
     </p>
   </div>
 

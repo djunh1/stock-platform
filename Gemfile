@@ -41,10 +41,14 @@ gem 'petergate', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
-gem 'carrierwave', '~> 1.0'
+
+gem 'bootstrap4-datetime-picker-rails'
+
+gem 'carrierwave', '~> 2.0.0.rc'
 gem 'carrierwave-aws', '~> 1.3'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'dotenv-rails', '~> 2.5'
+
 gem 'cocoon', '~> 1.2', '>= 1.2.12'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.2'
@@ -52,9 +56,10 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
-  gem 'trestle', '~> 0.8.12'
-  gem 'trestle-auth', '~> 0.2.5'
-  gem 'trestle-search', '~> 0.3.0'
-  gem 'trestle-tinymce', '~> 0.1.3'
+gem 'trestle', '~> 0.8.12'
+gem 'trestle-auth', '~> 0.2.5'
+gem 'trestle-search', '~> 0.3.0'
+gem 'trestle-tinymce', '~> 0.1.3'
+
 
 ruby "2.6.3"
