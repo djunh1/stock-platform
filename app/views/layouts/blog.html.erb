@@ -15,22 +15,14 @@
   </head>
 
   <body>
-
-    <%= render 'shared/blog_nav' %>
-    <%= render 'shared/blog_masthead' %>
-
-    <div class="container">
-
-      <div class="row">
-
+    <%= render "shared/application_nav" %>
+    <div class="container-fluid container-blogs">
+      <!--div class="row"-->
         <%= yield %>
-
-        <%= render 'shared/blog_sidebar' %>
-      </div>
-
-      <%= render 'shared/blog_footer' %>
+        
+      </!--div-->
       <%= alerts %>
-
     </div>
+    <%= render "shared/application_footer" %>
   </body>
 </html>

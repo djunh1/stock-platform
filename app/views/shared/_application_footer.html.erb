@@ -22,6 +22,7 @@
               <li><%= link_to "Blog", blogs_path %></li> 
               <% if logged_in?(:site_admin) %>
                 <li><%= link_to "Add Stocks", rails_items_path %></li> 
+                <li><%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %></li>
               <% end %>
     
             </ul>

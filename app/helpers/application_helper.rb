@@ -68,7 +68,7 @@ end
   end
 
   def alert_generator(msg)
-    js add_gritter(msg, title: "Douglas Jacobson Portfolio")
+    js add_gritter(msg, title: "Dougy Day Trader")
   end
 
 end

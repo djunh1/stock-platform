@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   end
 
   def show
-    if logged_in?(:site_admin) || Blog.published?
+    if logged_in?(:site_admin) || Blog.published
       @blog = Blog.includes(:comments).friendly.find(params[:id])
       @comment = Comment.new
       @page_title = @blog.title
@@ -79,7 +79,7 @@ class BlogsController < ApplicationController
     end
 
     def blog_params
-      params.require(:blog).permit(:title, :body, :topic_id, :status)
+      params.require(:blog).permit(:title,:main_image,  :body, :topic_id, :status)
     end
 
     def set_sidebar_topics

@@ -1,9 +1,13 @@
-<div class="col-sm-8 blog-main">
-<%= paginate @blogs %>
-<%= render @blogs %>
+<div class="row">
+  <div class="col-sm-8 blog-main">
+  <%= paginate @blogs %>
+  <%= render @blogs %>
 
- <nav class="blog-pagination">
-   <%= paginate @blogs %>
- </nav>
+  <nav class="blog-pagination">
+    <%= paginate @blogs %>
+  </nav>
 
+  </div>
+  <%= render 'shared/blog_sidebar' %>
 </div>
+

@@ -1,4 +1,11 @@
-<div class="col-sm-8 blog-main">
+<div class="container-blogfather" style="overflow: hidden">
+  <%= image_tag the_blog_father_image(@blog.main_image),class: 'container-blogfather--img' %>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 blog-main">
 
   <h2><%= @blog.title %></h2>
 
@@ -16,14 +23,15 @@
       </div>
     </nav>
 
-  <p>
-    <%= markdown(@blog.body) %>
-  </p>
+    <p>
+      <%= markdown(@blog.body) %>
+    </p>
 
-<%= render 'comments/comment_form' %>
-<div id='comments' data-blog-id="<%= @blog.id %>" >
-  <%= render @blog.comments %>
+    <%= render 'comments/comment_form' %>
+    <div id='comments' data-blog-id="<%= @blog.id %>" >
+      <%= render @blog.comments %>
+    </div>
+  </div>
+  </div>
 </div>
 
-
-</div>

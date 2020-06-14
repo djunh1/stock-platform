@@ -1,10 +1,36 @@
-<div class="blog-post">
-  <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-  <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
 
-  <%= render partial: 'blogs/admin_actions', locals: {blog:blog} %>
+<div class="article-wrapper u-cf mb-5 mt-2">
+        
+    <a class="bubble" href="https://themes.gohugo.io//theme/bilberry-hugo-theme/post/markdown-syntax/">
+    <i class="fas fa-fw fa-pencil-alt"></i>
+</a>
+<article class="default article">
+    <div class="content">
+    <h1 class="article-title">
+      <%= link_to blog.title.upcase, blog %>
+    </h1>
+    <div class="meta">
+        <span class="date moment">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago</span>
+        <span class="categories">
+                <%= render partial: 'blogs/admin_actions', locals: {blog:blog} %>
+                            
+        </span>
+        
+      </div>
+      <p><%= markdown(blog.body) %></p>
+      <%= link_to "Continue Reading", blog, class:'more' %>
+  </div>
+  <div class="footer">
+          <div class="tags">
+              <i class="fa fa-tags"></i>
+              <div class="links">
+                      
+                      <%= link_to blog.topic.title, topic_path(blog.topic), class: 'ml-3' %>
+                  
+              </div>
+          </div>
+  </div>
+</article>
 
-  <p>
-    <%= markdown(blog.body) %>
-  </p>
-</div>
+        
+    </div>

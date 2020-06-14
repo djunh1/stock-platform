@@ -1,10 +1,11 @@
+<% if logged_in?(:site_admin) %>
 <div class="blog-header">
   <div class="container">
-    <h1 class="blog-title">Blog</h1>
-    <p class="lead blog-description">.</p>
+    <h1 class="blog-title">Blog Admin</h1>
     <span>
       <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
     </span>
 
   </div>
 </div>
+<% end %>
