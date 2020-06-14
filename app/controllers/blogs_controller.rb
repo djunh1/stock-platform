@@ -79,7 +79,7 @@ class BlogsController < ApplicationController
     end
 
     def blog_params
-      params.require(:blog).permit(:title,:main_image,  :body, :topic_id, :status)
+      params.require(:blog).permit(:title,:main_image, :body, :blog_post, :topic_id, :status)
     end
 
     def set_sidebar_topics

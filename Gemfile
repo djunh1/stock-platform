@@ -61,5 +61,12 @@ gem 'trestle-auth', '~> 0.2.5'
 gem 'trestle-search', '~> 0.3.0'
 gem 'trestle-tinymce', '~> 0.1.3'
 
+#web packer
+gem 'webpacker', '~> 5.1', '>= 5.1.1'
+gem 'image_processing', '~> 1.2'
+gem 'rmagick'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+
+#new Blog
 
 ruby "2.6.3"

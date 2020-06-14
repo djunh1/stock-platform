@@ -17,7 +17,10 @@
         </span>
         
       </div>
-      <p><%= markdown(blog.body) %></p>
+      <% unless blog.body.nil? %>
+        <p><%= markdown(blog.body) %></p>
+      <% end %>
+      
       <%= link_to "Continue Reading", blog, class:'more' %>
   </div>
   <div class="footer">

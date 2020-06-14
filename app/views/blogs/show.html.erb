@@ -23,9 +23,9 @@
       </div>
     </nav>
 
-    <p>
-      <%= markdown(@blog.body) %>
-    </p>
+    <div>
+      <%= @blog.blog_post %>
+    </div>
 
     <%= render 'comments/comment_form' %>
     <div id='comments' data-blog-id="<%= @blog.id %>" >
