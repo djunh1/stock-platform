@@ -1,0 +1,90 @@
+<section class="jumbotron text-center">
+  <div class="container">
+    <h1 class="jumbotron-heading">Markets</h1>
+    
+    <% unless @market.nil? %>
+    <p class="lead text-muted"> 
+      Last updated on:
+    </p> <span> <%= @market.updated_at.strftime('%d %b %Y')  %></span>
+    <% else %> 
+    <p>No market info yet...</p>
+
+    <% end %>
+        
+  </div>
+</section>
+<% unless @market.nil? %>
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-lg-6">
+            <% if @market.status == "Bull" %>
+            <div class="card">
+                <div class="card-text">
+                    <div class="portada">
+                    </div>
+                    <div class="title-total">   
+                    <h2>Bull Market</h2>
+                        <div class="desc"> <p class="font-size-1">
+                            We are at the end of a long bull market.  While the trend is 
+                            currently up, this can change at any time. 
+                            </p>    
+                        </div>
+                    </div>
+                </div>
+            </div>
+           <% else %> 
+           <div class="card">    
+            <div class="card-text">
+                <div class="portada portada--bear">
+                </div>
+                <div class="title-total">   
+                    <h2>Bear Market</h2>
+                    <div class="desc"> <p class="font-size-1">
+                    Markets are currently selling off.  Be careful if trying to 
+                    take the long side of a trade, or stay on the sidelines. 
+                    </p> 
+                    </div>
+                </div>
+            </div>
+           </div> 
+           <% end %>
+        </div>
+       
+
+        <div class="col-lg-6">
+                <h3 class="header-market">
+                <span>
+                <%= @market.percent_cash %> % cash
+                </span>
+                </h3>
+        </div>
+    </div>
+
+    <hr>
+    <div class="row">
+    
+        <div class="col p-4 m-2">
+        <% unless @market.nil? %>
+    <p class="lead text-muted"> 
+      Updated <%= @market.updated_at.strftime('%d %b %Y')  %>
+    </p>
+    <% else %> 
+    <% end %>
+            <div>
+            <%= @market.market_status_update %>
+            </div>
+        </div>
+    </div>
+</div>
+<% else %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12 pb-5">
+            <h2>
+            We are updating the market section of this web site.  Please check back later.
+            </h2>
+            
+        </div>
+    </div>
+</div>
+<% end %>

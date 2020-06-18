@@ -12,6 +12,7 @@
 @import "base/typography.scss";
 
 @import "pages/mainpage.scss";
+@import "market.scss";
 @import "pages/rules.scss";
 @import 'components/footer.scss';
 
@@ -52,8 +53,8 @@ body {
 
 }
 body {
-  color: #fff;
-  text-align: center;
+  color: $color-primary;
+  //text-align: center;
   //text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 

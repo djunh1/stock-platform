@@ -26,4 +26,8 @@ Rails.application.configure do
   #TODO: Action cable config on Heroku - update when deploying
   config.action_cable.allowed_request_origins = ['https://djunh-portfolio.herokuapp.com/', 'http://djunh-portfolio.herokuapp.com/']
   config.action_cable.url = "wss://djunh-portfolio.herokuapp.com/cable"
+
+  # Check action storage on amazon when in prod
+
+  config.active_storage.service = :amazon
 end

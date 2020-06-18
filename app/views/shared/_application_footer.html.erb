@@ -17,12 +17,17 @@
             <h6>Navigation</h6>
             <ul class="footer-links">
               <li><%= link_to "Rules", trading_rules_path %></li> 
-              <li><%= link_to "Market Status", market_status_path %></li> 
+              <li><%= link_to "Market Status", markets_path %></li> 
               <li><%= link_to "Stocks", portfolios_path %></li> 
               <li><%= link_to "Blog", blogs_path %></li> 
               <% if logged_in?(:site_admin) %>
                 <li><%= link_to "Add Stocks", rails_items_path %></li> 
-                <li><%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %></li>
+                <li><%= link_to 'Write a New Blog', new_blog_path  %></li>
+                <% if Market.all.count < 1 %>
+                  <li><%= link_to 'Create a Market Status', new_market_path  %></li>
+                <% else %>
+                  <li><%= link_to 'Update Market Status', edit_market_path(1)  %></li>
+                <% end %>
               <% end %>
     
             </ul>

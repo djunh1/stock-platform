@@ -29,7 +29,7 @@ end
         title: 'Rules'
       },
       {
-        url: market_status_path,
+        url: markets_path,
         title: 'Market Status'
       },
       {

@@ -22,9 +22,14 @@ Rails.application.routes.draw do
 
   get 'download_resume', to: "pages#download_file"
   get 'trading-rules', to: 'pages#trading_rules'
-  get 'market-status', to: 'pages#market_status'
+  #get 'market-status', to: 'pages#market_status'
   get 'tech-news', to: 'pages#tech_news'
   get 'privacy' => 'pages#privacyPolicy'
   get 'terms' => 'pages#termsAndConditions'
+
+  resources :markets, except: [:delete]
+
+  #get 'market-status' => 'market#index'
+  #post 'market/new' => 'market#update'
 
 end

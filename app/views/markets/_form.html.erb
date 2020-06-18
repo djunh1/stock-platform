@@ -1,0 +1,43 @@
+<div class="col-md-10 offset-md-1 ">
+
+<%= form_for([market_item], html: {class: "d-flex flex-column justify-content-start"}) do |form| %>
+<% if market_item.errors.any? %>
+  <% market_item.errors.full_messages.each do |e| %>
+      <%= alert_generator e %>
+  <% end %>
+<% end %>
+
+  <div class="d-flex flex-column justify-content-start mb-4">
+    <p class="font-size-1">Percent Cash:</p>
+    <div class="form-group">
+      <%= form.number_field :percent_cash, class: 'form-control number-field', placeholder: "Percent Cash" %>
+    </div>
+  </div>
+  
+
+ 
+
+  <p class="font-size-1">Current Market Trend:</p>
+      <div class="form-group mb-5">
+        <%= form.radio_button :status, "Bull" %>
+        <%= form.label :status, "Bull", class: 'font-size-1 mr-4' %>
+
+        <%= form.radio_button :status, "Bear" %>
+        <%= form.label :status, "Bear", class: 'font-size-1' %>
+    </div>
+
+  
+
+    <div class="form-group">
+      <p class="font-size-1"p>Market Status Text: </p>
+      <%= form.rich_text_area :market_status_update, rows: 150, cols: 50 %>
+    </div>
+
+
+    <div class="actions p-5 mb-5">
+      <%= form.submit 'Save Market Status', class: 'btn btn-primary btn-block' %>
+    </div>
+
+<% end %>
+
+</div>
