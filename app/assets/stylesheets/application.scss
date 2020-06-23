@@ -10,8 +10,10 @@
 // @import "base/base.scss";
 @import "base/animations.scss";
 @import "base/typography.scss";
+@import "pages/termsPriv.scss";
 
 @import "pages/mainpage.scss";
+@import "components/ticker.scss";
 @import "market.scss";
 @import "pages/rules.scss";
 @import 'components/footer.scss';
@@ -513,7 +515,7 @@ h1.header{
 
 // navbar 
 nav .nav-link.active {
-  font-weight: 100;
+  font-weight: 600 !important;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -543,3 +545,38 @@ a.middle:hover:before {
   transform: scaleX(1);
 }
 
+// side bar picture
+
+.blog_preview_pic {
+   width: 100%;
+   height: auto;
+}
+
+.blog_preview_text{
+  max-width: 100%;
+  max-height: 30rem;
+}
+
+.ticker_preview_pic {
+  height: auto;
+  width: 70%;
+}
+
+.blog-news-section{
+  transform: translateY(10rem);
+  @media only screen and (max-width: $bp-medium) {
+    transform: translateY(0px);
+  }
+}
+
+.stock-ticker-section{
+  transform: translateY(10rem);
+  @media only screen and (max-width: $bp-medium) {
+    transform: translateY(0px);
+  }
+}
+
+ul.ticker-list{
+  margin: 0px;
+  padding:0px
+}

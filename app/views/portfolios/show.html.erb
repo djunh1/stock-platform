@@ -22,18 +22,16 @@
            </tr>   
         </tbody>
       </table>
-    <blockquote>
-      <%= @portfolio_item.body %>
-    </blockquote>
-
-    <div class="d-flex justify-content-around p-4 mb-3">
-        <%= link_to "Back" , portfolios_path, class: 'btn btn-success' %>
-        <% if logged_in?(:site_admin) %>
-          <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-success' %>
-       <% end %>
-         
-    </div>
-      
+      <blockquote>
+        <%= @portfolio_item.body %>
+      </blockquote>
+      <div class="d-flex justify-content-around p-4 mb-3">
+          <%= link_to "Back" , portfolios_path, class: 'btn btn-success' %>
+          <% if logged_in?(:site_admin) %>
+            <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-success' %>
+        <% end %>
+      </div>
+    </div>  
 
     </div>
   </div>

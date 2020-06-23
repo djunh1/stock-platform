@@ -18,7 +18,7 @@
     <div class="row mb-5">
         <div class="col-lg-6">
             <% if @market.status == "Bull" %>
-            <div class="card">
+            <div class="card m-5">
                 <div class="card-text">
                     <div class="portada">
                     </div>
@@ -33,7 +33,7 @@
                 </div>
             </div>
            <% else %> 
-           <div class="card">    
+           <div class="card m-5">    
             <div class="card-text">
                 <div class="portada portada--bear">
                 </div>
@@ -52,7 +52,7 @@
        
 
         <div class="col-lg-6">
-                <h3 class="header-market">
+                <h3 class="header-market m-5">
                 <span>
                 <%= @market.percent_cash %> % cash
                 </span>

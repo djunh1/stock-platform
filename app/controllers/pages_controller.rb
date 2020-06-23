@@ -1,7 +1,9 @@
 class PagesController < ApplicationController
   def home
-    @skills = Skill.all
-    @posts = Blog.all
+    #@skills = Skill.all
+    @posts = Blog.order("RANDOM()").limit(3)
+    @tickers = Portfolio.all
+    
   end
 
   def trading_rules

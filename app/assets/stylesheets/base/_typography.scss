@@ -6,8 +6,9 @@ body {
   color: $color-black;
   //background-color: #fff;
   font-family: $font-primary;
-  line-height: 1.7;
+  line-height: 1.4;
   box-sizing: border-box;
+  font-weight: 200;
 }
 
 strong{
@@ -25,6 +26,25 @@ p, span {
 
 p.font-light, span.font-light{
   color: $color-white;
+}
+
+a.blog_preview_link{
+  color:$color-primary-light;
+  font-size:1rem;
+  font-weight: 600;
+
+  &:hover{
+    color:$color-primary;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+   
+  }
+
+  &--stonks {
+    color:blue;
+    font-size:1.5rem;
+  }
 }
 
 h1.header{
@@ -114,6 +134,37 @@ h1.header{
     //transform:skewY(0.2deg) skewX(0.2deg) scale(1.05);
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
   }
+}
+
+.heading-stock-news{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+  -webkit-background-clip: text;
+  color:transparent;
+  letter-spacing: 2px;
+  transition: all .2s;
+  
+
+  @include respond(tab-port){
+    font-size:3rem;
+  }
+
+  @include respond(tab-port){
+    font-size:2rem;
+  }
+
+  &:hover{
+   
+    text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
+  }
+}
+
+.blog_preview_header{
+  font-size:1.4rem;
+  font-weight: 500;
+  color:$color-primary-dark;
 }
 
 .heading-tertiary {

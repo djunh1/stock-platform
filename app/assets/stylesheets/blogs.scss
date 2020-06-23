@@ -242,6 +242,11 @@ a.middle:hover:before {
 
 .blog-sidebar{
   padding-top:4rem;
+
+  @media only screen and (max-width: $bp-medium) {
+      margin: 5rem;
+      padding-top: 0rem;
+  }
 }
 
 .blog-sidebar-source{
@@ -426,6 +431,6 @@ article::after {
   position: relative;
 
   &--index {
-    width:40rem;
+    width:90%;
   }
 }

@@ -1,0 +1,119 @@
+
+
+
+#privacyPolicy h2 {
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+
+.tocFont {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+#privacyPolicy p.tocsubhead {
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 26px;
+}
+
+
+#privacyPolicy ul{
+  padding-left:25px;
+}
+#privacyPolicy li {
+    list-style-type: none;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+#privacyPolicy li.p-text {
+    font-size: 18px;
+}
+
+#privacyPolicy strong{
+  font-weight: 600;
+margin-right: 1.1rem;
+font-size: 1.5rem;
+}
+
+section.section-privacy p{
+  font-size:18px;
+}
+
+div#privacyPolicy p.anchor{
+  font-size:20px;
+  font-weight:bold;
+}
+
+div#privacyPolicy ul.list-privacy{
+  list-style-type: none;
+  margin-top: 15px;
+}
+
+div#privacyPolicy ul.list-privacy li{
+  margin-bottom: 15px;
+}
+
+.anchor{
+  padding-top: 25px;
+}
+
+
+
+
+.article-content ul li {
+    margin-left: 20px !important;
+    margin-bottom: 10px !important;
+    list-style: disc !important;
+    font-size: 16px !important;
+}
+
+.article-content ol li a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff9933;
+    text-decoration: none;
+}
+
+.article-content ol li{
+
+  margin-bottom: 10px;
+  list-style: outside decimal;
+  font-size: 18px;
+}
+
+.article-content ol ul{
+  margin-bottom:25px;
+  padding-left:15px;
+}
+.article-content ol{
+  padding-left:15px;
+}
+
+
+div.section-privacy ul.terms-unordered-list li{
+  list-style-type: circle !important;
+  margin-top: 15px;
+}
+.terms_and_conditions, .section-privacy{
+  font-size: 1.2rem;
+  & > p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+}
+
+ol.terms-list{
+
+  &>li{
+    padding: .3rem;
+    margin: 0rem;
+  }
+  
+}

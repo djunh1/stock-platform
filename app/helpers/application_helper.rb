@@ -71,4 +71,12 @@ end
     js add_gritter(msg, title: "Dougy Day Trader")
   end
 
+  def blog_image img
+    if img.model.main_image?
+      img.url
+    else 
+      ActionController::Base.helpers.asset_path('thestockfather.png')
+    end
+  end
+
 end

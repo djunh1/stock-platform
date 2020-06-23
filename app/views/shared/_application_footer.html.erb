@@ -20,17 +20,22 @@
               <li><%= link_to "Market Status", markets_path %></li> 
               <li><%= link_to "Stocks", portfolios_path %></li> 
               <li><%= link_to "Blog", blogs_path %></li> 
-              <% if logged_in?(:site_admin) %>
-                <li><%= link_to "Add Stocks", rails_items_path %></li> 
-                <li><%= link_to 'Write a New Blog', new_blog_path  %></li>
-                <% if Market.all.count < 1 %>
-                  <li><%= link_to 'Create a Market Status', new_market_path  %></li>
-                <% else %>
-                  <li><%= link_to 'Update Market Status', edit_market_path(1)  %></li>
-                <% end %>
-              <% end %>
+              
     
             </ul>
+            <% if logged_in?(:site_admin) %>
+            <h6>Administration</h6>
+            <ul class="footer-links">
+            <li><%= link_to "Add Stocks", rails_items_path %></li> 
+            <li><%= link_to 'Write a New Blog', new_blog_path  %></li>
+            <% if Market.all.count < 1 %>
+              <li><%= link_to 'Create a Market Status', new_market_path  %></li>
+            <% else %>
+              <li><%= link_to 'Update Market Status', edit_market_path(1)  %></li>
+            <% end %>
+            </ul>
+            <% end %>
+
           </div>
 
           <div class="col-xs-6 col-md-3">
@@ -52,10 +57,9 @@
 
           <div class="col-md-4 col-sm-6 col-xs-12">
             <ul class="social-icons">
-              <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
-              <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>   
+          
+              <li><a class="twitter" href="https://twitter.com/djunh1" target="_blank"><i class="fa fa-twitter"></i></a></li>
+             
             </ul>
           </div>
         </div>

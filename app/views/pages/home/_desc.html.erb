@@ -1,7 +1,18 @@
+
+<div class="">
+<div class="ticker-wrap">
+  <div class="ticker">
+  <% @tickers.each do |stock| %>
+    <div class="ticker__item"><%= stock.ticker %></div>
+    <% end %>
+  </div>
+</div>
+</div>
 <div class="container-fluid bg-light pt-5 pb-5 pl-5">
       <div class="row">
-        <div class="col-lg-8 offset-md-2 p-5">
-          <h2 class="text-left section-header mb-4">About</h2>
+        <div class="col-lg-6 offset-lg-1 p-5 text-center">
+        
+          <h2 class="text-left section-header mb-4 ">About</h2>
 
           <p class="text-left paragraph paragraph--dark">There is a lot of information about the markets, stocks, and how to trade correctly. 
           Most people are frauds, and don't even know the basics...yet they have no problems charging people an insane amount of money for 
@@ -23,7 +34,7 @@
 
             <div class="listcustom">
 
-              <div>
+              <div >
                 <p class="text-left paragraph paragraph--dark"> You are bored of reading about the so-called Fintwit experts who called 
                 winning trades after the fact.  These people never seem to lose money, and must be making hundreds of 
                 thousands of dollars every single month.
@@ -53,15 +64,40 @@
             
           </div>
 
-            
+        </div>
 
+        <div class="col-lg-3 offset-lg-1 ">
 
-            
+          <div class="listcustom-wrap blog-news-section">
+          
           
 
+          <h3 class="text-center heading-stock-news mb-5">Stock News</h3>
+          <% @posts.each do |post| %>
+            <div class="d-flex flex-column mb-3 p-1">
+              <%= image_tag blog_image(post.main_image), class: 'blog_preview_pic' %>
+              <div class="d-flex flex-column blog_preview_text m-2">
+                <h3 class="blog_preview_header"><%= post.title %></h3>
+                <%= link_to 'Read More ...', post, class:'blog_preview_link' %>
+              </div>
+            </div>
+          <% end %>
+          </div>
+          <br>
+          <div class="listcustom-wrap stock-ticker-section mt-4">  
+          <h3 class="text-center heading-stock-news">Watchlist</h3>
+            <ul class="ticker-list">
+             <% @tickers.each do |stonk| %>
+              <li class="d-flex justify-content-around align-items-center p-2 mb-2">
+                <%= image_tag blog_image(stonk.main_image), class: 'ticker_preview_pic mr-2 p-3' %>
+                <%= link_to stonk.ticker, portfolio_show_path(stonk), class:'blog_preview_link blog_preview_link--stonks text-left' %>
+                
+              </li>
 
-         
-          
+             <% end %> 
+            </ul>
+
+          </div>
         </div>
       </div>
 </div>

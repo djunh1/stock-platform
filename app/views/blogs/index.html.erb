@@ -1,11 +1,11 @@
-<div class="row">
+<div class="row p-5">
   <div class="col-lg-7 offset-lg-1 blog-main">
-  <%= paginate @blogs %>
-  <%= render @blogs %>
-
-  <nav class="blog-pagination">
     <%= paginate @blogs %>
-  </nav>
+    <%= render @blogs %>
+
+    <nav class="blog-pagination">
+      <%= paginate @blogs %>
+    </nav>
 
   </div>
   <%= render 'shared/blog_sidebar' %>

@@ -10,6 +10,7 @@
   
   div.listcustom {
     counter-reset: list-number;
+    text-align: left;
   }
   div.listcustom div:before {
     counter-increment: list-number;
