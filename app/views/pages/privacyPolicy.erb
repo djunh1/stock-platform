@@ -4,18 +4,17 @@
 <article>
     <section class=" section-privacy">
         <h3 class="section-title"> Privacy Policy </h3><br>
-        <h4 class="text-18 center-align">LAST UPDATED ON FEBURARY 20 2019</h4>
+        <h4 class="text-18 center-align">LAST UPDATED ON June 23 2020</h4>
         <hr>
 
         <div class="article-content">
-        <ol>
+        <ol class="privacy_policy_listing">
             <li>
               <a href="#introduction">INTRODUCTION</a>
             </li>
             <ul>
               <li><strong>Section 1.1</strong>: Definitions</li>
               <li><strong>Section 1.2</strong>: Data Controller</li>
-              <li><strong>Section 1.3</strong>: Payment Applicability</li>
             </ul>
             <li>
                 <a href="#information">INFORMATION WE COLLECT</a>
@@ -23,10 +22,9 @@
             <ul>
                 <li><strong>Section 2.1</strong>: Required information to use the <%= @companyName %> Platform</li>
                 <li><strong>Section 2.2</strong>: Information you elect to provide us</li>
-                <li><strong>Section 2.3</strong>: Required information for use of payment systems</li>
-                <li><strong>Section 2.4</strong>: Information we automatically collect from your use of <%= @companyName %></li>
-                <li><strong>Section 2.5</strong>: Information we collect from third parties</li>
-                <li><strong>Section 2.6</strong>: Childrens data</li>
+                <li><strong>Section 2.3</strong>: Information we automatically collect from your use of <%= @companyName %></li>
+                <li><strong>Section 2.4</strong>: Information we collect from third parties</li>
+                <li><strong>Section 2.5</strong>: Childrens data</li>
             </ul>
             <li>
                 <a href="#info_how">HOW WE USE INFORMATION WE COLLECT</a>
@@ -34,10 +32,7 @@
             <ul>
                 <li><strong>Section 3.1</strong>: Develop and improve the <%= @companyName %> platform</li>
                 <li><strong>Section 3.2</strong>: Create and maintain a trusted, safe environment</li>
-                <li><strong>Section 3.3</strong>: How our Payment Controller uses the personal information provided</li>
-                <li><strong>Section 3.4</strong>: SMS Terms - USA</li>
-                <li><strong>Section 3.5</strong>: Promotional messages</li>
-
+                <li><strong>Section 3.3</strong>: Communications</li>
             </ul>
 
             <li>
@@ -45,11 +40,8 @@
             </li>
             <ul>
                 <li><strong>Section 4.1</strong>: Sharing content with advertising or social media</li>
-                <li><strong>Section 4.2</strong>: Sharing between members</li>
-                <li><strong>Section 4.3</strong>: User Profiles, Venue Listings, and other public information</li>
-                <li><strong>Section 4.4</strong>: Compliance with Law, responding to legal requests, and protection of our rights </li>
-                <li><strong>Section 4.5</strong>: Service Providers</li>
-                <li><strong>Section 4.6</strong>: Aggregated data</li>
+                <li><strong>Section 4.2</strong>: Compliance with Law, responding to legal requests, and protection of our rights </li>
+                <li><strong>Section 4.3</strong>: Aggregated data</li>
             </ul>
 
             <li>
@@ -60,6 +52,7 @@
                 <li><strong>Section 5.1</strong>: Analyzing your communications</li>
                 <li><strong>Section 5.2</strong>: Linking third party accounts</li>
                 <li><strong>Section 5.3</strong>: Third party Integrations</li>
+                <li><strong>Section 5.4</strong>: Platform Features</li>
             </ul>
 
             <li>
@@ -86,9 +79,12 @@
             </ul>
             <li>
                 <a href="#security">SECURITY
-
                 </a>
             </li>
+            <ul>
+                <li><strong>Section 8</strong>: Security</li>
+             
+            </ul>
 
 
             <li>
@@ -97,29 +93,29 @@
                 </a>
             </li>
             <ul>
-                <li><strong>Section 10.1</strong>: Fair Information Practices</li>
-                <li><strong>Section 10.2</strong>: Data Breaches</li>
+                <li><strong>Section 9.1</strong>: Fair Information Practices</li>
+                <li><strong>Section 9.2</strong>: Data Breaches</li>
 
             </ul>
             <li><a href="#policy-rev">POLICY REVISIONS</a>
             </li>
             <ul>
-                <li><strong>Section 11.1</strong>: Email Collection</li>
+                <li><strong>Section 10.1</strong>: Email Collection</li>
             </ul>
             <li>
                 <a href="#spam">CAN SPAM Act  </a>
             </li>
             <ul>
-                <li><strong>Section 12.1</strong>: Email Collection</li>
-                <li><strong>Section 12.2</strong>: Agreement</li>
-                <li><strong>Section 12.3</strong>: Unsubscribe</li>
+                <li><strong>Section 11.1</strong>: Email Collection</li>
+                <li><strong>Section 11.2</strong>: Agreement</li>
+                <li><strong>Section 11.3</strong>: Unsubscribe</li>
 
             </ul>
             <li>
                 <a href="#contact">Contact</a>
             </li>
             <ul>
-                <li><strong>Section 13.1</strong>: Information</li>
+                <li><strong>Section 12.1</strong>: Information</li>
             </ul>
         </ol>
         </div>
@@ -127,10 +123,10 @@
         <div id="privacyPolicy" class="section-privacy">
            <p id="introduction" class="anchor"><strong>1. INTRODUCTION</strong></p>
            <ul>
-             <li class="policy_header"><strong> 1.1</strong>: Overview</li>
+             <li class="policy_header"><p>1.1 Overview</p></li>
              <li>
-               <span>
-                 <%= @companyName %>, LLC. ("<strong><%= @companyName %></strong>", "<strong>we</strong>") values
+               <p>
+                 <%= @companyName %>, LLC. ("<u><%= @companyName %></u>", "<u>we</u>") values
                  your privacy and is committed to protecting your personal information.
                  This privacy policy has been compiled to better serve those who are concerned with how their 'Personally
                  Identifiable Information' (PII) is being used online. PII,
@@ -139,110 +135,78 @@
                  or locate a single person, or to identify an individual in context. Please read our privacy
                  policy carefully to get a clear understanding of how we collect, use, protect or otherwise
                  handle your Personally Identifiable Information in accordance with our website.
-               </span>
+               </p>
              </li>
              <li>
-               <strong><p>By using our platform (including booking venues or renting ice time), you
+               <p><p>By using our platform, you
                consent to the collection, transfer,
                manipulation, storage, disclosure and other uses of your information as delineated in this
                Privacy Policy. Irrespective of which country you reside in or supply information from,
                you authorize <%= @companyName %> to use your information in the United States
                operates as described herein. Accordingly, please be sure to read this Privacy Policy before
-               using the Services or submitting information to us. </p></strong>
-           <span>This Privacy Policy may change from time to time and your continued use of the Services constitutes
+               using the Services or submitting information to us. </p></p>
+           <p>This Privacy Policy may change from time to time and your continued use of the Services constitutes
                acceptance of such changes, so please check this Privacy Policy periodically for updates. This
                Privacy Policy is incorporated by reference into the <%= @companyName %> Terms of Use
                (and in the event of any inconsistency between the Terms of Use and this Privacy Policy,
                this Privacy Policy shall govern), and Payments Terms of Service.
                If you have any questions or comments about this Privacy Policy,
-               please contact us at <%= @infoEmail %>.</span>
+               please contact us at <%= @infoEmail %>.</p>
              </li>
            </ul>
 
 
 
            <ul>
-             <li class="policy_header"><strong>1.2</strong>: Definitions</li>
-             <li><strong><%= @companyName %></strong><span>: Also referred to as "us", "we", or "the company".</span></li>
-             <li><strong>Venues</strong>: Also referred to as "rinks", "hosts", "verified rinks" and users.</li>
-             <li><strong>Payment Gateway</strong> refers to our online Payment portal, Stripe.</li>
+             <li class="policy_header"><p>1.2 Definitions</p></li>
+             <li><u><%= @companyName %></u><span>: Also referred to as "us", "we", or "the company".</span></li>
            </ul>
-
-           <ul>
-             <li class="policy_header"><strong>1.3</strong>: Payment Applicability</li>
-             <li><span>This Privacy policy also applies to the Payment Services provided
-             by <%= @companyName %>.  When using Stripe, you will be providing information including personal information to
-             them in for use of their services.  Stripe is the Payments Data Controller. </span></li>
-             <li></li>
-           </ul>
-
-
 
 
             <p id="information" class="anchor"><strong>2. INFORMATION COLLECTION AND USE</strong></p>
             <ul>
-                <li class="policy_header"><strong> 2.1 </strong>Required information to use the <%= @companyName %> Platform</li>
-                <li><span>When hosting games, booking games or registering on our site, as appropriate, you may be asked to
-                    enter your name,
-                    email address, physical address, phone number or other details to help you with your
-                    experience.  You may browse out site without registering.  This information is required
-                    for us to provide services to users and to comply with any legal obligations required of us.  Without
-                   this information, we would be unable to provide you with all the requested services we offer. <span> <br>
-                   <span><strong>Account information</strong>: When you sign up for a <%= @companyName %> Account, we require your full name ( first name and
-                      last name), and an email address.  </span>  <br>
-                  <span><strong>Profile and Venue information</strong>:  In order to use certain features of the <%= @companyName %> platform, such as booking ice time or
-                  renting ice time, we ask you to provide additional information including your physical address, a phone number, and a profile picture.  </span><br>
-                  <span><strong>Communications with <%= @companyName %> and users</strong>: When you communicate with <%= @companyName %> or use our platform to communicate with other members,
-                  we collect information about your communication and any information you choose to provide.</span><br>
-                  <span><strong>Payment information</strong>: In order to use certain features of the <%= @companyName %> platform, such as booking ice time or renting ice
-                  time, you will be required to provide financial information to our payment provider (Stripe).  This allows users to process payments.  <%= @companyName %>
-                does not store this information.  Please refer to Stripe's Policies for more information below.</span><br><br>
-                <a href="https://stripe.com/us/privacy" target=_blank>Stripe's Global Privacy Policy - Worldwide</a>
+                <li class="policy_header"><p> 2.1 Required information to use the <%= @companyName %> Platform</p></li>
+                <li><p>
+                    When you register for <%= @companyName %> Platform, and at other times, we will collect personally 
+                    identifiable information from you that may include your name, e-mail address facts about your computers, 
+                    and investing habits 
+                     and similar information. We do not, however, knowingly collect personal information from children under the
+                      age of thirteen.
+                </p>
                 </li>
             </ul>
             <ul >
-                <li class="policy_header"><strong>2.2</strong> Information you elect to provide us</li>
-                <li><span>You may choose to provide us with additional personal information.  This information will be processed based on our legitimate interest,
-                or with your consent where applicable. </span> <br>
-                <span><strong>Additional user information</strong>: You may choose to provide additional information as part of your <%= @companyName %>
-                profile such as preferred position.  This information will be publicly visible to other <%= @companyName %> users. </span><br>
-                <span><strong>Other information</strong>: You may provide other information to <%= @companyName %> when you fill a form, update or add information
-                to your <%= @companyName %> account, post reviews, communicate with our customer service team, or other features on the <%= @companyName %> platform.</span><br>
+                <li class="policy_header"><p>2.2 Information you elect to provide us</p> </li>
+                <li><p>You may choose to provide us with additional personal information.  This information will be processed based on 
+                our legitimate interest,
+                or with your consent where applicable. </p> 
+                <p><u>Additional user information:</u> You may choose to provide additional information as part of your <%= @companyName %>
+                profile such as preferred position.  This information will be publicly visible to other <%= @companyName %> users. </p>
+                <p><u>Other information:</u>You may provide other information to <%= @companyName %> when you fill a form, 
+                update or add information
+                to your <%= @companyName %> account, post comments, communicate with our customer service team, 
+                or other features on the <%= @companyName %> platform.</p>
               </li>
             </ul>
-            <ul >
-                <li class="policy_header"><strong>2.3</strong>: Required information for use of payment systems</li>
-                <li><span>We do not require any sensitive information for use of our payment gateway.  The type of information you need to provide to our Payment
-                  gateway can be found at the following link.  </span><br><br>
 
-                  <a href="https://stripe.com/us/privacy" target=_blank>Stripe's Global Privacy Policy - Worldwide</a> <br><br>
 
-                  <span>We store information with our Payment Provider ( Stripe) in order to provide use of <%= @companyName %>'s platform.  This information
-                  is non sensitive in nature, and allows us to communicate with the payment gateway when a user books ice time or rents icetime to users.  </p><br>
+            <ul>
+                <li class="policy_header"><p>2.3 Information we automatically collect from your use of <%= @companyName %></p> </li>
+                <li>
+                <p>When you use the <%= @companyName %> platform, we automatically collect personal information about the 
+                services you use and how you use them.
+                   This information is required in order to provide and improve the use of the <%= @companyName %> platform.</p>
 
-                  <span><strong>Merchant Identification</strong>: When you use payment services provided by stripe, we provide a merchant identification which allows
-                  venues to obtain a sellers permit through Stripe.   </span><br>
-                  <span><strong>Stripe Identification</strong>: When you use payment services provided by stripe, we provide a Stripe identification which allows
-                  users Stripes platform to provide them with personal information.  This ID that we automatically generate is our communications between our platform
-                 and Stripes services. </span><br>
-                </li>
-            </ul>
-
-            <ul >
-                <li class="policy_header"><strong>2.4</strong>:  Information we automatically collect from your use of <%= @companyName %></li>
-                <li><span>When you use the <%= @companyName %> platform, we automatically collect personal information about the services you use and how you use them.
-                   This information is required in order to provide and improve the use of the <%= @companyName %> platform.</span><br>
-
-                   <span><strong>Log data and device information</strong>: We automatically collect log data and device information when you access <%= @companyName %>, and
+                   <p><u>Log data and device information:</u> We automatically collect log data and device information when you access <%= @companyName %>, and
                    use our platform.  This information includes: the use of our platform ( links clicked or third party applications), IP address, access dates and times,
                  hardware and software information, device event information, cookie data, and pages you have viewed before, during, and after
-                 using the <%= @companyName %> platform.</span><br>
-                 <span><strong>Use information</strong>: We collect information on the interactions on our platform including the pages or content
-                 you view, your searches for games or venues, bookings you have made, or any other actions on the <%= @companyName %> platform.</span><br>
-                 <span><strong>Geo-location information</strong>: We may collect information about your location as determined through data such as IP address,
-                 or mobile devices GPS in order to offer you an improved user experience using the <%= @companyName %> platform.  Many mobile devices allow users to control or disable use
-               of these services through the devices settings menu.  We will not collect information about your device if your location service is disabled. </span><br>
-               <span><strong>Cookies</strong>: Cookies are small files that a
+                 using the <%= @companyName %> platform.</p>
+
+                 <p><u>Use information:</u> We collect information on the interactions on our platform including the pages or content
+                 you view, your searches for blog articles, or any other actions on the <%= @companyName %> platform.</p>
+
+                 <p></p>
+               <p><u>Cookies: </u> Cookies are small files that a
                  site or
                  its service provider transfers
                  to your computer's hard drive through your Web browser (if you allow) that
@@ -259,307 +223,278 @@
                  You can learn more about cookies by visiting
 
                  which includes addition useful information on cookies and how to block them using
-                 different browsers.</span><br><br>
+                 different browsers.</p>
 
-                 <a href="http:\\www.allaboutcookies.org" target=_blank>www.allaboutcookies.org</a><br>
-                  <span><strong>Software Development Kits (SDKs)</strong>: Third parties including Facebook or twitter may use cookies and other storage technologies
+
+                    <div class="m-3">
+                    <a href="http:\\www.allaboutcookies.org" target=_blank class="terms_link mb-5">www.allaboutcookies.org</a>
+                    </div>
+                 
+                  <p><u>Software Development Kits (SDKs):</u> Third parties including Facebook or twitter may use cookies and other storage technologies
                   to collect or receive information from our platform, as well as other sites.  Applications including facebook or twitter may collect information from
                 your application and use that information to provide services and targeted ads.  Users can opt-out of the collection and use of information for ad targeting by
               updating their facebook account ad settings and by contacting us at <%= @optOutEmail %>.  Please provide a full description of your request and
-            validation information.  For more information on these technology, please see see</span>
-            <br><a href="http://www.aboutads.info/" target=_blank>http://www.aboutads.info/</a> <br>
-            <span><strong>Do not track signals</strong>: Do Not Track (DNT) is a privacy preference
+            validation information.  For more information on these technology, please see see:</p>
+            <div class="m-3">
+            <a href="http://www.aboutads.info/" target=_blank class="terms_link">http://www.aboutads.info/</a> 
+            </div>
+            
+
+            <p class=mt-3><u>Do not track signals</u>: Do Not Track (DNT) is a privacy preference
                 that any user can set as a preference in their web browsers. The United States
                 Federal Trade Commission has endorsed DNT and California enacted a bill (AB370) that
                 lets the sites you visit know that you do not want them collecting certain kinds of
                 information about you across services that you have either directly or indirectly
                 interacted with while on the page. The DNT browser setting is now supported by recent
-                versions of major browsers, including Firefox 5+, Internet Explorer 9+, Safari 5.1+, and Chrome.</span>
+                versions of major browsers, including Firefox 5+, Internet Explorer 9+, Safari 5.1+, and Chrome.</p>
 
                </li>
 
             </ul>
             <ul >
-                <li class="policy_header"><strong>2.5 </strong>: Information we collect from third parties</li>
-                <li><span><%= @companyName %> may collect information including personal information that others provide about you
+                <li class="policy_header"><p>2.4 Information we collect from third parties</p></li>
+                <li><p><%= @companyName %> may collect information including personal information that others provide about you
                 when they use the <%= @companyName %> platform.  They may obtain information from other sources and combine that information we
               collect through our platform.  We do not control or supervise, or respond to how third parties providing your information process this information.
-              Any information request regarding the disclosure of your personal information should be directed to those third parties.</span><br>
-              <span><strong>Third party services</strong>: If you link, connect, or login to your <%= @companyName %> account with a third party service such
+              Any information request regarding the disclosure of your personal information should be directed to those third parties.</p>
+
+              <p><u>Third party services:</u> If you link, connect, or login to your <%= @companyName %> account with a third party service such
               as Facebook or Twitter, the third party may send us informaton such as your registration information, friends list, or profile information.  For more
-            information on this data, please refer to your privacy policy and privacy settings from that service.</span><br>
-            <span><strong>Other sources</strong>: In accordance to the applicable laws, we may receive additional information about you in order to help detect
+            information on this data, please refer to your privacy policy and privacy settings from that service.</p>
+
+            <p><u>Other sources:</u> In accordance to the applicable laws, we may receive additional information about you in order to help detect
             fraud of safety issues from third party services providers and combine it with information we have about you. For example we may receive background checks
-           results from fraud warnings from service providers. </span>
+           results from fraud warnings from service providers. </p>
 
                     </li>
 
-                <li class="policy_header"><strong>2.6 </strong>: Childrens data</li>
+                <li class="policy_header"><p>2.5 Childrens data </p></li>
             </ul>
             <ul >
-                <li><Strong>Modifying your personal information</Strong></li>
-                <li><span>Our Services are not directed to persons under 18. If you become aware that your child
+                <li><u>Modifying your personal information</u></li>
+                <li><p>Our Services are not directed to persons under 18. If you become aware that your child
                             has provided us with personal information without your consent, please contact us
                             at <%= @infoEmail %>. We do not knowingly collect personal information
                             from children under 18. If we become aware that a child under 18 has provided us
                             with personal information, we take steps to remove such information and terminate
                             the child's account. You can find additional resources for parents and teens at
-                    </span><br><br>
-                    <a href="http://www.connectsafely.org" target="_blank">www.connectsafely.org.</a>
+                    </p>
+                    <div class="m-2">
+                     <a href="http://www.connectsafely.org" target="_blank" class="terms_link">www.connectsafely.org</a>
+                    </div>
+                   
             </ul>
 
 
-            <p id="info_how" class="anchor"><strong>3</strong>. HOW WE USE INFORMATION WE COLLECT</p>
+            <p id="info_how" class="anchor"><strong>3.</strong> HOW WE USE INFORMATION WE COLLECT</p>
             <ul>
-              <li><span>We may use, storage and process personal information to provide, understand, improve and develop the <%= @companyName %> Platform.  Additionally
+              <li><p>We may use, storage and process personal information to provide, understand, improve and develop the <%= @companyName %> Platform.  Additionally
               we may use this information to provide and maintain a trusted environment including compliance with our policies or legal obligations.  We may
-            use data for provide, personalize, measure and improve advertising and marketing. </span></li>
+            use data for provide, personalize, measure and improve advertising and marketing. </p></li>
 
-            <li class="policy_header"><span><strong>3.1 Develop and improve the <%= @companyName %> platform</strong>:
+            <li class="policy_header"><p>3.1 Develop and improve the <%= @companyName %> platform</p>
 
-              </span></li>
-              <li><span>We may use personal information you provide to improve and develop our platform.</span>
+              </li>
+              <li><p>We may use personal information you provide to improve and develop our platform.</p>
               <ul>
-                  <li>1. Enable use of our platform</li>
-                  <li>2. Enable you to communicate with other users on our platform.</li>
-                  <li>3. Provide customer support.</li>
-                  <li>4. Operate, improve, or protect the <%= @companyName %> platform by collecting analytic data or conducting research.</li>
-                  <li>5. To help personalize and customize the <%= @companyName %> platform's user experience by (1) making venue suggestions, (2) ranking search
-                  results.</li>
+                  <li><p>1. For the purposes for which you specifically provided the information including, 
+                  for example, to process, validate and verify your registration.</p>
+                  <p>2. To send you notifications about your accounts or transactions with us and to otherwise contact 
+                  you with information that we believe will be of interest to you.</p>
+                  <p>3. To notify you about our products, services, and special offers or those of our advertisers.</p>
+                  <p>4. Operate, improve, or protect the <%= @companyName %> platform by collecting analytic data or conducting research.</p>
+                  <p>5. To provide advertisers and other third parties with aggregate information about our user base and usage patterns.</p>
+                  <p>6. To personalize the content and advertising that you and others see based on personal characteristics or preferences.</p>
+                  
+                  </li>
               </ul>
             </li>
 
-            <li class="policy_header"><span><strong>3.2 </strong>: Create and maintain a trusted, safe environment</span></li>
-            <li><span>We may use personal information you provide to create and maintain a trusted environment. We reserve the right to:</span>
-            <ul>
-                <li>1. Conduct security investigations and risk assessments.</li>
-                <li>2. Resolve any disputes between any of our members, and enforce agreements with third parties.</li>
-                <li>3. Detect and prevent fraud, spam, abuse, security incidents and any harmful activity.</li>
-                <li>4. Verify your information provided by you including a verified Venue's rink address.</li>
-                <li>5. Comply with our legal obligations.</li>
-                <li>6. Enforce our Terms of Service, and all policies herein. </li>
-                <li>7. Per <strong>Section 3.2</strong> subsections 1 through 6, we may conduct profiling based on your interactions with the <%= @companyName %> platform,
-                your profile information, and any other content you have submitted to the <%= @companyName %> platform, as well as information from third parties.  In limited
-              cases, some automated processes may restict use, or suspend use of our platform if the processes detect activity that can cause a safety
-            issue with the <%= @companyName %> platform, our community, or our third parties.  Please contact us if you wish to challenge a decision based on an automated
-          process using the contact information within this policy. </li>
-            </ul>
+            <li class="policy_header"><p>3.2  Create and maintain a trusted, safe environment</p></li>
+            <li><p>We may use personal information you provide to create and maintain a trusted environment. We reserve the right to:</p>
+                <ul>
+    
+                    <p>1. Detect and prevent fraud, spam, abuse, security incidents and any harmful activity.</p>
+                    <p>2. Comply with our legal obligations.</p>
+                    <p>3. Enforce our Terms of Service, and all policies herein. </p>
+
+                </ul>
+
             </li>
 
+            <li>
+                <p>Except as specifically set forth in this Privacy Policy, we will not share your personally 
+                identifiable information outside of <%= @companyName %>, unless we tell you otherwise when we collect the information or you
+                 “opt in” to having your personally identifiable information shared with a company that is not 
+                 affiliated with us. Subject to the foregoing, we may allow select companies to send you materials
+                  about their products and services.</p>
 
-            <li class="policy_header"><span><strong>3.3 </strong>: How our Payment Controller uses the personal information provided</span></li>
+                <p>We may combine the information that we collect from you on the Service with information that you provide to us in connection with your use of our 
+                other products, services and Web sites or information we collect from third parties.</p>
 
-            <li><span>We may use this personal information as a part of our payment system to:</span></li>
-            <ul>
-                <li>1. Detect and prevent fraud, abuse, security incidents and other harmful activity.</li>
-                <li>2. Comply with legal obligations for example money laundering regulations.</li>
-                <li>3. Enforce Payment policies and terms.</li>
-            </ul>
+                <p>We may hire other companies to perform services including, without limitation, facilitating some 
+                aspects of the Service, sending e-mail, fulfilling purchase requests, delivering ads, and auditing. 
+                These other companies may be supplied with or have access to your personally identifiable information 
+                solely for the purpose of providing these services to us or on our behalf.</p>
 
-            <li class="policy_header"><span><strong>3.4 </strong>: SMS Terms - USA</span></li>
-            <li><span>For text messaging in the United states, you must request to (enroll in) and acknowledge that you are willing to receive one or more
-            text messages "Opting In".  If you are using a <%= @companyName %> arrangement where <%= @companyName %> sends you, or indicates it will send you,
-            one or more text messages, you
-          accept the following: (1) these SMS terms for the US ("US Terms"), (2) the conditions outlined in the <%= @companyName %> Privacy Policy,
-          and (3) the <%= @companyName %> Terms of Service. Message and data rates will apply. </span></li>
+                <p>We may disclose and use personally identifiable information in special circumstances where it is necessary to 
+                enforce our Terms of Service and other rights (for example, when necessary to protect our intellectual property rights) 
+                or when we, in our sole discretion, believe it is necessary or appropriate in connection with or as the result of 
+                a change in ownership of all or a portion of the Service as the result of a merger, acquisition, or transfer to another 
+                company. We also may disclose or use your personal information when we, in good faith, believe that the law requires us to do so.</p>
+            
+            </li>
 
-          <li><span><%= @companyName %> is not responsible for undelivered or delayed messages.  </span></li>
+            <li class="policy_header"><p>3.3 Communications</p></li>
+            <li><p>We offer you the opportunity to choose whether to receive certain communications – both when you 
+            give us your personally identifiable information and as set out below. Please note that if
+             you have registered more than one email address with us, you must update your preferences for each email address separately.</p>
+            <p>Also, please note that we may send you certain communications relating to your membership accounts, such as transaction confirmations 
+            and other administrative messages, without offering you the opportunity to opt-out of receiving them.</p>
 
-          <li><strong>Opting in</strong>: By opting in to a text message service you:</li>
-          <ul>
-              <li>1. Authorize <%= @companyName %> and Twilio (SMS Service provider) to use autodiler and non-autodiler technology to send the text messages to
-              a cell phone number associated with your "Opt In".  You are not required to "Opt In" as a condition of using the <%= @companyName %> platform.</li>
-              <li>2. Consent to the use of an electronic record to document your "Opt-In".  To withdraw your consent send a free paper copy or email of the "Opt -In"
-              , or update your account on record with your contact information.  Please use the Contact section of our platform.  To view and retain and electronic copy
-            of your 'Opt-In', you will need the following (1) a device including a cell phone or computer with internet access, (2) a printer or suitable
-          method storage.  If you withdraw your consent, certain features of our platform will not be available to you.  You can update these settings using the <strong>Notifications settings</strong>
-         in your account dashboard.</li>
-         <li>3. Confirm that you are a subscriber to the relevant phone number, or that you are a customary user of that phone number on a family or business plan, and that
-         you have authorized to "Opt-in".</li>
-         <li>4. Consent to the use of an electronic record to document our "Opt-In". With withdraw this consent, update our records with your contact information.
-         This is done in the <strong>Notification settings</strong> and in your account dashboard.</li>
-
-         <li><strong>About Text Message Services</strong>: Message and data rates may apply.  Text Message service will send multiple recurring messages.
-         <%= @companyName %> may terminate any Text message service or your participation at any time with, or without notice.  This includes before you have received any or
-       all messages that you otherwise would have received.  SMS Terms outlined herein still apply.  To Opt-out, please update your SMS settings in
-     your <strong>notification settings</strong> of your <%= @companyName %> account.</li>
-          </ul>
-
-
-            <li class="policy_header"><span><strong>3.5 </strong>: Promotional messages</span></li>
-            <li><span>Outlined are choices in promotional messages you choose to receive:</span></li>
-
-            <ul>
-              <li>1. You can limit the information you provide to <%= @companyName %>.  Participation in promotions and marketing programs is voluntary.</li>
-              <li>2. To opt out of marketing emails, click the link labeled "unsubscribe" located at the bottom of any marketing email we send you. </li>
-              <li>3. You may update your notification settings within your account dashboard.  Please note even if you opt-out of marketing communications,
-              we may still need to contact you with important information about your account.  We may still send activity confirmations or fraud alerts.</li>
-            </ul>
+            </li>
 
 
             <p id="disclosure" class="anchor"><strong>4. DISCLOSURE</strong></p>
 
-            <li class="policy_header"><strong>4.1</strong>: Sharing content with advertising or social media</li>
+            <li class="policy_header"><p>4.1 Sharing content with advertising or social media</p></li>
 
-            <li><span>Where you have provided consent, we share your information including personal information as described at the time of
+            <li><p>Where you have provided consent, we share your information including personal information as described at the time of
             consent.  For example, when you authorize a third party application to access your <%= @companyName %> account or when you participate in promotional
-          activities conducted by third parties</span>
-        <br>
-            <span>When permissible according to applicable laws, we may use certain limited personal information about you such as your email, v
+          activities conducted by third parties</p>
+        
+            <p>When permissible according to applicable laws, we may use certain limited personal information about you such as your email, v
               enue address (only for verified rinks)
             to share with social media platforms such as Facebook, google, or Twitter to generate leads, drive traffic to our site, or otherwise
             promote our products, our services or
           the <%= @companyName %> platform.  These activities are based on our legitimate interest in participate in marketing activities to offer
-          you products or service of interest.</span>
-          <span>All social media platforms which we may share your personal information are not controlled or supervised by <%= @companyName %>.  Any questions regarding
+          you products or service of interest.</p>
+
+          <p>All social media platforms which we may share your personal information are not controlled or supervised by <%= @companyName %>.  Any questions regarding
           your social media platform should be directed to that provider.  At any time, you may request <%= @companyName %> to cease processing your data for these direct
-        marketing purposes by sending an email to <%= @optOutEmail %></span>
+        marketing purposes by sending an email to <%= @optOutEmail %></p>
 
         </li>
 
+            <li class="policy_header"><p>4.2 Compliance with Law, responding to legal requests, and protection of our rights</p> </li>
 
-            <li class="policy_header"><strong>4.2</strong>: Sharing between members</li>
-
-            <li><span>In order to help facilitate ice booking or other interactions between <%= @companyName %> users, we may need to share certain information including personal
-            information with other members.  We do not share billing or payout information with any other members.  The information shared includes the following:</span>
-          </li>
-
-          <ul>
-            <li>1. When a user submits a booking request for ice time, certain information is shared about you with the Venue including (1) your profile, (2) your full name
-            (3) and any other information you agree to share.</li>
-            <li>2. When a user as a Venue ("Verified Rink") have confirmed a booking, certain information is shared with the user booking ice time.  This information
-            includes your profile, your rink name, and your venue address.</li>
-
-          </ul>
-
-            <li class="policy_header"><strong>4.3</strong>: User Profiles, Venue Listings, and other public information</li>
-
-            <li><span>The <%= @companyName %> platform allows you to publish information, including personal information that is visible to the general public.  </span></li>
-
-            <ul>
-              <li>1. As users, parts of your public profile page such as your full name, your photo, your player position, and your description are visible to the public.</li>
-
-              <li> 2. As a venue ( Verified Rink), parts of your public profile such as your rink name, your address, your ice time schedules, calendar availability,
-              profile photo, followers, and any other additional information you choose to share. </li>
-              <li>3. Game Listing pages are publicly visible and include information such as the number of players to accommodate, the address of the game, the calendar
-              availability, the names and profiles of the players who have booked all games, and any rink photographs you choose to share.</li>
-
-              <li>4. After booking and playing in a game, users and venues may write reviews and rate each other.  Reviews and ratings are part of the public profile page and
-              may be visible anywhere on the <%= @companyName %> Page, for example when viewing a profile or a hosted game.</li>
-            </ul>
-
-            <li class="policy_header"><strong>4.4</strong>: Compliance with Law, responding to legal requests, and protection of our rights </li>
-
-            <li><span><%= @companyName %> may disclose your information including personal information to courts, law enforcement, government authorities, tax authorities, or other
+            <li><p><%= @companyName %> may disclose your information including personal information to courts, law enforcement,
+             government authorities, tax authorities, or other
             authorized third parties if and to the extent we are required or permitted to do so by law. If such disclosure is necessary to (i) comply with our legal obligations
           (ii) comply with legal processes and to respond to claims asserted against <%= @companyName %>,(iii) respond to valid requests relating to criminal investigations or alleged
         suspected illegal activity or an other activity that may expose us, you or any of our members to legal liability, (iv)  to enforce or administer our Terms of Service,
-       our Payment Terms, or other agreements with Members or (v) protect the rights, property, or personal safety of <%= @companyName %>, its employees, its members or members of the public. </span>
-          <br><span>These disclosures may be necessary to comply with our legal obligations, for the protection of you or another person's vital interest, or for the
+       our Payment Terms, or other agreements with Members or (v) protect the rights, property, or personal safety of <%= @companyName %>, its employees, its members or members of the public. </p>
+        
+          
+          <p>These disclosures may be necessary to comply with our legal obligations, for the protection of you or another person's vital interest, or for the
           purposes of our third party's legitimate interest in keeping our platform secure, and preventing harm or crime, and enforcing or defending legal rights, facilitating
-        the collection of taxes or for the prevention or tax fraud.</span><br>
-        <span>Where appropriate, we may notify members about legal requests unless; (i) providing notice is prohibited by the legal process itself,
+        the collection of taxes or for the prevention or tax fraud.</p>
+
+        <p>Where appropriate, we may notify members about legal requests unless; (i) providing notice is prohibited by the legal process itself,
           by court order we receive, or by applicable law, or (ii) we believe that providing notice would be futile,
           ineffective, create a risk of injury or bodily harm to an individual or group, or create or increase a risk of
           fraud upon <%= @companyName %>'s property, its Members and the <%= @companyName %> platform. In instances where we comply with legal requests without
           notice for these reasons, we will attempt to notify that Member about the request after the fact where appropriate and where we
-          determine in good faith that we are no longer prevented from doing so.</span>
+          determine in good faith that we are no longer prevented from doing so.</p>
      </li>
 
-            <li class="policy_header"><strong>4.5</strong>: Service Providers</li>
 
-            <li><span><%= @companyName %> uses a variety of third-party service providers to help us provide services related to our platform.  Service providers
-            may be located inside or outside the European Economic Area ("EEA").  </span></li>
+            <li class="policy_header"><p>4.3 Aggregated data</p></li>
 
-            <li><span>Service providers may help us (i) verify or authenticate identification documents, (ii) conduct background or police checks, fraud prevention
-            and risk assessment, (iii) perform product development, maintenance and debugging, (iv) allow provision of <%= @companyName %> services through third-party platforms
-          and other software tools, or (v) provide customer service, advertising, or payment services.</span><br>
-        </li>
-
-            <li class="policy_header"><strong>4.6</strong>: Aggregated data</li>
-
-            <li><span><%= @companyName %> may also share aggregated information including information about our users that we combine so that it no longer identifies the, or
+            <li><p><%= @companyName %> may also share aggregated information including information about our users that we combine so that it no longer identifies the, or
             references an individual user. We may share other anonymous information for regulatory compliance, industry or market analysis, research, demographic
-          profiling, marketing and advertising and other business purposes.</span></li>
+          profiling, marketing and advertising and other business purposes.</p></li>
 
             <p id="other-information" class="anchor"><strong>5. OTHER INFORMATION</strong></p>
 
-            <li class="policy_header"><strong> 5.1</strong>: Analyzing your communications</li>
+            <li class="policy_header"><p> 5.1 Analyzing your communications</p></li>
 
-            <li><span>We may review, scan or analyse your communication on the <%= @companyName %> platform for fraud prevention, risk assessment, regulatory
+            <li><p>We may review, scan or analyse your communication on the <%= @companyName %> platform for fraud prevention, risk assessment, regulatory
             compliance, investigation, product development, analytics, or customer support purposes.  As part of our process, for example in fraud
           prevention, we will scan and analyse messages to mask contact information or references to other websites.  We may also scan, review, or analyze messages
         to debug, improve and expand our product offerings.  We use automated solutions where possible, but occasionally may be required to review some communications
       such as for fraud investigations and customer support in order to assess or improve these automated tools.  We will not review, scan or analyze your messaging
-    communications to send to third party any marketing messages to you.  We will not sell reviews or analyses of these communications.  </span></li>
+    communications to send to third party any marketing messages to you.  We will not sell reviews or analyses of these communications.  </p></li>
 
-            <li class="policy_header"><strong> 5.2</strong>: Linking third party accounts</li>
+            <li class="policy_header"><p> 5.2: Linking third party accounts</p></li>
 
-            <li><span>You may link your <%= @companyName %> account with your account to a third party social networking service.
-              When this link is created, the following apply:</span></li>
+            <li><p>You may link your <%= @companyName %> account with your account to a third party social networking service.
+              When this link is created, the following apply:</p></li>
 
               <li>
                 <ul>
-                  <li>1. Some information you provide to us from linking the accounts may be published on your <%= @companyName %> account profile. </li>
-                  <li>2. Your activities on the <%= @companyName %> platform may be displayed for your friends on the <%= @companyName %> platform, and on that third party site,</li>
-                  <li>3. A link to your public profile on that third party social networking site may be included on your <%= @companyName %> public profile,</li>
-                  <li>4. Other <%= @companyName %> users may be able to see common friends that you have with that, or friends of friends if applicable,</li>
-                  <li>5. Other <%= @companyName %> users may be able to see schools, hometowns, or other groups you have in common with them,</li>
-                  <li>6. The information you provide to us from linking your accounts may be stored, processed and transmitted for fraud prevention and
-                  risk assessment purposes, and </li>
-                  <li>7. The publication and display of information you provide to <%= @companyName %> to this linkage is subject to your settings on the third party site.</li>
+                  <p>1. Some information you provide to us from linking the accounts may be published on your <%= @companyName %> account profile. </p>
+                  <p>2. Your activities on the <%= @companyName %> platform may be displayed for your friends on the <%= @companyName %> platform, and on that third party site,</p>
+                  <p>3. A link to your public profile on that third party social networking site may be included on your <%= @companyName %> public profile,</p>
+                  <p>4. Other <%= @companyName %> users may be able to see common friends that you have with that, or friends of friends if applicable,</p>
+                  <p>5. Other <%= @companyName %> users may be able to see schools, hometowns, or other groups you have in common with them,</p>
+                  <p>6. The information you provide to us from linking your accounts may be stored, processed and transmitted for fraud prevention and
+                  risk assessment purposes, and </p>
+                  <p>7. The publication and display of information you provide to <%= @companyName %> to this linkage is subject to your settings on the third party site.</p>
                 </ul>
               </li>
 
 
-            <li class="policy_header"><strong> 5.3</strong>: Third party Integrations</li>
+            <li class="policy_header"><p> 5.3 Third party Integrations</p></li>
 
-            <li><span>The <%= @companyName %> platform may contain links to third party websites, third party integrations, or third party branded services.  <%= @companyName %> does not
+            <li><p>The <%= @companyName %> platform may contain links to third party websites, third party integrations, or third party branded services.  <%= @companyName %> does not
             own or control these third party partners.  When you interact with them, you may be providing information directly to these Third party partners, <%= @companyName %>, or both.
             These third party partners will have their own rules governing the collection, use, and disclosure of information.  Please review the third party privacy policies
-          of any other websites you visit.</span></li>
+          of any other websites you visit.</p></li>
 
-          <li><span>Parts of <%= @companyName %> may use third party services such as Google maps, Twilio, Stripe.  These include Google Map API, Twilio SMS, and the Stripe Dashboard.  Please
-          use the respective services in accordance to their privacy policies including the Stripe Terms of use, Google Maps/earth Additional terms of use, the Google privacy policy
-          and Twilio Terms of service. </span></li>
+
+          <li class="policy_header"><p> 5.4 Platform Features</p></li>
+
+            <li><p><u>Interactive features:</u> Certain features of the Service may be introduced in the future to give you an opportunity to 
+            interact with us and other members. These may include message boards, submitting a letter to the editor, creating community profiles,
+             creating virtual stock portfolios, and rating, tagging and commenting on articles. When you use these features you should be 
+             aware that any information you submit there, including your name, location and e-mail address, may be publicly 
+            available to others. We are not responsible for any information you choose to submit through these interactive features.</p>
+            <p>
+            
+            </p>
+            
+            
+            </li>
+
 
           <p id="your-rights" class="anchor"><strong>6. YOUR PRIVACY RIGHTS</strong></p>
 
-          <li><span>You may exercise any of the rights described in this section by emailing to <%= @infoEmail %>.  We will ask you to
-          verify your identity before taking further action on your request.</span></li>
+          <li><p>You may exercise any of the rights described in this section by emailing to <%= @infoEmail %>.  We will ask you to
+          verify your identity before taking further action on your request.</p></li>
 
-          <li class="policy_header"><strong>6.1</strong>: Data Access</li>
+          <li class="policy_header"><p>6.1 Data Access</p></li>
 
-          <li><span>In some jurisdictions, applicable law may entitle you to request copies of your personal information held by us. You may
+          <li><p>In some jurisdictions, applicable law may entitle you to request copies of your personal information held by us. You may
             also be entitled to request copies of personal information that you have provided to us in a structured, commonly used,
-            and machine-readable format and/or request us to transmit this information to another service provider where technically feasible.</span></li>
+            and machine-readable format and/or request us to transmit this information to another service provider where technically feasible.</p></li>
 
-          <li class="policy_header"><strong>6.2</strong>: Managing your information</li>
-          <li><span>You may access or update your account information using your Account settings.  If you have choosen to connect your <%= @companyName %>
+          <li class="policy_header"><p>6.2 Managing your information</p></li>
+          <li><p>You may access or update your account information using your Account settings.  If you have choosen to connect your <%= @companyName %>
           account to a third party application such as Facebook, you must remove permission of the application by changing your account settings in Facebook.  You are
-        responsible for keeping all information up to date.</span></li>
+        responsible for keeping all information up to date.</p></li>
 
-          <li class="policy_header"><strong>6.3</strong>: Inaccurate or incorrect information</li>
+          <li class="policy_header"><p>6.3 Inaccurate or incorrect information</p></li>
           <li><span>You may request us to correct inaccurate or incomplete personal information about you which you are unable to update using our platform.</span></li>
 
-          <li class="policy_header"><strong>6.4</strong>: Our policy on data retention and deleting</li>
+          <li class="policy_header"><p>6.4 Our policy on data retention and deleting</p></li>
 
           <li><span>We generally do not retain personal information any longer than is necessary. Please note if you request removal (deleting)
             your data, the following applies:</span></li>
 
             <ul>
-              <li>1. We may retain some of your personal information as required for our legitimate business interests including; fraud detection, fraud prevention,
+              <p>1. We may retain some of your personal information as required for our legitimate business interests including; fraud detection, fraud prevention,
               and safety enhancements.  If for example we suspect your <%= @companyName %> account for fraud or safety reasons, we may retain certain information
-            about your account to prevent that member from opening a new <%= @companyName %> Account in the future. </li>
-            <li>2. We may retain and use your personal information to the extent necessary to comply with legal obligations.  </li>
-            <li>3. Information you have shared with others, such as reviews or messages may continue to be publicly visible on the <%= @companyName %> platform. However this information
-            can be removed upon request.  Additionally, some information such as record logs may remain in our database.  These records are disassociated from personal identifiers.  </li>
-            <li>4. We maintain the <%= @companyName %> platform to protect from accidental or malicious loss and destruction.  Residual copies of personal information may not be
-            removed from our backup systems for a limited period of time. </li>
+            about your account to prevent that member from opening a new <%= @companyName %> Account in the future. </p>
+            <p>2. We may retain and use your personal information to the extent necessary to comply with legal obligations.  </p>
+            <p>3. Information you have shared with others, such as reviews or messages may continue to be publicly visible on the <%= @companyName %> platform. However this information
+            can be removed upon request.  Additionally, some information such as record logs may remain in our database.  These records are disassociated from personal identifiers.  </p>
+            <p>4. We maintain the <%= @companyName %> platform to protect from accidental or malicious loss and destruction.  Residual copies of personal information may not be
+            removed from our backup systems for a limited period of time. </p>
             </ul>
 
-          <li class="policy_header"><strong>6.5</strong>: Withdrawing consent and restricting processing of your data</li>
-          <li><span>
+          <li class="policy_header"><p>6.5 Withdrawing consent and restricting processing of your data</p></li>
+          <li><p>
             If we are processing your personal information based on your consent you may withdraw your consent at any time by changing your Account settings
              or by sending a communication to <%= @companyName %> specifying which consent you are withdrawing. Please note that the withdrawal of your consent
              does not affect the lawfulness of any processing activities based on such consent before its withdrawal. Additionally, in some
@@ -567,35 +502,35 @@
              you contest the accuracy of your personal information; (ii) the processing is unlawful and you oppose the erasure of your
              personal information; (iii) we no longer need your personal information for the purposes of the processing, but you
              require the information for the establishment, exercise or defence of legal claims; or (iv) you have objected to the
-             processing pursuant to <strong>Section 6.6</strong> and pending the verification whether the legitimate grounds of <%= @companyName %> override your own.
-          </span></li>
+             processing pursuant to <u>Section 6.6</u> and pending the verification whether the legitimate grounds of <%= @companyName %> override your own.
+          </p></li>
 
-          <li class="policy_header"><strong>6.6</strong>: Objections to processing your data</li>
+          <li class="policy_header"><p>6.6 Objections to processing your data</p></li>
 
-          <li><span>
+          <li><p>
             In some jurisdictions, applicable law may entitle you to require <%= @companyName %> not to process
             your personal information for certain specific purposes (including profiling) where such processing is
             based on legitimate interest. If you object to such processing <%= @companyName %> will no longer process your personal information
             for these purposes unless we can demonstrate compelling legitimate grounds for such processing or such processing is required
             for the establishment, exercise or defence of legal claims.
-          </span></li>
+          </p></li>
 
-          <li><span>
+          <li><p>
             Where your personal information is processed for direct marketing purposes, you may, at any time ask
             <%= @companyName %> to cease processing your data for these direct marketing purposes by sending an e-mail to <%= @optOutEmail %>.
-          </span></li>
-          <li class="policy_header"><strong>6.7 </strong>: Filing a complaint</li>
-          <li><span>
+          </p></li>
+          <li class="policy_header"><p>6.7: Filing a complaint</p></li>
+          <li><p>
             You have the right to lodge complaints about our data processing activities by filing a
             complaint with our Data Protection Officer who can be reached by the “Contact Us” section below or with a supervisory authority.
-          </span></li>
+          </p></li>
 
 
           <p id="cali" class="anchor"><strong>7. YOUR CALIFORNIA AND VERMONT PRIVACY RIGHTS</strong></p>
 
-          <li class="policy_header"><strong>7.1</strong>: California Online Privacy Protection Act</li>
+          <li class="policy_header"><p>7.1 California Online Privacy Protection Act</p></li>
 
-          <li><span>
+          <li><p>
             California Online Privacy Protection Act (CalOPPA)
                  is the first state law in the nation to require commercial websites
                 and online services to post a privacy policy. The law's reach stretches well
@@ -605,37 +540,42 @@
                 privacy policy on its website stating exactly the information being
                 collected and those individuals or companies with whom it is being shared. -
                 For more information, please follow the link below.
-          </span><br>
-          <a href="http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf" target=_blank>California online privacy protection act</a>
+          </p>
 
+            <div class="m-3">
+            <a href="http://consumercal.org/california-online-privacy-protection-act-caloppa/#sthash.0FdRbT51.dpuf" class="terms_link" target=_blank>California online privacy protection act</a>
+
+            </div>
+
+          
         </li>
 
-        <li><span><strong>Vermont and California residents</strong>: <%= @companyName %> will not share information it collects about you with its third parties
-          (Financial and non-financial) except as required or permitted by your state's law. </span></li>
-          <li class="policy_header"><strong>7.2</strong>: Agreement</li>
+        <li><p><u>Vermont and California residents</u>: <%= @companyName %> will not share information it collects about you with its third parties
+          (Financial and non-financial) except as required or permitted by your state's law. </p></li>
+          <li class="policy_header"><p>7.2 Agreement</p></li>
 
 
-                <li><strong>
+                <li><p>
                     According to the California Online Privacy Protection Act, we agree to the
-                    following:</strong></li>
-                <li>Users can visit our site anonymously.
+                    following:</p></li>
+                <p>Users can visit our site anonymously.
                     Upon creation of this website , a Privacy Policy is created, we will add a link to it
                     on our
                     home
                     page or as a
                     minimum, on the first significant page after entering our website.
                     Our Privacy Policy link includes the word 'Privacy' and can easily be found on the page
-                    specified above.</li>
-                <li>You will be notified of any Privacy Policy changes:
+                    specified above.</p>
+                <p>You will be notified of any Privacy Policy changes:
                     <ul>
-                        <li>1. On our Privacy Policy Page.</li>
+                        <p>1. On our Privacy Policy Page.</p>
                     </ul>
-                </li>
+                </p>
                 <li>Can change your personal information:
                     <ul>
-                        <li>1. By Emailing Us.</li>
-                        <li>2. By Calling Us.</li>
-                        <li>3. By Logging in to your account.</li>
+                        <p>1. By Emailing Us.</p>
+                        <p>2. By Calling Us.</p>
+                        <p>3. By Logging in to your account.</p>
                     </ul>
                 </li>
 
@@ -644,89 +584,89 @@
 
             <p id="security" class="anchor"><strong>8. SECURITY</strong></p>
 
-            <li><span>
+            <li><p>
               We are continuously implementing and updating administrative, technical, and physical security measures to help protect your
               information against unauthorized access, loss, destruction, or alteration. Some of the safeguards we use to protect your information are
               firewalls and data encryption, and information access controls. If you know or have reason to believe that your <%= @companyName %> Account
               credentials have been lost, stolen, misappropriated, or otherwise compromised or in case of any actual or suspected unauthorized
-              use of your <%= @companyName %> Account, please contact us following the instructions in the Contact Us <strong>Section 12</strong>.
-            </span></li>
+              use of your <%= @companyName %> Account, please contact us following the instructions in the Contact Us, see <u>Section 12</u>.
+            </p></li>
 
 
-            <p id="fip" class="anchor"><strong>10. FAIR INFORMATION PRACTICES</strong></p>
+            <p id="fip" class="anchor"><strong>9. FAIR INFORMATION PRACTICES</strong></p>
 
-              <li class="policy_header"><strong>Section 10.1</strong>: Fair Information Practices</li>
+              <li class="policy_header"><p>Section 9.1 Fair Information Practices</p></li>
 
 
-                <li>The Fair Information Practices Principles form the backbone of privacy law in the United States and the concepts they
+                <p>The Fair Information Practices Principles form the backbone of privacy law in the United States and the concepts they
                   include have played a significant role in the development of data protection laws around the globe. Understanding
                   the Fair Information Practice Principles and how they should be implemented is critical to comply with the various privacy
-                  laws that protect personal information.</li>
+                  laws that protect personal information.</p>
 
-          <li class="policy_header"><strong>Section 10.2</strong>: Data Breaches</li>
+          <li class="policy_header"><p>Section 9.2 Data Breaches</p></li>
 
-                <li><strong>In order to be in line with Fair Information Practices we will take the
-                  following responsive action, should a data breach occur:</strong></li>
-                <li>We will notify you via email <strong>within 7 days.</strong></li>
-                <li>We will notify the users via in-site notification <strong>within 7 days.</strong></li>
+                <li><p>In order to be in line with Fair Information Practices we will take the
+                  following responsive action, should a data breach occur:</p></li>
+                <p>We will notify you via email <u>within 7 days.</u></p>
+                <p>We will notify the users via in-site notification <u>within 7 days.</u></p>
 
 
             <p id="policy-rev" class="anchor"><strong>10. POLICY REVISIONS</strong></p>
 
-            <li class="policy_header"><strong>Section 11.1</strong>: Email Collection</li>
-        <li> <span><%= @companyName %> reserves the right to modify this Privacy Policy at any time in accordance with this provision.  If we make changes to this Privacy Policy,
+            <li class="policy_header"><p>Section 10.1 Email Collection</p></li>
+        <li> <p><%= @companyName %> reserves the right to modify this Privacy Policy at any time in accordance with this provision.  If we make changes to this Privacy Policy,
           we will post the revised Privacy Policy on the <%= @companyName %> Platform and update the “Last Updated” date at the top of this Privacy Policy.
           We will also provide you with notice of the modification by email at least thirty (30) days before the date they become effective. If
           you disagree with the revised Privacy Policy, you may cancel your Account. If you do not cancel your Account before the date the
-          revised Privacy Policy becomes effective, your continued access to or use of the <%= @companyName %> Platform will be subject to the revised Privacy Policy. </span></li>
+          revised Privacy Policy becomes effective, your continued access to or use of the <%= @companyName %> Platform will be subject to the revised Privacy Policy. </p></li>
 
 
             <p id="spam" class="anchor"><strong>11. CAN SPAM Act</strong></p>
             <li>
-              <span>
+              <p>
                 The CAN-SPAM Act is a law that sets the rules for commercial email, establishes requirements
                   for commercial messages, gives recipients the right to have emails stopped from being sent to
                   them, and spells out tough penalties for violations.
-              </span>
+              </p>
             </li>
 
 
-                <li><strong>We collect your email address in order to:</strong></li>
+                <li><p>We collect your email address in order to:</p></li>
                 <li><ul>
-                    <li>1. Process orders and to send information and updates pertaining to orders.</li>
-                    <li>2. Send you additional information related to your product and/or service</li>
+                    <p>1. Process orders and to send information and updates pertaining to orders.</p>
+                    <p>2. Send you additional information related to your product and/or service</p>
                 </ul></li>
 
-                <li><strong>To be in accordance with CANSPAM, we agree to the following:</strong></li>
+                <li><p>To be in accordance with CANSPAM, we agree to the following:</p></li>
                 <li>
                     <ul>
-                        <li>Not use false or misleading subjects or email addresses.</li>
-                        <li>Identify the message as an advertisement in some reasonable way.</li>
-                        <li>Include the physical address of our business or site headquarters.</li>
-                        <li>Monitor third-party email marketing services for compliance, if one is used.</li>
-                        <li>Honor opt-out/unsubscribe requests quickly.</li>
-                        <li>Allow users to unsubscribe by using the link at the bottom of each email.</li>
+                        <p>1. Not use false or misleading subjects or email addresses.</p>
+                        <p>2. Identify the message as an advertisement in some reasonable way.</p>
+                        <p>3. Include the physical address of our business or site headquarters.</p>
+                        <p>4. Monitor third-party email marketing services for compliance, if one is used.</p>
+                        <p>5. Honor opt-out/unsubscribe requests quickly.</p>
+                        <p>6. Allow users to unsubscribe by using the link at the bottom of each email.</p>
                     </ul>
                 </li>
 
 
 
-                <li><strong>If at any time you would like to unsubscribe from receiving future emails,
-                    you can email us at</strong></li>
+                <li><p>If at any time you would like to unsubscribe from receiving future emails,
+                    you can email us at:</p></li>
                 <li><%= @infoEmail %> and we will promptly remove you from ALL correspondence.</li>
 
 
             <p id="contact" class="anchor"><strong>12. CONTACT</strong></p>
-            <li><span>
+            <li><p>
               If there are any questions regarding this privacy policy, you may contact us using the information below.
-            </span></li>
+            </p></li>
 
             <ul>
-                <li><%= @baseUrl %></li>
-                <li>909 State St</li>
-                <li>Portsmouth, New Hampshire 03801</li>
-                <li>USA</li>
-                <li><%= @infoEmail %></li>
+                <p><%= @baseUrl %></p>
+                <p>909 State St</p>
+                <p>Portsmouth, New Hampshire 03801</p>
+                <p>USA</p>
+                <p><%= @infoEmail %></p>
 
             </ul>
 

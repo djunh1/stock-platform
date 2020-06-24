@@ -109,11 +109,51 @@ div.section-privacy ul.terms-unordered-list li{
 
 }
 
+
+
 ol.terms-list{
 
   &>li{
     padding: .3rem;
     margin: 0rem;
   }
+
+  & ::marker {
+    font-size: 100%;
+    color:$color-primary;
+}
   
 }
+
+.terms_link{
+  color: #0083f7;
+  font-weight: 600;
+  font-size:1.3rem;
+
+  &:hover{
+    color: #0083f7;
+  
+  text-decoration: none;
+  }
+}
+
+li.policy_header p {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+ol.privacy_policy_listing li{
+
+  list-style-type: none;
+}
+
+ol.privacy_policy_listing ::marker {
+  font-size: 0%;
+  color: #fff;
+}
+
+ol ::marker {
+  font-size: 100%;
+  color: $color-primary;
+}
+
