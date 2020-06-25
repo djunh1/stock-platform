@@ -6,6 +6,8 @@ class Portfolio < ApplicationRecord
   mount_uploader :main_image, PortfolioUploader
   #pluralize the model referenced.
 
+  enum status: {Bullish: 0 , Bearish: 1}
+
 
   #collection of items associated with a parent model
   accepts_nested_attributes_for :technologies,

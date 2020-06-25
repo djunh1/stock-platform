@@ -167,3 +167,105 @@ blockquote span{
   margin-top:1em;
 }
 
+// Index page 
+
+.stock-preview{
+  font-size:10px;
+  font-weight: bold;
+
+  &--show{
+    font-size:18px;
+  }
+}
+
+// Show stock page
+
+.stock-svg{
+  &--show{
+    transform: translateY(7px);
+    width: 2rem;
+    height: 2rem;
+    
+  }
+}
+
+.sid {
+  position: relative;
+  padding: 2rem;
+
+  &--ticker{
+    background-color: #a4c6f978;
+    &__font{
+      font-size: 2.4rem;
+      font-weight: 100;
+      color:$color-primary;
+      transform: translateY(12px);
+    }
+  }
+
+  &--pivot{
+    background-color: #0cb75866;
+    &__font{
+      font-size: 2.4rem;
+      font-weight: 100;
+      color:$color-primary;
+      transform: translateY(12px);
+    }
+  }
+
+  &--stop{
+    background-color:#fdd0d066;
+    &__font{
+      font-size: 2.4rem;
+      font-weight: 100;
+      color:$color-primary;
+      transform: translateY(12px);
+    }
+  }
+
+  &--earnings{
+    background-color: #5ae8b466;
+    &__font{
+      font-size: 2.4rem;
+      font-weight: 100;
+      color:$color-primary;
+      transform: translateY(12px);
+    }
+  }
+
+  &--header{
+    font-size:15px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+}
+
+.container-stock-picture{
+  text-align: center;
+        vertical-align: middle;
+        display: table-cell;
+  padding:3rem;
+}
+
+
+.show-stock{
+  width:80%;
+  -webkit-box-shadow: 11px 13px 41px -13px rgba(0,0,0,1);
+  -moz-box-shadow: 11px 13px 41px -13px rgba(0,0,0,1);
+  box-shadow: 11px 13px 41px -13px rgba(0,0,0,1);
+  border: 1px solid $color-primary;
+}
+
+.stock-description-body{
+  padding:2rem;
+  margin:3rem;
+  background-color: #edffb873;
+
+  &>p{
+    font-size:1.3rem;
+    font-weight: 500;
+  }
+}

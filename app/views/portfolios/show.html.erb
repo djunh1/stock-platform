@@ -1,5 +1,5 @@
-<div class="container-fluid pb-5">
-  <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%', class: '#' %>
+<div class="container-fluid container-stock-picture ">
+  <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), class: 'show-stock' %>
 </div>
 
 <div class="container-fluid port-container">
@@ -7,30 +7,56 @@
     
 
     <div class="col-lg-8 offset-lg-2">
-      <div class="table-responsive mb-3">
-      <table class="table">
-        <thead>
-        <tr>
-          <th scope="col">Ticker</th>
-          <th scope="col">Earnings</th>
-        </tr>
-        </thead>
-        <tbody> 
-          <tr>
-            <td><%= @portfolio_item.ticker %></td>
-            <td><%= @portfolio_item.earnings_date.strftime('%d %b %Y') if @portfolio_item.earnings_date %></td>     
-           </tr>   
-        </tbody>
-      </table>
-      <blockquote>
-        <%= @portfolio_item.body %>
-      </blockquote>
+      <div class="d-flex justify-content-center justify-content-around">
+
+        <div class="d-flex flex-column sid sid--ticker">
+          <p class="sid--header">TICKER:</p>
+          <p class="sid--ticker__font"><%= @portfolio_item.ticker %></p> 
+        </div>
+
+
+        <div class="d-flex flex-column sid sid--pivot">
+          <p class="sid--header">PIVOT BUY:</p>
+          <div class="d-flex align-items-stretch">
+            <%= inline_svg "credit.svg", class:'stock-svg stock-svg--show' %>
+            <p class="sid--pivot__font"><%= number_to_currency(@portfolio_item.pivot_buy) %></p>  
+          </div>
+        </div>
+
+        <div class="d-flex flex-column sid sid--stop">
+          <p class="sid--header">STOP LOSS:</p>
+          <div class="d-flex align-items-stretch">
+            <%= inline_svg "credit.svg", class:'stock-svg stock-svg--show' %>
+            <p class="sid--stop__font"><%= number_to_currency(@portfolio_item.stop_loss) %></p>  
+          </div>
+          
+        </div>
+
+        <div class="d-flex flex-column sid sid--earnings">
+          <p class="sid--header">EARNINGS DATE:</p>
+          <div class="d-flex align-items-stretch">
+            <%= inline_svg "calendar.svg", class:'stock-svg stock-svg--show mr-3' %>
+            <p class="sid--earnings__font"><%= @portfolio_item.earnings_date.strftime('%d %b %Y') if @portfolio_item.earnings_date %></p>
+          </div>
+          
+        </div>
+        
+      </div>
+
+
+      <div class="stock-description-body">
+      <p>
+      <%= @portfolio_item.body %>
+      </p>
+        
+      </div>
       <div class="d-flex justify-content-around p-4 mb-3">
           <%= link_to "Back" , portfolios_path, class: 'btn btn-success' %>
           <% if logged_in?(:site_admin) %>
             <%= link_to "Edit item" , edit_portfolio_path(@portfolio_item), class: 'btn btn-success' %>
         <% end %>
       </div>
+
     </div>  
 
     </div>

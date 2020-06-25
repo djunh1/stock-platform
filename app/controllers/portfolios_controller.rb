@@ -70,6 +70,9 @@ class PortfoliosController < ApplicationController
                                       :body,
                                       :main_image,
                                       :thumb_image,
+                                      :pivot_buy,
+                                      :stop_loss,
+                                      :status,
                                       technologies_attributes: [:id, :name, :_destroy]
                                     )
  end

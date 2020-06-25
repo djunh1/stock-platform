@@ -14,20 +14,37 @@
 
     <div class="form-group">
       <%= form.label :earnings_date %>
-      
-    
-      <%= form.datetime_field :earnings_date, label: false, 
-                    placeholder: "Select Date", class: "form-control" %>
-     
+      <%= form.datetime_field :earnings_date, 
+                              label: false, 
+                              placeholder: "Select Date", 
+                              class: "form-control" %>
     </div>
 
     <div class="form-group">
-      <label class="btn btn-primary">
-        Upload main image file
-        <%= form.file_field :main_image, style: 'display:none;' %>
-      </label>
-
+      <%= form.label :pivot_buy %>
+      <%= form.number_field :pivot_buy, step: 0.1,
+                              label: false, 
+                              placeholder: "Pivot Price ($)", 
+                              class: "form-control" %>
     </div>
+
+    <div class="form-group">
+      <%= form.label :stop_loss %>
+      <%= form.number_field :stop_loss, step: 0.1,
+                              label: false, 
+                              placeholder: "Stop Loss value ($)", 
+                              class: "form-control" %>
+    </div>
+
+      <p class="font-size-1">Stock View:</p>
+      <div class="form-group mb-5">
+        <%= form.radio_button :status, "Bullish" %>
+        <%= form.label :status, "Bullish", class: 'font-size-1 mr-4' %>
+
+        <%= form.radio_button :status, "Bearish" %>
+        <%= form.label :status, "Bearish", class: 'font-size-1' %>
+    </div>
+
     
 
   </div>
@@ -37,13 +54,20 @@
       <%= form.text_area :body, class: 'form-control', rows: 10 %>
     </div>
 
+    <div class="form-group m-2">
+          <label class="btn-stylish btn-stylish--update">
+            Upload main image file
+            <%= form.file_field :main_image, style: 'display:none;' %>
+          </label>
+        </div>
+      </div>
+  </div>
 
-  </div>
-  </div>
- 
+
+    
 
     <div class="actions p-5 mb-5">
-      <%= form.submit 'Save Item', class: 'btn btn-primary btn-block' %>
+      <%= form.submit 'Save Item', class: 'btn-stylish btn-stylish--verify' %>
     </div>
   </div>
 

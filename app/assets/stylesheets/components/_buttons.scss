@@ -118,7 +118,7 @@
     font-family: $font-display;
     font-size: 1.78rem;
     text-transform: uppercase;
-    padding: 1.3rem 3rem;
+    padding: 1rem 2.5rem;
     cursor: pointer;
     transition: all .2s;
   
@@ -145,7 +145,7 @@
       border:1px solid $color-update;
       color:#fff;
       border-radius: 2px;
-      font-size: 1.6rem;
+      font-size: 1.1rem;
       font-weight: 200;
   
       &:link,
@@ -167,6 +167,30 @@
         color:rgb(131, 128, 128);
         border-radius: 2px;
         padding: 1.3rem 2.4rem;
+      }
+    }
+
+    &--navigation{
+      background-color: #49d06699;
+      border:1px solid #49d06699;
+      color:$color-primary;
+      border-radius: 2px;
+      font-size: 1rem;
+      font-weight: 400;
+  
+      &:link,
+      &:visited,
+        {
+          background-color: #49d06699;
+          border:1px solid #49d06699;
+          color:$color-primary;
+          border-radius: 2px;
+
+          &:hover{
+            background-color: #49d06699;
+          border:1px solid #49d06699;
+          color:$color-primary;
+          }
       }
     }
   

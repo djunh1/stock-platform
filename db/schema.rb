@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_16_103856) do
+ActiveRecord::Schema.define(version: 2020_06_24_220535) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -108,6 +108,9 @@ ActiveRecord::Schema.define(version: 2020_06_16_103856) do
     t.datetime "updated_at", null: false
     t.integer "position"
     t.datetime "earnings_date"
+    t.decimal "pivot_buy", precision: 10, scale: 2
+    t.decimal "stop_loss", precision: 10, scale: 2
+    t.integer "status", default: 0
   end
 
   create_table "skills", force: :cascade do |t|
