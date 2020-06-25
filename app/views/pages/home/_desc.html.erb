@@ -69,9 +69,6 @@
         <div class="col-lg-3 offset-lg-1 ">
 
           <div class="listcustom-wrap blog-news-section">
-          
-          
-
           <h3 class="text-center heading-stock-news mb-5">Stock News</h3>
           <% @posts.each do |post| %>
             <div class="d-flex flex-column mb-3 p-1">
@@ -82,22 +79,14 @@
               </div>
             </div>
           <% end %>
+          </div> <br>
+         
+          <div class="listcustom-wrap blog-news-section">
+          <h3 class="text-center heading-stock-news mb-5">Watch List</h3>
+          <%= render 'pages/home/stock_list'%>
           </div>
-          <br>
-          <div class="listcustom-wrap stock-ticker-section mt-4">  
-          <h3 class="text-center heading-stock-news">Watchlist</h3>
-            <ul class="ticker-list">
-             <% @tickers.each do |stonk| %>
-              <li class="d-flex justify-content-around align-items-center p-2 mb-2">
-                <%= image_tag blog_image(stonk.main_image), class: 'ticker_preview_pic mr-2 p-3' %>
-                <%= link_to stonk.ticker, portfolio_show_path(stonk), class:'blog_preview_link blog_preview_link--stonks text-left' %>
-                
-              </li>
+          
 
-             <% end %> 
-            </ul>
-
-          </div>
         </div>
       </div>
 </div>

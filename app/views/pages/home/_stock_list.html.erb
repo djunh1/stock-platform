@@ -1,0 +1,16 @@
+
+
+<% @tickers.each do |stonk| %>
+    <%= link_to portfolio_show_path(stonk), class:'blog_preview_link blog_preview_link--stonks text-left' do %>
+   
+    <figure class="ticker-preview ticker-preview--parent">
+    <%= image_tag portfolio_img(stonk.main_image, 'main'), class:'tp-img' %>
+    <div class="date"><span class="card-date-day"><%= stonk.updated_at.strftime("%e") %></span><span class="card-date-month"><%= stonk.updated_at.strftime("%B") %></span></div>
+        <figcaption>
+        <h4 class="ticker-preview ticker-preview--child"> <span><%= stonk.ticker %></span></h4>
+        
+        </figcaption>
+    </figure>
+    <% end %>
+<% end %>
+    
