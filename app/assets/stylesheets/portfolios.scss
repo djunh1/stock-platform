@@ -193,6 +193,10 @@ blockquote span{
   position: relative;
   padding: 2rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    padding:20px;
+  }
+
   &--ticker{
     background-color: #a4c6f978;
     &__font{
@@ -200,6 +204,10 @@ blockquote span{
       font-weight: 100;
       color:$color-primary;
       transform: translateY(12px);
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+        transform: translateY(20px);
+      }
     }
   }
 
@@ -210,6 +218,10 @@ blockquote span{
       font-weight: 100;
       color:$color-primary;
       transform: translateY(12px);
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+        transform: translateY(20px);
+      }
     }
   }
 
@@ -220,6 +232,10 @@ blockquote span{
       font-weight: 100;
       color:$color-primary;
       transform: translateY(12px);
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+        transform: translateY(20px);
+      }
     }
   }
 
@@ -230,6 +246,10 @@ blockquote span{
       font-weight: 100;
       color:$color-primary;
       transform: translateY(12px);
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 1.5rem;
+        transform: translateY(20px);
+      }
     }
   }
 

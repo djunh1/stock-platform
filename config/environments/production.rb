@@ -28,6 +28,5 @@ Rails.application.configure do
   config.action_cable.url = "wss://djunh-portfolio.herokuapp.com/cable"
 
   # Check action storage on amazon when in prod
-
   config.active_storage.service = :amazon
 end

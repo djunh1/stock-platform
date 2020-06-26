@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   def set_variables
     #Set these for application wide values.
-     @companyName = "The WOLF of state street"
+     @companyName = "THE STOCK FATHER , LLC."
      @DOMAIN = "unassisted.com"
      @infoEmail = "info@mail.gametime-sports.com"
      @supportEmail = "support@mail.gametime-sports.com"
