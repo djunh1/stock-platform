@@ -17,12 +17,12 @@ Trestle.configure do |config|
 
   # Speficy a favicon to be used within the admin.
   #
-  # config.favicon = "favicon.ico"
+   config.favicon = "favicon.ico"
 
   # Set the text shown in the page footer within the admin.
   # Defaults to 'Powered by Trestle'.
   #
-  # config.footer = "Powered by Trestle"
+   config.footer = "TWSS admin"
 
   # Sets the default precision for timestamps (either :minutes or :seconds).
   # Defaults to :minutes.

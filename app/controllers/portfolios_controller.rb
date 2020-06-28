@@ -6,6 +6,7 @@ class PortfoliosController < ApplicationController
 
   def index
     @portfolio_items = Portfolio.by_position
+    @page_title = "The Watchlist"
   end
 
   def sort
@@ -53,6 +54,7 @@ class PortfoliosController < ApplicationController
   end
 
   def show
+    @page_title = "#{Portfolio.find(params[:id]).ticker}"
   end
 
   def destroy

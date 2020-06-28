@@ -1,7 +1,7 @@
 ready = ->
   Typed.new '.element',
     strings: [
-      "Stocks, Stocks, Stocks"
+      "The Wolf of State Street"
     ]
     typeSpeed: 35
     showCursor: false

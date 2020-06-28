@@ -2,11 +2,17 @@
 @import 'components/footer.scss';
 
 .listcustom-wrap {
-    padding:3rem;
+    padding:2rem;
     background-color:#fff;
     border-radius:5px;
     width:100%;
+
+    &--list{
+      background-color:rgb(230, 228, 228);
+    }
   }
+
+  
   
   div.listcustom {
     counter-reset: list-number;
@@ -27,4 +33,5 @@
     background-color:#d7385e;
     border-radius:50%;
     color:#fff;
+    transform: translate(-5rem, 3rem);
   }
