@@ -23,12 +23,8 @@ Rails.application.configure do
 
   config.active_record.dump_schema_after_migration = false
 
-
-  config.action_cable.allowed_request_origins = ['https://https://wolfofstatestreet-staging.herokuapp.com/', 'http://https://wolfofstatestreet-staging.herokuapp.com/']
-  config.action_cable.url = "wss://https://wolfofstatestreet-staging.herokuapp.com/cable"
-
   config.action_cable.allowed_request_origins = [ENV.fetch('ACTION_CABLE_DOMAIN_HTTPS'), ENV.fetch('ACTION_CABLE_DOMAIN_HTTP')]
-   config.action_cable.url = ENV.fetch('ACTION_CABLE_URL')
+  config.action_cable.url = ENV.fetch('ACTION_CABLE_URL')
 
 
   # Check action storage on amazon when in prod
