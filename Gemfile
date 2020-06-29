@@ -67,6 +67,9 @@ gem 'image_processing', '~> 1.2'
 gem 'rmagick'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 
+#for AWS
+gem 'rack-cors', '~> 1.1', '>= 1.1.1'
+
 gem 'inline_svg'
 
 ruby "2.6.3"
