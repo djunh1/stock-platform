@@ -24,8 +24,8 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   #TODO: Action cable config on Heroku - update when deploying
-  config.action_cable.allowed_request_origins = ['https://djunh-portfolio.herokuapp.com/', 'http://djunh-portfolio.herokuapp.com/']
-  config.action_cable.url = "wss://djunh-portfolio.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://https://wolfofstatestreet-staging.herokuapp.com/', 'http://https://wolfofstatestreet-staging.herokuapp.com/']
+  config.action_cable.url = "wss://https://wolfofstatestreet-staging.herokuapp.com/cable"
 
   # Check action storage on amazon when in prod
   config.active_storage.service = :amazon
