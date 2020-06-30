@@ -29,4 +29,5 @@ Rails.application.configure do
 
   # Check action storage on amazon when in prod
   config.active_storage.service = :amazon
+  config.require_master_key = true
 end

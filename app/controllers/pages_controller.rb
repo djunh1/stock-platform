@@ -10,6 +10,7 @@ class PagesController < ApplicationController
   def trading_rules
     @skills = Skill.all
     @page_title = "Rules"
+    byebug
   end
 
   def market_status
