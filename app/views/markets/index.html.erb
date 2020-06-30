@@ -17,6 +17,7 @@
 <div class="container">
     <div class="row mb-5">
         <div class="col-lg-6">
+
             <% if @market.status == "Bull" %>
             <div class="card m-5">
                 <div class="card-text">
@@ -24,30 +25,52 @@
                     </div>
                     <div class="title-total">   
                     <h2>Bull Market</h2>
-                        <div class="desc"> <p class="font-size-1">
-                            We are at the end of a long bull market.  While the trend is 
-                            currently up, this can change at any time. 
+                        <div class="desc"> 
+                        <p class="font-size-2">
+                          The market is trending up.  Buy the breakouts in leading 
+                          stocks. 
                             </p>    
                         </div>
                     </div>
                 </div>
             </div>
-           <% else %> 
+
+            <% end %>
+
+           <% if @market.status == "Bear" %> 
            <div class="card m-5">    
             <div class="card-text">
                 <div class="portada portada--bear">
                 </div>
                 <div class="title-total">   
                     <h2>Bear Market</h2>
-                    <div class="desc"> <p class="font-size-1">
-                    Markets are currently selling off.  Be careful if trying to 
-                    take the long side of a trade, or stay on the sidelines. 
+                    <div class="desc"> <p class="font-size-2">
+                    The market is trending down.  Stay in cash, or enter short sales of
+                    key leaders from the prior bull market.  
                     </p> 
                     </div>
                 </div>
-            </div>
+              </div>
            </div> 
            <% end %>
+
+            <% if @market.status == "Caution" %> 
+           <div class="card m-5">    
+            <div class="card-text">
+                <div class="portada portada--caution">
+                </div>
+                <div class="title-total">   
+                    <h2>Caution</h2>
+                    <div class="desc"> <p class="font-size-2">
+                    Markets are choppy, moving sideways or are extended.  Raise cash, 
+                    and be selective on stock purchases.  
+                    </p> 
+                    </div>
+                </div>
+              </div>
+           </div> 
+           <% end %>
+
         </div>
        
 
