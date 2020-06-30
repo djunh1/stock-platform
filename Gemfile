@@ -65,11 +65,11 @@ gem 'trestle-tinymce', '~> 0.1.3'
 gem 'webpacker', '~> 5.1', '>= 5.1.1'
 gem 'image_processing', '~> 1.2'
 gem 'rmagick'
-gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+
 
 #for AWS
 gem 'rack-cors', '~> 1.1', '>= 1.1.1'
-#gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 gem 'inline_svg'
 
