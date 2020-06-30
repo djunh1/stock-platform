@@ -8,9 +8,8 @@ class PagesController < ApplicationController
   end
 
   def trading_rules
-    @skills = Skill.all
+    #@skills = Skill.all
     @page_title = "Rules"
-    byebug
   end
 
   def market_status
