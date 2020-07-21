@@ -18,7 +18,7 @@ class PortfoliosController < ApplicationController
 
   def rails
     @rails_portfolio_items = Portfolio.all
-    
+
   end
 
   def new
@@ -31,7 +31,7 @@ class PortfoliosController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html {redirect_to portfolios_path, notice: 'Portfolio Item is live.'}
+        format.html {redirect_to rails_items_path, notice: 'Stock added to watchlist.'}
       else
         format.html {render :new}
       end
@@ -42,7 +42,7 @@ class PortfoliosController < ApplicationController
     respond_to do |format|
       set_portfolio_item
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to rails_items_path, notice: 'Stock was successfully updated.' }
       else
         format.html { render :edit }
       end

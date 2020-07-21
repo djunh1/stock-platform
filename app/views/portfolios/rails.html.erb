@@ -1,6 +1,6 @@
 <header class="header-admin-section ">
   <div class="header-admin-section __logo-box">
-    
+
   </div>
   <div class="header-admin-section__text-box">
     <h1 class="heading-primary">
@@ -17,7 +17,7 @@
 
       <%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin)%>
 
-     
+
 
       <div class="table-responsive">
       <table class="table">
@@ -25,7 +25,8 @@
         <tr>
           <th scope="col">Ticker</th>
           <th scope="col">Earnings</th>
-          <th scope="col">Chart</th>
+
+
           <th scope="col"></th>
           <th scope="col"></th>
         </tr>
@@ -35,11 +36,11 @@
           <tr>
             <td><%= port.ticker %></td>
             <td><%= port.earnings_date %></td>
-            
-            <% unless port.main_image.nil?%>
+
+            <% unless port.main_image.url.nil?%>
               <td><%= image_tag port.main_image.url, class: 'thumbnail' %></td>
             <% end %>
-            
+
             <td><%= link_to 'Edit', edit_portfolio_path(port) if logged_in?(:site_admin)%></td>
             <td><%= link_to 'Delete', portfolio_path(port), method: :delete, data: { confirm: "Are you sure?"} if logged_in?(:site_admin) %></td>
             </tr>
@@ -47,11 +48,11 @@
         </tbody>
       </table>
     </div>
-        
-        
-        
-        
-            
+
+
+
+
+
       </div>
     </div>
   </div>

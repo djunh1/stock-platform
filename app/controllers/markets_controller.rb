@@ -1,5 +1,5 @@
 class MarketsController < ApplicationController
-  
+
   access all: [:index], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
@@ -7,12 +7,12 @@ class MarketsController < ApplicationController
     @page_title = "Market Status"
   end
 
-  def show 
+  def show
   end
 
   def edit
     @market = Market.first
-    
+
   end
 
   def new
@@ -24,14 +24,14 @@ class MarketsController < ApplicationController
 
     respond_to do |format|
       if @market.save
-        format.html { redirect_to markets_path, notice: 'Market Status Object was successfully created.' }
+        format.html { redirect_to markets_path, notice: 'Market Status was successfully created.' }
 
       else
         format.html { render :new, notice: 'Something went wrong' }
       end
     end
   end
- 
+
 
   def update
     @market = Market.first
@@ -45,7 +45,7 @@ class MarketsController < ApplicationController
   end
 
 
-  private 
+  private
 
   def market_status_params
     params.require(:market).permit(:status,:percent_cash, :market_status_update)

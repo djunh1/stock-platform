@@ -1,10 +1,10 @@
 class PagesController < ApplicationController
   def home
     #@skills = Skill.all
-    @posts = Blog.order("RANDOM()").limit(3)
+    @posts = Blog.limit(3).order('created_at DESC')
     @tickers = Portfolio.all
     @page_title = "Welcome"
-    
+
   end
 
   def trading_rules
@@ -29,7 +29,7 @@ class PagesController < ApplicationController
   end
 
   def download_file
-    send_file "#{Rails.root}/app/assets/downloads/resume.pdf", type: "application/pdf", x_sendfile: true
+    #send_file "#{Rails.root}/app/assets/downloads/resume.pdf", type: "application/pdf", x_sendfile: true
   end
 
 end
