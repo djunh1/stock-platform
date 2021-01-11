@@ -1147,7 +1147,7 @@ GEM
     rb-fsevent (0.10.4)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    redcarpet (3.5.0)
+    redcarpet (3.5.1)
     redis (3.3.5)
     responders (3.0.1)
       actionpack (>= 5.0)
@@ -1269,7 +1269,7 @@ DEPENDENCIES
   puma (~> 3.7)
   rack-cors (~> 1.1, >= 1.1.1)
   rails (~> 6.0, >= 6.0.3.1)
-  redcarpet (~> 3.4)
+  redcarpet (~> 3.5)
   redis (~> 3.3, >= 3.3.3)
   rmagick
   sass-rails (~> 5.0)
