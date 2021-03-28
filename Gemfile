@@ -73,4 +73,4 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 
 gem 'inline_svg'
 
-ruby "2.6.3"
+ruby "2.6.5"

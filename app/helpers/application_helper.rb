@@ -30,7 +30,7 @@ end
       },
       {
         url: markets_path,
-        title: 'Market Status'
+        title: 'Live Status'
       },
       {
         url: portfolios_path,
@@ -74,7 +74,7 @@ end
   def blog_image img
     if img.model.main_image?
       img.url
-    else 
+    else
       ActionController::Base.helpers.asset_path('thestockfather.png')
     end
   end
