@@ -15,7 +15,7 @@
         <div class="meta">
             <span class="date moment"><%= @blog.created_at.strftime("%A, %b %d") %></span>
             <span class="author">
-              |  The Stock Father
+              |  Douglas Jacobson
             </span>
         </div>
         <nav class="breadcrumb row">
@@ -41,7 +41,7 @@
           <div class="tags">
               <i class="fa fa-tags"></i>
               <div class="links">
-                      <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'ml-3' %>     
+                      <%= link_to @blog.topic.title, topic_path(@blog.topic), class: 'ml-3' %>
               </div>
           </div>
       </div>
@@ -49,9 +49,8 @@
 
     <%# <%= render 'comments/comment_form' %>
     <div id='comments' data-blog-id="<%= @blog.id %>">
-      <%# <%=render @blog.comments %> 
-    </div> 
+      <%# <%=render @blog.comments %>
+    </div>
   </div>
   </div>
 </div>
-
