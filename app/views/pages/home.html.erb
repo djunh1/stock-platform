@@ -1,32 +1,30 @@
-
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <!--div id="background"></div-->
-          <%= video_tag(
+<div class="site-wrapper container-fluid">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <!--div id="background"></div-->
+      <%= video_tag(
             'increase_stock.mov',
              id: 'background',
              autoplay: true,
              loop: true,
              muted: true,
              poster: 'stockbg.jpg') %>
-
       <div class="inner cover text-center">
         <h1 class="element header"></h1>
-        <span class="lead font-light font-size-1">High momentum stocks with growing earnings and sales. Find them.
-          Trade them.  <b>Profit.</b>
-
-
-        <div><br><br>
-          <p class="lead">
-            <%= link_to "Trading Rules", trading_rules_path, class: "btn-stylish btn-stylish--primary" %>
-          </p>
+        <span class="lead font-light font-size-1">Markets, Stocks, and Reminiscences.
+          <div><br>
+            <br>
+            <p class="lead">
+              <%= link_to "Trading Rules", trading_rules_path, class: "btn-stylish btn-stylish--primary" %>
+            </p>
+          </div>
         </div>
+        <%= alerts %>
       </div>
-
-    <%= alerts %>
     </div>
   </div>
 </div>
+  <%= render "pages/home/blog_list" %>
+  <%= render "pages/home/stock_list" %>
+  <%= render "pages/home/desc" %>
 
-<%= render "pages/home/desc" %>

@@ -1,0 +1,50 @@
+<div class="container-fluid bg-light pt-5 pl-5 text-center">
+  <h2 class="text-left section-header mb-4 ">Recent Posts</h2>
+</div>
+<div class="container-fluid bg-light pt-5 pb-5 pl-5">
+  <div class="row">
+    <div class="col-lg-5 offset-md-1 text-left">
+      <% @posts.each.with_index do |post, index| %>
+        <div class="<%= (index+1)%2 == 1 ? 'blog-card' : 'blog-card alt' %>">
+          <div class="meta">
+            <%= image_tag blog_image(post.main_image), class: 'photo' %>
+            <ul class="details">
+              <li class="author"><a href="#">The Stock Father</a></li>
+              <li class="date"><%= post.updated_at.strftime("%A, %b %d") %></li>
+              <li class="tags">
+                <ul>
+                  <li><a href="#"><%= Topic.find(post.topic.id).title %></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="description">
+            <h1><%= post.title %></h1>
+            <h2><%= Topic.find(post.topic.id).title %></h2>
+            <p> <%= post.body.truncate_words(20, omission: '... (continued)') %> </p>
+            <p class="read-more">
+              <%= link_to 'Read More ...', post %>
+            </p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-6 pl-5 pr-5 text-left">
+      <table class="rwd-table">
+        <tr>
+        <th></th>
+        <th></th>
+          <th>Stock and Market Posts</th>
+        </tr>
+        <% @market_posts.each.with_index do |post, index| %>
+          <tr>
+            <td  class="numberCircle"><%= index+1 %></td>
+            <td class="date-table"><%= post.updated_at.strftime("%b %d, %Y") %></td>
+            <td><%= link_to post.title, post %></td>
+
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>

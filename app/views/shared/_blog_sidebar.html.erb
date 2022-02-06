@@ -1,25 +1,11 @@
-<div class="col-lg-3 blog-sidebar">
-  <div class="sidebar-module sidebar-module-inset">
-    <h4></h4>
-    <p>When in disgrace with fortune and men's eyes, I all alone beweep my outcast state,
-      And trouble deaf heaven with my bootless cries, And look upon myself and curse my fate.</p>
-  </div>
-
-
-    <%= source_helper("alart alert-info blog-sidebar-source") %>
-
+<div class="col-lg-1 blog-sidebar">
+  <%= source_helper("alart alert-info blog-sidebar-source") %>
   <div class="sidebar-module">
-    <h4 class="pb-2">TRENDING TOPICS</h4>
+    <h4 class="pb-2">Topics</h4>
     <% @sidebar_topics.each do |topic| %>
       <p class="sidebar-module__item">
         <%= link_to topic.title, topic_path(topic) %>
       </p>
     <% end %>
-  </div>
-  <div class="sidebar-module">
-    <h4>FOLLOW</h4>
-    <ol class="list-unstyled social-links">
-      <li><a href="https://twitter.com/2Fresh2Furious" target="_blank"><%= fa_icon "twitter" %></a></li>
-    </ol>
   </div>
 </div>

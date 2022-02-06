@@ -2,6 +2,7 @@ class PagesController < ApplicationController
   def home
     #@skills = Skill.all
     @posts = Blog.limit(3).order('created_at DESC')
+    @market_posts = Blog.limit(15).order('created_at DESC')
     @tickers = Portfolio.all
     @page_title = "Welcome"
 
