@@ -33,6 +33,10 @@ end
         title: 'Live Status'
       },
       {
+        url: stockit_path,
+        title: 'Stock-It'
+      },
+      {
         url: portfolios_path,
         title: 'Stocks'
       },

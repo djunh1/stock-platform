@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   get 'tech-news', to: 'pages#tech_news'
   get 'privacy' => 'pages#privacyPolicy'
   get 'terms' => 'pages#termsAndConditions'
+  get 'stockit' => 'stockit#index'
 
   resources :markets, except: [:delete]
 
