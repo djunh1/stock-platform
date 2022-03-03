@@ -5,6 +5,8 @@ Rails.application.routes.draw do
               path_names: {sign_in: 'login', sign_out: 'logout' , sign_up: 'register'}
   root to: 'pages#home'
 
+  get "user/:id" => "stockit#profile", as: :profile
+
 
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
 
   mount ActionCable.server => '/cable'
 
-  get 'download_resume', to: "pages#download_file"
+  #get 'download_resume', to: "pages#download_file"
   get 'trading-rules', to: 'pages#trading_rules'
   #get 'market-status', to: 'pages#market_status'
   get 'tech-news', to: 'pages#tech_news'
@@ -36,6 +38,8 @@ Rails.application.routes.draw do
   resources :communities do
     resources :posts
   end
+
+  resources :subscriptions
 
 
 end

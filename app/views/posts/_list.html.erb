@@ -1,0 +1,13 @@
+<% @posts.each do |p| %>
+  <div class="newsBox m-2 p-3">
+    <p>
+      <small>
+        <%= link_to p.community.name, community_path(p.community.id),class: "blog_preview_link" %>
+        Posted By:
+        <%= link_to p.user.name, profile_path(p.user.id), class: "blog_preview_link" %>
+        <%= time_ago_in_words p.created_at %></small>
+    </p>
+    <h3 class="mb-1><%= link_to p.title, community_post_path(p.community_id, p), class:"blog_preview_link" %></h3>
+    <p><%= truncate p.body, length:200  %></p>
+  </div>
+<% end %>

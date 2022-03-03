@@ -1,4 +1,4 @@
-    <div class="site-wrapper">
+    <div class="site-wrapper m-4">
       <div class="site-wrapper-inner">
         <div class="cover-container">
           <!--div id="background"></div-->
@@ -20,12 +20,7 @@
                   <%= devise_error_messages! %>
 
                   <div class="form-group">
-                    <%= f.label :email %><br />
-                    <%= f.email_field :email, autofocus: true, class: 'form-control' %>
-                  </div>
-
-                  <div class="form-group">
-                    <%= f.label :name %><br />
+                    <%= f.label "User Name" %><br />
                     <%= f.text_field :name, class: 'form-control' %>
                   </div>
 
@@ -34,26 +29,12 @@
                   <% end %>
 
                   <div class="form-group">
-                    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-                    <%= f.password_field :password, autocomplete: "off", class: 'form-control' %>
-                    <% if @minimum_password_length %>
-                      <br />
-                      <em><%= @minimum_password_length %> characters minimum</em>
-                    <% end %>
-                  </div>
-
-                  <div class="form-group">
-                    <%= f.label :password_confirmation %><br />
-                    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control' %>
-                  </div>
-
-                  <div class="form-group">
                     <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
                     <%= f.password_field :current_password, autocomplete: "off", class: 'form-control' %>
                   </div>
 
                   <div class="form-group">
-                    <%= f.submit "Update", class: 'btn btn-primary' %>
+                    <%= f.submit "Update", class: 'btn-stylish btn-stylish--primary' %>
                   </div>
                 <% end %>
             </div>
@@ -61,12 +42,12 @@
             <div class="col-md-4">
               <h3>Cancel my account</h3>
 
-              <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger' %></p>
+              <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn-stylish btn-stylish--update' %></p>
             </div>
           </div>
 
           <div class="auth-links register-text">
-            <%= link_to "Back", :back %>
+            <%= link_to "Back", :back, class:' btn btn-info' %>
           </div>
         </div>
       </div>

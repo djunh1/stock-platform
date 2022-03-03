@@ -1,0 +1,5 @@
+<%= form_for @subscribtion do |f| %>
+  <%= f.hidden_field :community_id, value: community_id %>
+  <%= f.submit "Join this trade", class: 'btn btn-success text-uppercase float-right' %>
+<% end %>
+

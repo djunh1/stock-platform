@@ -1,23 +1,40 @@
-<div class="container-fluid bg-light pt-5 pb-5 pl-5">
-  <div>
-    <%= link_to "Create new Stock Post", new_community_post_path(@community),
-      class: "btn btn-primary float-right" %>
-  </div>
-  <div class="row">
-    <div class="col">
-      <%= @community.name %>
-      <%= @posts.each do |p| %>
-        <h4>
-          <%= link_to p.title, community_post_path(@community, p), class:"blog_preview_link" %>
-        </h4>
-        <p>
-          <%= truncate p.body, length:200  %>
-        </p>
+<div class="container-fluid bg-light pb-5 pl-5">
+  <div class="row p-4">
+    <div class="col-sm-8">
+      <h2 class="text-left section-header mb-4 "><%= @community.name %></h2>
+    </div>
+    <div class="col-sm-4">
+      <% if @is_subscribed %>
+        <%= link_to "Create new Stock Post", new_community_post_path(@community),
+                  class: 'btn btn-primary float-right mt-4'  %>
+      <% else %>
+        <%= render partial: "communities/subscribe", locals: {community_id: @community.id} %>
       <% end %>
-      <%= simple_format @community.rules %>
     </div>
   </div>
-  <p>
-    <%= simple_format @community.rules%>
-  </p>
+</div>
+<div class="row">
+  <div class="col-lg-12 m-2 p-5 text-center">
+
+    <div>
+    </div>
+    <div class="row">
+      <div class="col-sm-8">
+        <%= render partial: "posts/list", locals: {posts: @posts } %>
+      </div>
+      <div class="col-sm-4">
+        <div class="card p-3">
+          <h4>About</h4>
+          <p>
+            <%= @community.summary%>
+          </p>
+        </div>
+        <p><%= pluralize @subscriber_count, "member" %></p>
+        <small>
+          <%= simple_format @community.rules %>
+        </small>
+      </div>
+    </div>
+  </div>
+</div>
 </div>

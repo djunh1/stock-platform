@@ -5,4 +5,9 @@ class StockitController < ApplicationController
     @posts = Post.order(id: :desc).limit(20)
   end
 
+  def profile
+    @profile = User.find(params[:id])
+    @posts = @profile.posts
+  end
+
 end

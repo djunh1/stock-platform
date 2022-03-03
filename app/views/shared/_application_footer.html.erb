@@ -1,38 +1,29 @@
 <footer class="site-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h6>About</h6>
-            <p class="text-justify font-light">This information is issued solely for informational purposes and does not constitute an offer to
-            sell or a solicitation of an offer to buy securities. Information contained herein is based on sources which we believe
-             to be reliable but is not guaranteed by us as being accurate and does not purport to be a complete statement
-             or summary of available data. Past performance is not a guarantee, nor is it necessarily indicative, of future results.
-             Opinions expressed herein are statements of our judgment as of the publication date and are subject to change
-             without notice. Douglas Jacobson may have a position, long or short, in the securities referred to herein, and/or other
-             related securities, and may increase or decrease such position or take a contra position. Additional information
-             is available upon written request.</p>
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Navigation</h6>
-            <ul class="footer-links">
-              <li><%= link_to "Rules", trading_rules_path %></li>
-              <li><%= link_to "Live Status", markets_path %></li>
-              <li><%= link_to "Stocks", portfolios_path %></li>
-              <li><%= link_to "Blog", blogs_path %></li>
-              <li><%= link_to "Stock-it", stockit_path %></li>
-            </ul>
-            <h6>Account</h6>
-            <% if logged_in?(:user) %>
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
-            <% else %>
-              <%= link_to "Log In", new_user_session_path %>
-              <%= link_to "Register", new_user_registration_path %>
-            <% end %>
-
-            <% if logged_in?(:site_admin) %>
-            <h6>Administration</h6>
-            <ul class="footer-links">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <h6>About</h6>
+        <p class="text-justify font-light">This information is issued solely for informational purposes and does not constitute an offer to
+          sell or a solicitation of an offer to buy securities. Information contained herein is based on sources which we believe
+          to be reliable but is not guaranteed by us as being accurate and does not purport to be a complete statement
+          or summary of available data. Past performance is not a guarantee, nor is it necessarily indicative, of future results.
+          Opinions expressed herein are statements of our judgment as of the publication date and are subject to change
+          without notice. Douglas Jacobson may have a position, long or short, in the securities referred to herein, and/or other
+          related securities, and may increase or decrease such position or take a contra position. Additional information
+          is available upon written request.</p>
+      </div>
+      <div class="col-xs-6 col-md-3">
+        <h6>Navigation</h6>
+        <ul class="footer-links">
+          <li><%= link_to "Rules", trading_rules_path %></li>
+          <li><%= link_to "Live Status", markets_path %></li>
+          <li><%= link_to "Stocks", portfolios_path %></li>
+          <li><%= link_to "Blog", blogs_path %></li>
+          <li><%= link_to "Stock-it", stockit_path %></li>
+        </ul>
+        <% if logged_in?(:site_admin) %>
+          <h6>Administration</h6>
+          <ul class="footer-links">
             <li><%= link_to "Add Stocks", rails_items_path %></li>
             <li><%= link_to 'Write a New Blog', new_blog_path  %></li>
             <% if Market.all.count < 1 %>
@@ -40,28 +31,47 @@
             <% else %>
               <li><%= link_to 'Update Market Status', edit_market_path(1)  %></li>
             <% end %>
-            </ul>
-            <% end %>
-
-          </div>
-
-          <div class="col-xs-6 col-md-3">
-            <h6>Quick Links</h6>
-            <ul class="footer-links">
-             <li><%= link_to "Privacy Policy", privacy_path %></li>
-              <li><%= link_to "Terms and Conditions", terms_path %></li>
-            </ul>
-          </div>
-        </div>
-        <hr>
+          </ul>
+        <% end %>
       </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-sm-6 col-xs-12">
-            <p class="copyright-text font-light">Copyright &copy; <%= Time.zone.now.year %> All Rights Reserved.
-            </p>
-          </div>
-
-        </div>
+      <div class="col-xs-6 col-md-3">
+        <h6>Quick Links</h6>
+        <ul class="footer-links">
+          <li><%= link_to "Privacy Policy", privacy_path %></li>
+          <li><%= link_to "Terms and Conditions", terms_path %></li>
+        </ul>
+        <% if logged_in?(:user) %>
+          <h6> <%= current_user.name %> </h6>
+          <ul class="footer-links">
+            <li>
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            </li>
+            <li>
+              <%= link_to "Edit Profile", edit_user_registration_path %>
+            </li>
+            <li><%  unless current_user.id.nil? %>
+              <%= link_to "My Profile", profile_path(current_user.id)  %>
+              <% end %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Log In", new_user_session_path %>
+            </li>
+            <li>
+              <%= link_to "Register", new_user_registration_path %>
+            </li>
+          </ul>
+        <% end %>
       </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text font-light">Copyright &copy; <%= Time.zone.now.year %> All Rights Reserved.
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>

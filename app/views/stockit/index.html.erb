@@ -1,43 +1,36 @@
-<div class="container-fluid bg-light pt-5 pb-5 pl-5">
-  <div class="row">
-    <div class="col">
-      <p class="h4">Trending Stocks</p>
+<div class="container p-3">
+  <% unless user_signed_in? %>
+    <div class="row">
+      <div class="col">
+        <p class="h4">Trending Stocks</p>
+      </div>
     </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-3">
-      Trending stock : UPST
+    <div class="row">
+      <div class="col-sm-3">
+        Trending stock : UPST
+      </div>
+      <div class="col-sm-3">
+        Trending stock : TSLA
+      </div>
+      <div class="col-sm-3">
+        Trending stock : AMD
+      </div>
+      <div class="col-sm-3">
+        Trending stock : AAPL
+      </div>
     </div>
-    <div class="col-sm-3">
-      Trending stock : TSLA
-    </div>
-    <div class="col-sm-3">
-      Trending stock : AMD
-    </div>
-    <div class="col-sm-3">
-      Trending stock : AAPL
-    </div>
-  </div>
+  <% end %>
   <div class="row mt-4">
     <div class="col">
-      <p class="h4">Popular Trades</p>
+      <p class="h4"> Trade Discussions</p>
     </div>
   </div>
   <div class="row">
     <div class="col-8">
-      <%= @posts.each do |p| %>
-        <div class="card p-3">
-          <h4>
-            <%= link_to p.title, community_post_path(p.community_id, p), class:"blog_preview_link" %>
-          </h4>
-          <p>
-            <%= truncate p.body, length:200  %>
-          </p>
-        <% end %>
-      </div>
+    <%= render partial: "posts/list" , locals: {posts: @posts }%>
     </div>
     <div class="col-4">
-      <p class="h5 mb-2">Traders trading</p>
+      <p class="h5 mb-2">Discussions</p>
       <ul class="list-group list-group-flush">
         <% @communities.each do |c| %>
           <li class="list-group-item "><%= link_to c.name, c, class: "blog_preview_link" %> </li>

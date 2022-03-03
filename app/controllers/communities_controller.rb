@@ -8,6 +8,13 @@ class CommunitiesController < ApplicationController
 
   def show
     @posts = @community.posts
+    @subscribers_count = @community.subscribers.count
+    @is_subscribed = user_signed_in? ? Subscription.where(community_id: @community.id, user_id: current_user.id).any? : false
+    @subscribtion = Subscription.new
+
+    #todo add pop up
+
+    # todo dont let user join same community more than once
   end
 
   def new
@@ -32,6 +39,6 @@ class CommunitiesController < ApplicationController
   end
 
   def community_values
-    params.require(:community).permit(:name, :url, :rules)
+    params.require(:community).permit(:name, :url, :rules, :summary)
   end
 end

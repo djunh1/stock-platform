@@ -17,8 +17,5 @@ class ApplicationController < ActionController::Base
      @helpEmail = "djunh1@gmail.com"
      @optOutEmail ="djunh1@gmail.com"
      @baseUrl = "wolfofstatestreet.com"
-
-    end
-
-
+  end
 end

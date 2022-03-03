@@ -13,6 +13,11 @@
         <%= label_tag "Trade Rules" %>
         <%= form.text_area :rules, class: "form-control" %>
       </div>
+
+      <div class="form-group">
+        <%= label_tag "About" %>
+        <%= form.text_area :summary, class: "form-control" %>
+      </div>
       <%= form.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
