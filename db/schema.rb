@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_02_230529) do
+ActiveRecord::Schema.define(version: 2022_03_03_004508) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,6 +129,22 @@ ActiveRecord::Schema.define(version: 2022_03_02_230529) do
     t.decimal "pivot_buy", precision: 10, scale: 2
     t.decimal "stop_loss", precision: 10, scale: 2
     t.integer "status", default: 0
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "community_id"
+    t.string "title"
+    t.text "body"
+    t.text "main_image"
+    t.text "thumb_image"
+    t.integer "upvotes", default: 0
+    t.integer "downvotes", default: 0
+    t.integer "total_comments", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["community_id"], name: "index_posts_on_community_id"
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|

@@ -1,8 +1,23 @@
 <div class="container-fluid bg-light pt-5 pb-5 pl-5">
+  <div>
+    <%= link_to "Create new Stock Post", new_community_post_path(@community),
+      class: "btn btn-primary float-right" %>
+  </div>
   <div class="row">
     <div class="col">
       <%= @community.name %>
+      <%= @posts.each do |p| %>
+        <h4>
+          <%= link_to p.title, community_post_path(@community, p), class:"blog_preview_link" %>
+        </h4>
+        <p>
+          <%= truncate p.body, length:200  %>
+        </p>
+      <% end %>
       <%= simple_format @community.rules %>
     </div>
   </div>
+  <p>
+    <%= simple_format @community.rules%>
+  </p>
 </div>
