@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   #get 'market-status' => 'market#index'
   #post 'market/new' => 'market#update'
 
+  resources :communities
+
 end

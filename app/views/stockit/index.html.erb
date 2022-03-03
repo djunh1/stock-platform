@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid bg-light pt-5 pb-5 pl-5">
   <div class="row">
     <div class="col">
       <p class="h4">Trending Stocks</p>
@@ -29,14 +29,15 @@
     </div>
     <div class="col-4">
       <p class="h5 mb-2">Traders trading</p>
-      <ul class="list-group">
-        <li class="list-group-item">Cras justo odio</li>
-        <li class="list-group-item">Dapibus ac facilisis in</li>
-        <li class="list-group-item">Morbi leo risus</li>
-        <li class="list-group-item">Porta ac consectetur ac</li>
-        <li class="list-group-item">Vestibulum at eros</li>
+      <ul class="list-group list-group-flush">
+      <% @communities.each do |c| %>
+        <li class="list-group-item "><%= link_to c.name, c, class: "blog_preview_link" %> </li>
+
+      <% end %>
+
+
       </ul>
-      <%= link_to "View All Trades", "", class: "btn btn-primary mt-2" %>
+      <%= link_to "View All Trades", communities_path, class: "btn btn-primary mt-2" %>
     </div>
 
   </div>

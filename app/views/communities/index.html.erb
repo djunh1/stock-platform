@@ -1,0 +1,20 @@
+<div class="container-fluid bg-light pt-5 pb-5 pl-5">
+  <div class="row">
+    <% if user_signed_in? %>
+      <div class="float-right">
+        <%= link_to "Create New Trade Idea", new_community_path,
+              class: "btn btn-outline-primary" %>
+      </div>
+    <% end %>
+    <% if @communities.size > 0 %>
+      <% @communities.each do |community| %>
+        <div class="card">
+          <h3><%= link_to community.name, community %></h3>
+          <%= simple_format community.rules %>
+        </div>
+      <% end %>
+    <% else %>
+      <p>No Trade ideas to display yet...</p>
+    <% end %>
+  </div>
+</div>

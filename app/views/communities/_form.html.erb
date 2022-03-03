@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-sm-6">
+    <%= form_for @community do |form| %>
+      <div class="form-group">
+        <%= label_tag 'Ticker' %>
+        <%= form.text_field :name, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag :url %>
+        <%= form.text_field :url, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= label_tag "Trade Rules" %>
+        <%= form.text_area :rules, class: "form-control" %>
+      </div>
+      <%= form.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
