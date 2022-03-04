@@ -40,6 +40,9 @@ Rails.application.routes.draw do
   end
 
   resources :subscriptions
+  #resources :scomments, only: [:create]
+
+  resources :scomments, only: [:create], defaults: { format: 'js' }
 
 
 end

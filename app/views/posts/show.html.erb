@@ -5,4 +5,17 @@
       <%= simple_format @post.body %>
     </div>
   </div>
+  <div id="post-scomments">
+    <%= render partial: "posts/comments", locals: {scomments: @post.scomments} %>
+  </div>
+  <div class="row">
+    <div class="col">
+      <h4>Leave a comment</h4>
+      <%= form_for @scomment, remote:true do |f| %>
+        <%= f.hidden_field :post_id, value: @post.id %>
+        <%= f.text_area :message, placeholder: "New comment here...", class: 'form-control' %>
+        <%= f.submit "Submit Comment", class: 'btn btn-success' %>
+      <% end %>
+    </div>
+  </div>
 </div>

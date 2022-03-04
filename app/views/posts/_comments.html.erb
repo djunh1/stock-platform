@@ -1,0 +1,10 @@
+<% unless @scomments.nil? %>
+<div class="comment">
+  <% @scomments.each do |c| %>
+    <%= link_to c.user.name, profile_path(c.user.name) %>
+    <%= simple_format c.message %>
+  <% end %>
+</div>
+<% else %>
+<p>no comments. leave one!</p>
+<% end %>

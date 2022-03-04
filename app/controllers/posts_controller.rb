@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :set_community, only: [:show]
+  before_action :set_post, only: [:show]
   before_action :auth_subscriber, only: [:new]
 
   def index
@@ -8,14 +8,13 @@ class PostsController < ApplicationController
   end
 
   def show
+    @scomment = Scomment.new
   end
 
   def new
     @community = Community.find(params[:community_id])
     @post= Post.new
   end
-
-
 
   def create
     @post= Post.new(post_values)
@@ -31,6 +30,10 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def set_post
+    @post = Post.includes(:scomments).find(params[:id])
+  end
 
   def auth_subscriber
     comm_id = params[:community_id]

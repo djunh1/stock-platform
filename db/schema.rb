@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_03_220709) do
+ActiveRecord::Schema.define(version: 2022_03_03_232827) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -146,6 +146,16 @@ ActiveRecord::Schema.define(version: 2022_03_03_220709) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["community_id"], name: "index_posts_on_community_id"
     t.index ["user_id"], name: "index_posts_on_user_id"
+  end
+
+  create_table "scomments", force: :cascade do |t|
+    t.text "message"
+    t.bigint "user_id"
+    t.bigint "post_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["post_id"], name: "index_scomments_on_post_id"
+    t.index ["user_id"], name: "index_scomments_on_user_id"
   end
 
   create_table "skills", force: :cascade do |t|
