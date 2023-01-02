@@ -7,10 +7,11 @@ end
 
 
 gem 'rails', '~> 6.0', '>= 6.0.3.1'
-gem 'pg', '>= 0.18', '< 2.0'
+gem "pg", "1.4.4"
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
+# gem 'uglifier', '>= 1.3.0'
+gem 'uglifier', '~> 4.2'
 gem 'coffee-rails', '~> 5.0.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
@@ -64,7 +65,7 @@ gem 'trestle-tinymce', '~> 0.1.3'
 #web packer
 gem 'webpacker', '~> 5.1', '>= 5.1.1'
 gem 'image_processing', '~> 1.2'
-gem 'rmagick'
+gem 'rmagick', '~> 5.1'
 
 
 #for AWS
@@ -74,4 +75,8 @@ gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
 gem 'inline_svg'
 gem 'htmlbeautifier'
 
-ruby "2.6.5"
+gem 'bundler', '~> 2.4', '>= 2.4.2'
+gem 'nokogiri', '~> 1.14.0.rc1'
+gem 'psych', '< 4.0.0'
+
+ruby "3.1.0"
