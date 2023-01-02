@@ -64,7 +64,7 @@ gem 'trestle-tinymce', '~> 0.1.3'
 
 #web packer
 gem 'webpacker', '~> 5.1', '>= 5.1.1'
-gem 'image_processing', '~> 1.2'
+gem 'image_processing', '~> 1.12'
 gem 'rmagick', '~> 5.1'
 
 
