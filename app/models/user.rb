@@ -17,6 +17,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :communities, through: :subscriptions
   has_many :scomments
+  has_many :votes
 
   has_many :comments, dependent: :destroy
   #virtual attr
@@ -26,5 +27,13 @@ class User < ApplicationRecord
 
   def last_name
     self.name.split.last
+  end
+
+  def upvoted_post_ids
+    self.votes.where(upvote: true).pluck(:post_id)
+  end
+
+  def downvoted_post_ids
+    self.votes.where(upvote: false).pluck(:post_id)
   end
 end

@@ -1,0 +1,27 @@
+@import "bootstrap";
+@import "font-awesome";
+@import "gritter";
+@import "abstracts/variables.scss";
+@import "base/animations.scss";
+@import "base/typography.scss";
+@import "pages/mainpage.scss";
+@import "pages/rules.scss";
+@import 'components/footer.scss';
+@import 'components/buttons.scss';
+.upvote,
+.downvote {
+    display: block;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #ddd;
+    color: #000;
+    text-align: center;
+    &.active {
+        color: #f0f0f0
+    }
+    &:hover {
+        color: rgb(255, 0, 0);
+        cursor: pointer;
+    }
+}

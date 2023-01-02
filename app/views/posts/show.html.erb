@@ -1,4 +1,13 @@
 <div class="container-fluid bg-light pt-5 pb-5 pl-5">
+    <div class="row">
+      <div class="col-1 col-md-2 text-center">
+        <div id="vote-actions" class="vote" data-id="<%= @post.id  %>">
+        <%= csrf_meta_tags %>
+          <div class="fa fa-arrow-up upvote <%= is_upvoted @post %>" ></div>
+          <span class="font-weight-bold score"><%= @post.score %></span>
+          <div class="fa fa-arrow-down downvote <%= is_downvoted @post %>"></div>
+        </div>
+      </div>
   <div class="row">
     <div class="col">
       <%= @post.title %>

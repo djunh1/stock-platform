@@ -44,5 +44,7 @@ Rails.application.routes.draw do
 
   resources :scomments, only: [:create], defaults: { format: 'js' }
 
+  post "post/vote" => "votes#create"
+
 
 end
