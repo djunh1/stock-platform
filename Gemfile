@@ -79,4 +79,7 @@ gem 'bundler', '~> 2.4', '>= 2.4.2'
 gem 'nokogiri', '~> 1.14.0.rc1'
 gem 'psych', '< 4.0.0'
 
+# Ruby 3.1 upgrade
+gem 'net-smtp', require: false
+
 ruby "3.1.0"
