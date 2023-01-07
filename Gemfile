@@ -81,5 +81,7 @@ gem 'psych', '< 4.0.0'
 
 # Ruby 3.1 upgrade
 gem 'net-smtp', require: false
+gem 'net-imap', require: false
+gem 'net-pop', require: false
 
 ruby "3.1.0"
