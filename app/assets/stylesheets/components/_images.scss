@@ -12,3 +12,11 @@
     width:80%;
   }
 
+  .picture-2 {
+    @extend %stock-pick;
+    width:60%;
+    float: center;
+    border: 1px solid black;
+    border-radius: 3px;
+  }
+

@@ -5,7 +5,7 @@
           <%= video_tag(
             'increase_stock.mov',
              id: 'background',
-             autoplay: true,
+             autoplay: false,
              loop: true,
              muted: true,
              poster: 'stockbg.jpg') %>
@@ -54,7 +54,7 @@
               <div class="col-md-10"></div>
               <div class="col-md-2">
                 <div class="form-group">
-                  <%= f.submit "Sign up", class: 'btn btn-primary btn-block' %>
+                  <%= f.submit "Sign up", class: 'btn btn-primary btn-block', disabled: true %>
                 </div>
 
                 <div class="auth-links register-text">

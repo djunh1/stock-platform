@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_03_13_171821) do
+ActiveRecord::Schema.define(version: 2021_03_28_162454) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -87,18 +87,6 @@ ActiveRecord::Schema.define(version: 2022_03_13_171821) do
     t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
-  create_table "communities", force: :cascade do |t|
-    t.bigint "user_id"
-    t.string "name"
-    t.string "url"
-    t.text "rules"
-    t.integer "total_traders"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.text "summary"
-    t.index ["user_id"], name: "index_communities_on_user_id"
-  end
-
   create_table "friendly_id_slugs", id: :serial, force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -132,47 +120,12 @@ ActiveRecord::Schema.define(version: 2022_03_13_171821) do
     t.integer "status", default: 0
   end
 
-  create_table "posts", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "community_id"
-    t.string "title"
-    t.text "body"
-    t.text "main_image"
-    t.text "thumb_image"
-    t.integer "upvotes", default: 0
-    t.integer "downvotes", default: 0
-    t.integer "total_comments", default: 0
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["community_id"], name: "index_posts_on_community_id"
-    t.index ["user_id"], name: "index_posts_on_user_id"
-  end
-
-  create_table "scomments", force: :cascade do |t|
-    t.text "message"
-    t.bigint "user_id"
-    t.bigint "post_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_scomments_on_post_id"
-    t.index ["user_id"], name: "index_scomments_on_user_id"
-  end
-
   create_table "skills", force: :cascade do |t|
     t.string "title"
     t.integer "percent"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "badge"
-  end
-
-  create_table "subscriptions", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "community_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["community_id"], name: "index_subscriptions_on_community_id"
-    t.index ["user_id"], name: "index_subscriptions_on_user_id"
   end
 
   create_table "technologies", force: :cascade do |t|
@@ -199,19 +152,8 @@ ActiveRecord::Schema.define(version: 2022_03_13_171821) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "roles"
-    t.integer "karma", default: 0
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  end
-
-  create_table "votes", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "post_id"
-    t.boolean "upvote"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["post_id"], name: "index_votes_on_post_id"
-    t.index ["user_id"], name: "index_votes_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

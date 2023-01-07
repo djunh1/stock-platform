@@ -4,81 +4,169 @@
   </div>
   <div class="header-rules__text-box">
     <h1 class="heading-primary">
-      <span class="heading-primary--main font-light">Trading</span>
-      <span class="heading-primary--sub font-light">Know the Rules</span>
+      <span class="heading-primary--main font-light">My System</span>
+      <span class="heading-primary--sub font-light">Know the rules</span>
     </h1>
   </div>
 </header>
 
 <section>
     <div class="container mt-5 mb-5">
+                <div class="row">
+            <div class="col text-center"">
+
+            <h2 class="text-left section-header mb-4 text-center"">My System</h2>
+                <p class="paragraph--dark text-left font-size-1">The system I use to trade stocks can best be described as a momentum trading system.  The momentum effect in stocks is well documented in respected academic journals, and highlighted in Dr Gray’s book (Quantitative Momentum).  While much of my work uses chart patterns, I also find it is important to pay attention macroeconomic considerations as well.     </p>
+
+                <p class="paragraph--dark text-left font-size-1">The following is a quick overview of how I trade, and is hardly comprehensive.
+                </p>
+
+           <ol class="terms-list">
+
+            <li class="text-left font-size-1">
+
+                <ol class="terms-list">
+                <p class="font-size-1 mb-4"><strong>
+                Books </strong> - If you are interested in getting started or understanding more of what I do, please consider checking out these excellent books.  They will be all that you ever need.</p>
+                <li class="text-left font-size-1 mb-2">
+
+                  <a href="https://www.amazon.com/How-Make-Money-Stocks-Winning/dp/0071614133/ref=sr_1_1?crid=3S4KWY0Y2GKBP&keywords=How+to+make+money+in+stocks&qid=1673121950&sprefix=how+to+make+money+in+stocks%2Caps%2C97&sr=8-1"
+                  class="rules"
+                  target=_blank> How to make money in Stocks -</a> <span>This is the original gangster (OG) book that started it all.  Bill O’Neil grew up during the great depression and built a system which serves as the bedrock of many traders to this day.   This book will give the reader context on reading charts, understanding markets, and digging into the fundamentals. </span>
+                </li>
+
+                <li class="text-left font-size-1 mb-2">
+
+                  <a href="https://www.amazon.com/Stan-Weinsteins-Secrets-Profiting-Markets-dp-1556230796/dp/1556230796/ref=dp_ob_title_bk"
+                  class="rules"
+                  target=_blank> Stan Weinstein's Secrets For Profiting in Bull and Bear Markets -</a> <span>Don’t let this cheesy looking cover fool you. Stan (The Man) delivers in this one.  He goes over basic concepts that are timeless and can not only help investors make a lot of money, but save a lot of money.  The basis for my stock models are derived from some very simple concepts in this book.  </span>
+                </li>
+
+                <li class="text-left font-size-1 mb-2">
+
+                  <a href="https://www.amazon.com/Trade-Like-Stock-Market-Wizard/dp/0071807225/ref=sr_1_4?crid=1DLL09AEOHTLB&keywords=Mark+minervini&qid=1673123393&s=books&sprefix=mark+minervini%2Cstripbooks%2C78&sr=1-4"
+                  class="rules"
+                  target=_blank>  Trade Like a Stock Market Wizard: How to Achieve Super Performance in Stocks in Any Market  -</a> <span>
+                  In the off chance that Mark stumbles onto this site, he is probably asking why his book is third.  Well for starters, the other two books came out before his did.  Next, and most importantly is that this book ( and his other, Think and Trade like a Champion) provide an actionable system for selecting stocks, determining stop losses, and position sizes.  I found it very helpful in bringing the concepts from the other two books together in a cohesive manner.  I recommend reading both of his books.  </span>
+                </li>
+
+                <li class="text-left font-size-1 mb-2">
+
+                  <a href="https://www.amazon.com/Momentum-Masters-Roundtable-Interview-Minervini/dp/0996307923/ref=sr_1_1?crid=N27BO99JH85V&keywords=momentum+masters&qid=1673123718&sprefix=momentum+masters%2Caps%2C84&sr=8-1"
+                  class="rules"
+                  target=_blank>  Momentum Masters  -</a> <span>
+                This book has to be one of the most densely packed books on trading ever written.  This thing get into the nitty gritty including specifics for buying/scaling out of pivots, stops, positioning, and watchlists.   This book will tie everything together as well.    </span>
+                </li>
+                </ol>
+             </li>
+
+
+
+            <li class="text-left font-size-1"><span class="font-size-1">Technical Analysis (TA) - TA utilizes daily stock charts in order to determine entries, areas to reduce, and exists for your positions.  While the breadth of information is quite large, I will cover a few of the key concepts so you can know what I am talking about.<span>
+
+            <ol class="terms-list">
+                <li class="text-left font-size-1 mb-2">
+                  <span> <strong>Price Bar -</strong>  </span> <span>a price bar can be on any time frame, but I generally look at it on a daily level.  A price bar consists of a price level at the open of the market, the close of the market, as well as a high and low level for the day.  </span>
+                </li>
+                <%= image_tag "ohlc.png", alt: "Price bar", class: 'picture-2' %>
+
+                <li class="text-left font-size-1 mb-2">
+                  <p> <strong>Stock Base -</strong>  </p> <p>A stock base consists of an amalgamation of price bars.  A base is a controlled trading range where price either remains flat ( a flat base) contracts (Cup and Handle), or wedges down ( often called a bull flag).  The concept of a base is simple - in each case a stock has run up its price.  Eventually the excitement cools down and the price starts to slow down and consolidate.   </p>
+
+                  <p> <strong>A flat base -</strong>  Here is a flat base on FNKO around a year ago using weekly bars. This pattern has easily defined highs and lows.  The length of these depends on a lot, and is one of the questions I am looking at in my modeling.  For now, we assume that they last at least 4 weeks or more.</p>
+                  <%= image_tag "flat-base.png", alt: "Flat Base", class: 'picture-2' %>
+
+                  <p> <strong>Cup and Handle -</strong>  Fancy name for a stock that is seeing a base with decreasing volatility.  The range of the price bars start to decrease in amplitude.  Basically people are becoming less interested in it so people aren’t trading it as frequently.  Bill O’Neil coined this term. This one was Qualcom during the 1999 dot come bubble, and it ran up big time after this set up. </p>
+                  <%= image_tag "cah.png", alt: "Flat Base", class: 'picture-2' %>
+
+                  <p> <strong>Bull Flag -</strong>  Another name for a price consolidation - the price bars move downward as weaker buyers sell their holdings.  The reason it is called a bull flag is because it is a continuation pattern within a bull market.  Obviously the reverse can (and does) occur in bear markets. This one was BMEA which broke out on 6/7/2022 during the bear market rally of the summer.    </p>
+                  <%= image_tag "bull-flag.png", alt: "Bull Flag", class: 'picture-2' %>
+
+                  <p>There are many more considerations than what I listed here, but this should be sufficient to understand the context on my blog.  Remember patterns are not anywhere close to 100%, and it takes time to spot them and act on them correctly.  Don’t expect this to be a magic bullet. </p>
+                </li>
+
+              </ol>
+
+            <li class="text-left font-size-1">
+            <p class="font-size-1 mb-1"> <strong>Breakouts </strong>  </p>
+            <p class="font-size-1 mb-2">  Pivotal points are regions of price where the price must move in order to purchase it.  When price moves through this region, it is called a breakout.  The volume (number of shares) must be very high in order to consider it a strong breakout.  I purchase breakouts in bull markets, but not in bear markets.<p>
+
+            <p>In this case, the pivotal region was a line connecting the highs of the price bars from the past few weeks. This one was Cisco from fall of 2022.  It ran up a little after this.</p>
+            <%= image_tag "breakout.png", alt: "Bull Flag", class: 'picture-2' %>
+
+            <p>Questions concerning how much volume is needed for the day in order to buy a breakout is something that my market model will answer in due time.  I will post that data as I find candidates for purchase</p>
+
+
+            </li>
+
+            </li>
+
+             <li class="text-left font-size-1"><p class="font-size-1 mb-3"><strong>Fundmentals</strong> - The fundamentals of a company play an important role is determining how long the stock will run for.  If a stock is running on pure momentum based on speculation, it is likely the price will crash as fast as it rose ( or faster).   What I look for with my selections is (generally) growing sales, gross margins, net income, net margins, and widening operating leverage.  We don’t necessarily need all.  I also like a new product or service combined with somewhat low following.   <span>
+
+             <p>Specifically what I look for is accelerating quarterly year over year rates of change for sales, margins and earnings over the past 4 quarters.  My stock model will quantitatively determine these rates of changes for previous winners at the start of their runs, and when their runs ended.  </p>
+
+
+             </li>
+
+
+
+
+            <li class="text-left font-size-1"><p class="font-size-1 mb-3"><strong>Macroeconomic big picture</strong> -   <span>
+
+             <p>It is possible to trade stocks without context of the macroeconomic environment.  However getting the long term macro correct will avoid (in general) being on the wrong side of trades.  I’ll confess I outsource this task to a buddy of mine who manages his own family office.  I am familiar with the system he employs, and will only discuss it at a very high level here.  Essentially one can determine the likely positioning of professional money based upon the rates of change of growth an inflation.  This was originally presented as Ray Dalios work, but has been adopted elsewhere.  Essentially one is to be weary of being positioned heavily in equity markets as growth is slowing an inflation is (a) slowing or (b) accelerating.   </p>
+
+             <p>The federal reserve is another important consideration when considering long-term exposure to markets.  In particular the fed has been known to move markets during ( recently before) the setting of the short term fed funds target.  Higher rates means tighter liquidity which generally poses a challenge for stock performance.  More recently, quantitative easing ( QE) must be considered as well.  Quantitative easing is the process of adding liquidity to the financial system as the federal reserve purchases fixed income instruments such as treasury debt and Mortgage backed securities form member banks.  Watching the rate of change of money on the federal reserves balance sheet generally shows how much money will go into/out of the system whereby one can make an approximation for stock performance.  I have not been able to model it as of yet. </p>
+
+
+             </li>
+
+
+
+            <li class="text-left font-size-1"><span class="font-size-1"> <strong>Indicators -</strong>  I use a few other indicators including the McClellan Summation Index, and tick data during the day.  The McClellan Summation Index will show the general participation of stocks.  If it is going up this simply means more stocks are moving up and if its down, this means more stocks are moving down. (thanks detective)  Tick data shows the buying and selling pressure during moves.  Finally I record breadth data by hand every day - this includes (a) number of advancing stocks/ declining stocks, (b) net net new highs ( highs minus lows), and (c) advancing volume and declining volume for the NYSE and NASDAQ listings.<span></li>
+
+            <span>
+
+            </ol>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col text-center"">
 
             <h2 class="text-left section-header mb-4">Trading Rules</h2>
-                <p class="paragraph--dark text-left font-size-1">Here are trading rules that have worked for me:</p>
+                <p class="paragraph--dark text-left font-size-1">Anyone wishing to trade using a method like this must employ their own set of rules.   I follow these without exceptions.
+
+                </p>
 
            <ol class="terms-list">
-            <li class="text-left font-size-1"><span class="font-size-1"><strong>Stop Losses:</strong></span>
-            <span class="font-size-1">Prior to entering into a trade, calculate the stop loss level where you will sell your position without hesitation. My typical stop loss is around 5%, and can be as high as 7%.  Don’t risk more than 1% to 1.5% of your entire portfolio on a trade.  If the price reaches your predetermined stop loss level, sell without hesitation.  There is no exception to this rule.  </span></li>
+            <li class="text-left font-size-1"><span class="font-size-1"><strong>Stop Losses -</strong></span>
+            <span class="font-size-1">Prior to entering a trade, determine a price level where you will exit the trade if you are wrong.  These levels can vary from very tight (1% to 2%) all the way up to 7% or so.  My typical stop loss is 5% or around 1-1.5% of my total equity.  This allows two things (1) to get out when you are wrong and preserve capital and (2) stay in the trade when a shakeout occurs.  There is a tradeoff between tight stops and being shaken out.  You will have to figure this out on your own, but in general utilize the 14-period average true range as a maximum stop loss distance.   If my stop is hit, I am out.  There is no exception to this rule.  </span></li>
 
-            <li class="text-left font-size-1"><span class="font-size-1">Purchase a stock only at the proper point within a price consolidations.  This level can be a breakout level (at new highs) or after a price reaction to a logical location.  Price confirms your trade, and volume confirms price.  Ensure all are in place after making the trade.   <span></li>
+            <li class="text-left font-size-1"><span class="font-size-1"><strong>Breakouts -</strong></span>
+            <span class="font-size-1">Only purchase a stock if it is moving out of a price consolidation during a bull market.  This pivot area is usually new highs, and should be accompanied by volume when viewed on the weekly chart. (I.E the volume might come in a few days after a breakout).  Do not chase a stock that has already broken out for more than a day and is more than 5% above its pivot region.  Reduce some 3-5 days after a breakout.  In a bull market reduce a smaller amount such as 20% or 30%, whereas in a bear market its smarter to reduce a larger %.    <span></li>
 
 
             <li class="text-left font-size-1"><span class="font-size-1">If a momentum stock without large earnings moves up very quickly, sell some of the position ( 20% to 30%) and lock in profit.  When the stock has moved up to 3 times your total risk, raise the stop loss to break even.  When a stock has moved up past your average profit, move the stop loss to this level.  Never let a profitable position turn into a loss.   <span></li>
 
             <li class="text-left font-size-1"><span class="font-size-1"> If the stock in question is a high pedigree name and has a strong earnings profile, a new product, forward thinking management and it is up 20% in under 3 weeks from a large base, the stock must be held for 8 weeks at a minimum.  This rule is directly from Bill O’Niel’s book, ‘How to Make Money in Stocks”<span></li>
 
-            <li class="text-left font-size-1"><span class="font-size-1"> No options. <span></li>
+            <li class="text-left font-size-1"><span class="font-size-1"> To keep things simple, I use a trailing stop of the 10 simple moving average or the 20 simple moving average to reduce my positions on the bullish ( or bearish) side.   <span></li>
 
-            <li class="text-left font-size-1"><span class="font-size-1"> If people are getting giddy on a stock, and it starts moving very fast after a long move, consider locking in profits.  The secret is out.   <span></li>
+            <li class="text-left font-size-1"><span class="font-size-1"> If twitter or friends start talking about a stock, its time to start considering when to exit.  Don't follow the crowd unless you want to lose money like the crowd.    <span></li>
 
             <li class="text-left font-size-1"><span class="font-size-1">Don’t hold through an earnings report unless you have a huge profit in a stock.
              Don't initiate a position before earnings unless you are a degenerate gambler. <span></li>
 
 
-            <li class="text-left font-size-1"><span class="font-size-1">Hold onto winners, and sell losers quickly.    <span></li>
+            <li class="text-left font-size-1"><span class="font-size-1">Hold onto winners, and sell losers quickly.  <span></li>
+
+            <li class="text-left font-size-1"><span class="font-size-1">I don't do options often, if ever.  <span></li>
 
 
 
-            </ol>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col text-center"">
 
-            <h2 class="text-left section-header mb-4 text-center"">The System</h2>
-                <p class="paragraph--dark text-left font-size-1">This system is a combination of looking at macroeconomic conditions, stock fundamentals, and technical patterns of the markets and leading stocks.  The macroeconomic picture helps front-run fed policy decisions which can assist in determining appropriate agressiveness for trading, and retirement portfolio construction.  The company fundamentals provide a basis for sustained price movements, and the technicals are encoded human emotions which a successful operator can navigate.    </p>
-
-                <p class="paragraph--dark text-left font-size-1">Here are the basics:
-                </p>
-
-           <ol class="terms-list">
-
-            <li class="text-left font-size-1"><span class="font-size-1">Books - Read Bill O'Niel's book "How to Make Money In Stocks", and Mark Minervini's books to get started.
-             <span></li>
-
-            <li class="text-left font-size-1"><span class="font-size-1">Fundamentals - A growing company will attract institutional attention.  Institutions move stocks.  Look for a break-out of quarterly earnings when compared to a positive long-term earnings growth rate.  Specifically look for acceleration of year over year quarterly earnings ( sales too) due to a new catalyst of some sort.  This can be a new product, new management, or new industry catalyst. P/E doesn’t matter, as the best growth names start out at higher P/Es. I look for insider buying, and a conservative balance sheet as well. <span></li>
-
-             <li class="text-left font-size-1"><span class="font-size-1">Charts - I buy when a stock breaks out of a trading range.  I look for
-            low volume on distribution, and higher volume during accumulation.  The stock must have good volume when it exits a trading range. Read books on the subject
-            to get the idea.  See the chart below for Qualcom, a very strong performing stock during the 1999 dot com bubble. <span></li>
- <%= image_tag "stock-qcom.png", alt: "QCOM breakout", class: 'picture-1' %>
-            <li class="text-left font-size-1"><span class="font-size-1"> Macroeconomic conditions - Overall we want to see growth as measured by GDP increasing when compared to the previous year.  We also want to see inflation contained within a reasonable levels.  Next, we want a generally accommodative fed, which suggests that the following conditions aught to be in place: rate cuts/low rates, a low discount rate, a low federal funds rate, a low prime lending rate, a low  Nonrevolving consumer credit growth rate.    <span></li>
-
-
-
-            <li class="text-left font-size-1"><span class="font-size-1"> Indicators - Important indications of market conditions include, but are not limited to the following:  The put/call ratio, the advance/decline levels of all issues, new highs/new lows, price/volatility, and increasing/decreasing volume ratios.    <span></li>
-
-
-            <span>
-
-
-
-
-            </ol>
-            </div>
-        </div>
     </div>
 </section>
