@@ -57,10 +57,10 @@ gem 'redis', '~> 3.3', '>= 3.3.3'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
 
-gem 'trestle', '~> 0.8.12'
-gem 'trestle-auth', '~> 0.2.5'
-gem 'trestle-search', '~> 0.3.0'
-gem 'trestle-tinymce', '~> 0.1.3'
+gem 'trestle', '~> 0.9.7'
+gem 'trestle-auth', '~> 0.4.4'
+gem 'trestle-search', '~> 0.4.3'
+gem 'trestle-tinymce', '~> 0.3.1'
 
 #web packer
 gem 'webpacker', '~> 5.1', '>= 5.1.1'
