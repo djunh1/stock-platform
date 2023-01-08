@@ -1,30 +1,18 @@
-<header class="header-admin-section ">
-  <div class="header-admin-section __logo-box">
 
-  </div>
-  <!--div class="header-admin-section__text-box">
-    <h1 class="heading-primary">
-      <span class="heading-primary--main">Administer my Stocks</span>
-    </h1>
-  </div-->
-</header>
 
 <section>
   <div class="container m-5 p-5">
-    <div class="row">
+    <div class="row mt-3">
+
       <div class="col-lg-10 offset-lg-2">
-      <h1>My Listed Stocks </h1>
-
-      <%= link_to "Create new item", new_portfolio_path if logged_in?(:site_admin)%>
-
-
-
+      <%= link_to 'Add a stock' , new_portfolio_path,  class: 'btn-stylish btn-stylish--navigation' %>
+      <h1 class="mt-5">Current Open positions </h1>
       <div class="table-responsive">
       <table class="table">
         <thead>
         <tr>
           <th scope="col">Ticker</th>
-          <th scope="col">Earnings</th>
+          <th scope="col">Purchase Date</th>
 
 
           <th scope="col"></th>
@@ -35,7 +23,7 @@
           <% @rails_portfolio_items.each do |port| %>
           <tr>
             <td><%= port.ticker %></td>
-            <td><%= port.earnings_date %></td>
+            <td><%= port.purchase_date %></td>
 
             <% unless port.main_image.url.nil?%>
               <td><%= image_tag port.main_image.url, class: 'thumbnail' %></td>

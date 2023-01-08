@@ -68,7 +68,7 @@ class PortfoliosController < ApplicationController
 
  def portfolio_params
    params.require(:portfolio).permit(:ticker,
-                                      :earnings_date,
+                                      :purchase_date,
                                       :body,
                                       :main_image,
                                       :thumb_image,

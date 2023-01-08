@@ -45,8 +45,8 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
 gem 'bootstrap4-datetime-picker-rails'
 
-gem 'carrierwave', '~> 2.0.0.rc'
-gem 'carrierwave-aws', '~> 1.3'
+gem 'carrierwave', '~> 2.2', '>= 2.2.3'
+gem 'carrierwave-aws', '~> 1.5'
 gem 'mini_magick', '~> 4.9', '>= 4.9.2'
 gem 'dotenv-rails', '~> 2.5'
 

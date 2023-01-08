@@ -36,7 +36,7 @@
           <p class="sid--header">ENTRY DATE:</p>
           <div class="d-flex align-items-stretch">
             <%= inline_svg "calendar.svg", class:'stock-svg stock-svg--show mr-3' %>
-            <p class="sid--earnings__font"><%= @portfolio_item.earnings_date.strftime('%d %b %Y') if @portfolio_item.earnings_date %></p>
+            <p class="sid--earnings__font"><%= @portfolio_item.purchase_date.strftime('%d %b %Y') if @portfolio_item.purchase_date %></p>
           </div>
 
         </div>

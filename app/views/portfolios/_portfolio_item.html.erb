@@ -25,7 +25,7 @@
           <p class="stock-preview stock-preview--topright">PURCHASE DATE:</p>
           <div class="d-flex align-items-stretch">
             <%= inline_svg "calendar.svg", class:'mr-3' %>
-            <p><%= portfolio_item.earnings_date.strftime('%d %b %Y') if portfolio_item.earnings_date %></p>
+            <p><%= portfolio_item.purchase_date.strftime('%d %b %Y') if portfolio_item.purchase_date %></p>
           </div>
         </div>
       </div>

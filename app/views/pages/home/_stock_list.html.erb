@@ -23,7 +23,7 @@
                  </div>
               </td>
               <td> <%= link_to stonk.ticker, portfolio_show_path(stonk) %></td>
-              <td><%= stonk.earnings_date.present? ? stonk.earnings_date.strftime("%b %d, %Y") : "n.a" %></td>
+              <td><%= stonk.purchase_date.present? ? stonk.purchase_date.strftime("%b %d, %Y") : "n.a" %></td>
               <td>$<%= stonk.pivot_buy %></td>
               <td>$<%= stonk.stop_loss %></td>
             </tr>
