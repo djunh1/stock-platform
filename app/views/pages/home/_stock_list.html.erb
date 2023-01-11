@@ -9,6 +9,7 @@
           <tr>
             <th scope="col"></th>
             <th scope="col">Ticker</th>
+            <th scope="col"></th>
             <th scope="col">Trade Date</th>
             <th scope="col">Entry Price</th>
             <th scope="col">Stop Loss</th>
@@ -23,6 +24,15 @@
                  </div>
               </td>
               <td> <%= link_to stonk.ticker, portfolio_show_path(stonk) %></td>
+              <td>
+                <% if stonk.status == "Bullish" %>
+                  <%= image_tag "bullmarket.jpg", alt: "bullish", class: 'picture-3'  %>
+                <% end %>
+
+                <% if stonk.status == "Bearish" %>
+                  <%= image_tag "bearmarket.jpg", alt: "bearish", class: 'picture-4'  %>
+                <% end %>
+              </td>
               <td><%= stonk.purchase_date.present? ? stonk.purchase_date.strftime("%b %d, %Y") : "n.a" %></td>
               <td>$<%= stonk.pivot_buy %></td>
               <td>$<%= stonk.stop_loss %></td>

@@ -26,7 +26,7 @@ end
       },
       {
         url: trading_rules_path,
-        title: 'Rules'
+        title: 'System/Rules'
       },
       {
         url: markets_path,

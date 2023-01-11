@@ -1,6 +1,15 @@
 <div class="col-md-6">
   <div class="card" data-id="<%= portfolio_item.id %>">
-    <%= image_tag portfolio_img(portfolio_item.main_image, 'main'), width: '100%'  %>
+
+
+    <% if portfolio_item.status == "Bullish" %>
+      <%= image_tag "bullmarket.jpg", alt: "bullish", class: 'thumbnail-for-stock-bullish'  %>
+    <% end %>
+
+    <% if portfolio_item.status == "Bearish" %>
+      <%= image_tag "bearmarket.jpg", alt: "bullish", class: 'thumbnail-for-stock-bearish'  %>
+    <% end %>
+    <%= image_tag portfolio_img(portfolio_item.main_image, 'main'), width: '100%' %>
     <p class="card-text">
       <div class="d-flex justify-content-center justify-content-around">
         <div class="d-flex flex-column">
