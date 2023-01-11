@@ -84,4 +84,8 @@ gem 'net-smtp', require: false
 gem 'net-imap', require: false
 gem 'net-pop', require: false
 
+# carrierwave and s3
+gem 'figaro', '~> 1.2'
+gem 'fog-aws', '~> 3.15'
+
 ruby "3.1.0"
