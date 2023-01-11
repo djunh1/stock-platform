@@ -33,11 +33,9 @@ class BlogsController < ApplicationController
 
   def create
     @blog = Blog.new(blog_params)
-
     respond_to do |format|
       if @blog.save
         format.html { redirect_to @blog, notice: 'Blog was successfully created.' }
-
       else
         format.html { render :new }
 
@@ -63,13 +61,12 @@ class BlogsController < ApplicationController
   end
 
   def toggle_status
-
-      if @blog.draft?
-        @blog.published!
-      elsif @blog.published?
-        @blog.draft!
-      end
-      redirect_to blogs_url, notice: 'Report Status Updated!'
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: 'Report Status Updated!'
   end
 
   private
@@ -79,7 +76,7 @@ class BlogsController < ApplicationController
     end
 
     def blog_params
-      params.require(:blog).permit(:title,:main_image, :body, :blog_post, :topic_id, :status)
+      params.require(:blog).permit(:title, :main_image, :body, :blog_post, :topic_id, :status)
     end
 
     def set_sidebar_topics
