@@ -38,7 +38,7 @@ a.blog_preview_link{
     text-decoration: none;
     transition: all 0.5s ease-in-out;
     font-weight: bold;
-   
+
   }
 
   &--stonks {
@@ -57,8 +57,12 @@ h1.header{
 .font-size-1 {
   font-size:1.3rem;
   color: $color-primary;
-  
+
   line-height: 1.5rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size:16px;
+ }
 }
 
 .font-size-2 {
@@ -145,7 +149,7 @@ h1.header{
   color:transparent;
   letter-spacing: 2px;
   transition: all .2s;
-  
+
 
   @include respond(tab-port){
     font-size:3rem;
@@ -156,7 +160,7 @@ h1.header{
   }
 
   &:hover{
-   
+
     text-shadow: .5rem 1rem 2rem rgba($color-black, .2);
   }
 }
@@ -230,6 +234,11 @@ h1.header{
     &--dark {
       color:$color-primary;
     }
+
+    @media only screen and (max-width: $bp-small) {
+      font-size: 16px;
+   }
+
 }
 
 

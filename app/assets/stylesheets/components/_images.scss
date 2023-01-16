@@ -27,6 +27,10 @@
     border: 3px solid rgb(0, 251, 130);
     float:center;
     border-radius: 50%;
+    @media only screen and (max-width: $bp-small) {
+      height: 30px;
+      width: 30px;
+   }
   }
 
   .picture-4 {

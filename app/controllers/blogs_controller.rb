@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.published.recent.page(params[:page]).per(5)
     end
-    @page_title = "Blog - Douglas Jacobson"
+    @page_title = "Blog - Wolf of State Street"
   end
 
   def show

@@ -6,7 +6,7 @@ module DefaultPageContent
   end
 
   def set_page_defaults
-    @page_title = "Douglas Jacobson | Home"
-    @seo_keywords = "Douglas Jacobson, Developer, Ruby on Rails, Python, Java, AWS "
+    @page_title = "Wolf of State Street | Home"
+    @seo_keywords = "Douglas Jacobson, Stock, Stocks, Equity, Markets, Trading, Rules, Risk, Money, Money Management "
   end
 end

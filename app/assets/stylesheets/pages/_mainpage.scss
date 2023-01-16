@@ -295,6 +295,10 @@ $breakpoint-alpha: 480px; // adjust to your needs
     td:before {
         color: #dd5;
     }
+
+    @media only screen and (max-width: $bp-small) {
+        visibility: hidden;
+     }
 }
 
 .numberCircle {
@@ -311,6 +315,13 @@ $breakpoint-alpha: 480px; // adjust to your needs
     width: 120px;
 }
 
+.main-page-section {
+    padding:3rem;
+    @media only screen and (max-width: $bp-small) {
+        padding:5px;
+     }
+}
+
 .table-centered {
     text-align: center;
     vertical-align: middle;
@@ -320,6 +331,22 @@ $breakpoint-alpha: 480px; // adjust to your needs
             color: #17334a;
             font-size: 1.2rem;
             font-weight: bold;
+            @media only screen and (max-width: $bp-small) {
+                font-size: 12px;
+                font-weight: thin;
+             }
         }
     }
+    td.sm-hidden {
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+         }
+    }
+
+    th.sm-hidden {
+        @media only screen and (max-width: $bp-small) {
+            display: none;
+         }
+    }
 }
+

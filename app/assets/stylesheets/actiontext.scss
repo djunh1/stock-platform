@@ -8,6 +8,8 @@
 // We need to override trix.css’s image gallery styles to accommodate the
 // <action-text-attachment> element we wrap around attachments. Otherwise,
 // images in galleries will be squished by the max-width: 33%; rule.
+
+@import "abstracts/variables.scss";
 .trix-content {
   .attachment-gallery {
     > action-text-attachment,
@@ -44,5 +46,13 @@
   min-height: 5em;
   outline: none;
   background-color: #fff;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 1rem 1rem;
+}
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 10px 10px;
+  }
 
 }

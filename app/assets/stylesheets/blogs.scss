@@ -10,6 +10,8 @@
 @import 'components/footer.scss';
 @import 'components/buttons.scss';
 
+@import "abstracts/mixins.scss";
+
 /*
  * Globals
  */
@@ -53,6 +55,15 @@ h6,
 
 .blog-main {
     padding: 4rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        padding: 0rem;
+        transform: translate(20px, 10px);
+     }
 }
 
 
@@ -253,10 +264,13 @@ a.middle:hover:before {
 }
 
 .blog-sidebar {
-    //padding-top: 4rem;
+    padding-top: 4rem;
     @media only screen and (max-width: $bp-medium) {
         margin: 5rem;
-        padding-top: 0rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        visibility: hidden;
     }
 }
 
@@ -393,7 +407,12 @@ article::after {
         width: auto;
         display: block;
         margin-left: auto;
-        margin-right: auto
+        margin-right: auto;
+
+        @media only screen and (max-width: $bp-small) {
+            margin-left: -34%;
+          }
+
     }
 }
 
