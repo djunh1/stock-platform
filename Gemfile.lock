@@ -1497,7 +1497,7 @@ GEM
     formatador (1.1.0)
     friendly_id (5.2.5)
       activerecord (>= 4.0.0)
-    globalid (1.0.0)
+    globalid (1.0.1)
       activesupport (>= 5.0)
     gritter (1.2.0)
     htmlbeautifier (1.4.2)
