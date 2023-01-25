@@ -1,19 +1,17 @@
-
-
 <section>
   <div class="container m-5 p-5">
     <div class="row mt-3">
 
       <div class="col-lg-10 offset-lg-2">
       <%= link_to 'Add a stock' , new_portfolio_path,  class: 'btn-stylish btn-stylish--navigation' %>
-      <h1 class="mt-5">Current Open positions </h1>
+      <h1 class="mt-5">Stock List </h1>
       <div class="table-responsive">
       <table class="table">
         <thead>
         <tr>
           <th scope="col">Ticker</th>
           <th scope="col">Purchase Date</th>
-
+          <th scope="col">Sell Date</th>
 
           <th scope="col"></th>
           <th scope="col"></th>
@@ -24,7 +22,7 @@
           <tr>
             <td><%= port.ticker %></td>
             <td><%= port.purchase_date %></td>
-
+            <td><%= port.sell_date.present? ? port.sell_date.strftime("%b %d, %Y")  : "Holding" %></td>
             <% unless port.main_image.url.nil?%>
               <td><%= image_tag port.main_image.url, class: 'thumbnail' %></td>
             <% end %>
@@ -36,13 +34,7 @@
         </tbody>
       </table>
     </div>
-
-
-
-
-
       </div>
     </div>
   </div>
-
 </section>

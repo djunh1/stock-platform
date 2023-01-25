@@ -10,7 +10,8 @@
             <th scope="col" class="sm-hidden"></th>
             <th scope="col">Ticker</th>
             <th scope="col">Bullish/Bearish</th>
-            <th scope="col">Trade Date</th>
+            <th scope="col">Buy Date</th>
+            <th scope="col">Sell Date</th>
             <th scope="col" class="sm-hidden">Entry Price</th>
             <th scope="col" class="sm-hidden">Stop Loss</th>
           </tr>
@@ -34,6 +35,7 @@
                 <% end %>
               </td>
               <td><%= stonk.purchase_date.present? ? stonk.purchase_date.strftime("%b %d, %Y") : "n.a" %></td>
+              <td><%= stonk.sell_date.present? ? stonk.sell_date.strftime("%b %d, %Y")  : "Holding" %></td>
               <td class="sm-hidden">$<%= stonk.pivot_buy %></td>
               <td class="sm-hidden">$<%= stonk.stop_loss %></td>
             </tr>

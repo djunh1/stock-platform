@@ -1,7 +1,5 @@
 <div class="col-md-6">
   <div class="card" data-id="<%= portfolio_item.id %>">
-
-
     <% if portfolio_item.status == "Bullish" %>
       <%= image_tag "bullmarket.jpg", alt: "bullish", class: 'thumbnail-for-stock-bullish'  %>
     <% end %>
@@ -24,17 +22,19 @@
           </div>
         </div>
         <div>
-          <p class="stock-preview stock-preview--topright">STOP LOSS:</p>
-          <div class="d-flex align-items-stretch">
-            <%= inline_svg "credit.svg", class:'' %>
-            <p><%= number_to_currency(portfolio_item.stop_loss) %></p>
-          </div>
-        </div>
-        <div>
           <p class="stock-preview stock-preview--topright">PURCHASE DATE:</p>
           <div class="d-flex align-items-stretch">
             <%= inline_svg "calendar.svg", class:'mr-3' %>
             <p><%= portfolio_item.purchase_date.strftime('%d %b %Y') if portfolio_item.purchase_date %></p>
+          </div>
+        </div>
+        <div>
+          <p class="stock-preview stock-preview--topright">SELL DATE:</p>
+          <div class="d-flex align-items-stretch">
+            <%= inline_svg "calendar.svg", class:'mr-3' %>
+            <p>
+              <%= portfolio_item.sell_date.present? ? portfolio_item.sell_date.strftime("%b %d, %Y")  : "Holding" %>
+            </p>
           </div>
         </div>
       </div>

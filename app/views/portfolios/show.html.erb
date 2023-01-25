@@ -29,7 +29,6 @@
             <%= inline_svg "credit.svg", class:'stock-svg stock-svg--show' %>
             <p class="sid--stop__font"><%= number_to_currency(@portfolio_item.stop_loss) %></p>
           </div>
-
         </div>
 
         <div class="d-flex flex-column sid sid--earnings m-1">
@@ -38,7 +37,14 @@
             <%= inline_svg "calendar.svg", class:'stock-svg stock-svg--show mr-3' %>
             <p class="sid--earnings__font"><%= @portfolio_item.purchase_date.strftime('%d %b %Y') if @portfolio_item.purchase_date %></p>
           </div>
+        </div>
 
+        <div class="d-flex flex-column sid sid--earnings m-1">
+          <p class="sid--header">SELL DATE:</p>
+          <div class="d-flex align-items-stretch">
+            <%= inline_svg "calendar.svg", class:'stock-svg stock-svg--show mr-3' %>
+            <p class="sid--earnings__font"><%= @portfolio_item.sell_date.strftime('%d %b %Y') if @portfolio_item.sell_date %></p>
+          </div>
         </div>
 
       </div>
